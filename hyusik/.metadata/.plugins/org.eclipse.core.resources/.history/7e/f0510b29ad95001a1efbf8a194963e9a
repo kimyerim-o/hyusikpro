@@ -1,0 +1,14 @@
+package review.service;
+
+import java.util.List;
+
+import review.dto.ReviewDto;
+
+public class ReviewData {
+	private List<ReviewDto> review;
+
+	public List<ReviewDto> getReview() {
+		return review;
+	}
+	
+}

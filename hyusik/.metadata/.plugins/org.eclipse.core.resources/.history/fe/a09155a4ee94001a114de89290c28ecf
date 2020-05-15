@@ -1,0 +1,14 @@
+package oil.Service;
+
+import java.util.List;
+
+import info.model.OilDto;
+
+public class OilData {
+	
+
+	public OilData(List<OilDto> oilgasol, List<OilDto> oildisel, List<OilDto> oillpg) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

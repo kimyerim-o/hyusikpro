@@ -1,0 +1,20 @@
+package info.service;
+
+import info.model.BrandDto;
+
+public class InfoData {
+	private BrandDto brand;
+	
+	
+	
+	public InfoData(BrandDto brand) {
+		this.brand = brand;
+	}
+
+
+
+	public BrandDto getBrand() {
+		return brand;
+	}
+	
+}

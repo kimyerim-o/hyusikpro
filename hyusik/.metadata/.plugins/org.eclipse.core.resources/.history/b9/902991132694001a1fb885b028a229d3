@@ -1,0 +1,23 @@
+package info.model;
+
+public class RestinfoDto {
+	private int restno;
+	private String restname;
+	private String theme;
+	private String themede;
+	private String resttel;
+	private String restadd;
+	private String firstfood;
+	private String truck;
+	private String maintenance;
+	private String wifi;
+	private int m_toilet;
+	private int w_toilet;
+	private int topark;
+	private int spark;
+	private int bpark;
+	private String jpark;
+	private String block;
+	private String pregnant;
+
+}

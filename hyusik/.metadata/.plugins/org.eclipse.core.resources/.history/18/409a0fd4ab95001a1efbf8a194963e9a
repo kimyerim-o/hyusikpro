@@ -1,0 +1,31 @@
+package main.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.mysql.cj.Session;
+
+import info.service.NotFoundException;
+import mvc.command.CommandHandler;
+import oil.Service.OilData;
+import oil.Service.OilService;
+
+public class MainHandler implements CommandHandler {
+	
+	private ReviewService reviewService=new ReviewService();
+	
+	@Override
+	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("MainHandler");
+		try {
+			ReviewDto nameis =reviewService.getStis();
+			//session
+			//request.setAttribute("nameis",nameis);
+			return "/admin/admin.jsp";
+		}catch(NotFoundException e) {
+			response.sendError(HttpServletResponse.SC_NOT_FOUND);
+		}
+		return null;
+	}
+
+}

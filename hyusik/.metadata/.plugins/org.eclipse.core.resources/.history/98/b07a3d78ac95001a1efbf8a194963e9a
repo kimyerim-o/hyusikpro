@@ -1,0 +1,13 @@
+package review.service;
+
+import main.dto.ReviewDto;
+
+public class ReviewService {
+	private ReviewDao ReviewDao=new ReviewDao();
+	
+	public ReviewDto getStis() {
+		
+		return null;
+	}
+
+}

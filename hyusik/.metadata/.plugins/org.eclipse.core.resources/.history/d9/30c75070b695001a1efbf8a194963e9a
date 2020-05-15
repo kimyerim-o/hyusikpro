@@ -1,0 +1,28 @@
+package admin.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import info.service.InfoData;
+import info.service.InfoService;
+import info.service.NotFoundException;
+import mvc.command.CommandHandler;
+
+public class AdminInfoHandler implements CommandHandler {
+	
+	private InfoService infoService=new InfoService();
+	
+	@Override
+	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("AdminInfoHandler");
+		try {
+			//InfoData info=infoService.getRestinfoDao();
+			//request.setAttribute("oil",oil);
+			return "/admin/admin_info.jsp";
+		}catch(NotFoundException e) {
+			response.sendError(HttpServletResponse.SC_NOT_FOUND);
+		}
+		return null;
+	}
+
+}

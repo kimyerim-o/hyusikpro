@@ -1,0 +1,13 @@
+package info.service;
+
+import info.dao.BrandDao;
+
+public class InfoService {
+	private BrandDao brandDao=new BrandDao();
+	
+	public InfoData getInfo(int restno) {
+		
+		return null;
+	}
+
+}

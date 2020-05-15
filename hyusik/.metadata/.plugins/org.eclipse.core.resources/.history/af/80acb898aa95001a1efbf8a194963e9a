@@ -1,0 +1,6 @@
+#keyname=value
+/info.go=info.command.InfoHandler
+/oilprice.go=oil.command.OilHandler
+/admin.go=admin.command.AdminHandler
+/admin_info.go=admin.command.AdminInfoHandler
+#/article/modify.do=article.command.ModifyArticleHandler

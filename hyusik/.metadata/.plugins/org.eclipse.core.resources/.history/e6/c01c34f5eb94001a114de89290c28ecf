@@ -1,0 +1,32 @@
+package oil.command;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+import info.dao.OilDao;
+import info.model.OilDto;
+import info.service.NotFoundException;
+import jdbc.connection.ConnectionProvider;
+
+public class OilService {
+	private OilDao oilDao=new OilDao();
+	public OilDto getOil() {
+		try(Connection conn=ConnectionProvider.getConnection()) {
+			List<OilDto> oilDtog=oilDao.selectgasol(conn);
+			if(oilDtog==null)
+				throw new NotFoundException();
+			List<OilDto> oilDtod=oilDao.selectdisel(conn);
+			if(oilDtod==null)
+				throw new NotFoundException();
+			List<OilDto> oilDtol=oilDao.selectlpg(conn);
+			if(oilDtol==null)
+				throw new NotFoundException();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

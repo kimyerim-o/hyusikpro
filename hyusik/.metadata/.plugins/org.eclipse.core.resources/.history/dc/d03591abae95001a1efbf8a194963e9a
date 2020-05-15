@@ -1,0 +1,25 @@
+package review.service;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+import jdbc.connection.ConnectionProvider;
+import review.dao.ReviewDao;
+import review.dto.ReviewDto;
+
+public class ReviewService {
+	private ReviewDao ReviewDao=new ReviewDao();
+	
+	public ReviewData getStis() {
+		try(Connection conn=ConnectionProvider.getConnection()) {
+			System.out.println("OilService");
+			List<ReviewDto> review=ReviewDao.selectNameis(conn);
+			return new ReviewData(review);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

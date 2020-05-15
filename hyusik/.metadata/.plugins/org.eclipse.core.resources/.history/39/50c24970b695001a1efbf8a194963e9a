@@ -1,0 +1,33 @@
+package admin.service;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+import info.dao.RestinfoDao;
+import info.dto.BrandDto;
+import info.dto.FoodDto;
+import info.dto.OilDto;
+import info.dto.OilconDto;
+import info.dto.RestconDto;
+import info.dto.RestinfoDto;
+import info.service.InfoData;
+import info.service.NotFoundException;
+import jdbc.connection.ConnectionProvider;
+
+public class AdminInfoService {
+	private RestinfoDao restinfoDao=new RestinfoDao();
+	
+	
+	public InfoData getRestInfo() {
+		try(Connection conn=ConnectionProvider.getConnection()){ 
+			List<RestinfoDto> restinfos=restinfoDao.selectName(conn);
+			if(restinfos==null)
+				throw new NotFoundException();
+			
+			return new InfoData(restinfos);
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+}

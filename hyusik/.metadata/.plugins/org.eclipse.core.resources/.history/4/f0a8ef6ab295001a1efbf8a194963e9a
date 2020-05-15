@@ -1,0 +1,31 @@
+package review.dto;
+
+public class ReviewDto {
+	private String restname;
+	private String redate;
+	private int restis;
+	
+	public ReviewDto(String string, double double1) {
+		// TODO Auto-generated constructor stub
+	}
+	public String getRestname() {
+		return restname;
+	}
+	public void setRestname(String restname) {
+		this.restname = restname;
+	}
+	public String getRedate() {
+		return redate;
+	}
+	public void setRedate(String redate) {
+		this.redate = redate;
+	}
+	public int getRestis() {
+		return restis;
+	}
+	public void setRestis(int restis) {
+		this.restis = restis;
+	}
+	
+	
+}

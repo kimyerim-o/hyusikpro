@@ -1,0 +1,22 @@
+package oil.command;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import info.dao.OilDao;
+import info.model.OilDto;
+import jdbc.connection.ConnectionProvider;
+
+public class OilService {
+	private OilDao oilDao=new OilDao();
+	public OilDto getOil() {
+		try(Connection conn=ConnectionProvider.getConnection()) {
+			OilDto oilDto=oilDao.selectCost(conn);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

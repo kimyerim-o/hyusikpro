@@ -1,0 +1,17 @@
+package info.service;
+
+import java.sql.Connection;
+
+import info.dao.BrandDao;
+
+public class InfoService {
+	private BrandDao brandDao=new BrandDao();
+	
+	public InfoData getInfo(int restno) {
+		try(Connection conn=ConnectionProvider.getConnection()) {
+			
+		}
+		return null;
+	}
+
+}

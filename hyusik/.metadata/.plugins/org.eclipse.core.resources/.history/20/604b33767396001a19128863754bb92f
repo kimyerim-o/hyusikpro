@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+ul.tab li.tab2 a{background-color:rgb(177,196,214);}
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+ $("header").remove(".body");
+ $("#page-wrapper").attr("id","");
+</script>
+</head>
+<body>
+<jsp:include page="admin.jsp"/>
+<div>
+	<ul class="infolist">
+	<!-- 수정하기 삽입하기 삭제하기 -->
+		<c:forEach var="restinfos" items="${restnames.restinfos}" >
+		
+		<input type="hidden" name="site" value="${restinfos.restno}">
+		<form action="/info_update.go" method="get">
+		<li><input type="submit">${restinfos.restname}</a></li>
+		</form>
+		</c:forEach>
+	</ul>
+</div>
+</body>
+</html>

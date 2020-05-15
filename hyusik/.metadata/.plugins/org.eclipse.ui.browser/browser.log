@@ -1,0 +1,185 @@
+
+5월 11, 2020 11:14:55.01 NEW SESSION
+5월 11, 2020 11:14:55.01 [2620:4844:0511/111455.012:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 11:15:40.98 [7760:7764:0511/111540.989:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 11:16:05.01 [6304:488:0511/111605.012:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 11:16:24.50 [8132:7260:0511/111624.508:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 11:17:39.17 [7556:7552:0511/111739.178:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 11:17:49.31 [1608:7880:0511/111749.314:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 11:18:22.77 [1372:6872:0511/111822.775:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 11:18:47.21 [1928:7236:0511/111847.219:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 11, 2020 11:30:04.60 NEW SESSION
+5월 11, 2020 11:30:04.60 [5416:6892:0511/113004.603:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 11:31:16.06 [7820:5472:0511/113116.064:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 11:32:03.06 [4064:352:0511/113203.066:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 11, 2020 13:38:07.88 NEW SESSION
+5월 11, 2020 13:38:07.88 [4964:2468:0511/133807.880:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 13:42:03.35 [7444:5960:0511/134203.355:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 13:43:17.70 [7916:7968:0511/134317.701:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 13:45:35.68 [7196:3412:0511/134535.686:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 13:47:17.56 [1952:7584:0511/134717.569:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 13:48:07.15 [8916:8920:0511/134807.150:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 13:54:55.09 [1544:8480:0511/135455.099:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 13:59:13.84 [8996:9120:0511/135913.845:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 14:00:23.89 [8184:8580:0511/140023.892:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 14:00:52.59 [7628:8628:0511/140052.593:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 11, 2020 14:19:22.10 NEW SESSION
+5월 11, 2020 14:19:22.10 [8532:8648:0511/141922.105:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 11, 2020 14:42:08.31 NEW SESSION
+5월 11, 2020 14:42:08.31 [5564:376:0511/144208.317:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 14:42:57.37 [752:7388:0511/144257.371:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 14:43:56.30 [8108:7596:0511/144356.306:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 14:44:31.09 [7292:7876:0511/144431.096:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 14:45:01.46 [4236:7636:0511/144501.467:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 14:49:06.99 [6992:9136:0511/144906.995:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 14:49:35.46 [4924:7056:0511/144935.468:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 11, 2020 14:55:57.53 NEW SESSION
+5월 11, 2020 14:55:57.53 [8244:3644:0511/145557.528:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 14:57:41.49 [7084:6212:0511/145741.493:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 15:00:44.16 [7356:160:0511/150044.161:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 15:00:46.52 [7356:160:0511/150046.522:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 1.498 s for first_image_paint 1.432 s
+5월 11, 2020 15:00:48.30 [7356:160:0511/150048.305:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 1.498 s for first_image_paint 1.432 s
+5월 11, 2020 15:00:53.35 [7356:160:0511/150053.355:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 1.498 s for first_image_paint 1.432 s
+5월 11, 2020 15:00:57.46 [7356:160:0511/150057.460:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.138 s for first_image_paint 0.137 s
+5월 11, 2020 15:01:02.49 [7356:160:0511/150102.499:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.138 s for first_image_paint 0.137 s
+5월 11, 2020 15:01:06.79 [7356:160:0511/150106.792:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.315 s for first_image_paint 0.314 s
+5월 11, 2020 15:01:14.03 [8236:1072:0511/150114.035:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 15:01:16.19 [8236:1072:0511/150116.190:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 1.372 s for first_image_paint 1.306 s
+5월 11, 2020 15:01:18.19 [8236:1072:0511/150118.196:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 1.372 s for first_image_paint 1.306 s
+5월 11, 2020 15:01:23.24 [8236:1072:0511/150123.243:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 1.372 s for first_image_paint 1.306 s
+5월 11, 2020 15:01:33.67 [8236:1072:0511/150133.676:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 1.372 s for first_image_paint 1.306 s
+5월 11, 2020 15:01:53.66 [9072:3556:0511/150153.665:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 15:03:45.30 [6284:5616:0511/150345.299:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 15:58:36.18 [2116:8880:0511/155836.181:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 15:59:09.86 [9204:8848:0511/155909.863:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 16:18:32.84 [7312:8820:0511/161832.843:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 18:02:54.06 [9520:4852:0511/180254.068:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 18:04:04.65 [3500:6984:0511/180404.656:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 11, 2020 18:04:20.78 [9160:3376:0511/180420.784:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 12, 2020 09:36:57.13 NEW SESSION
+5월 12, 2020 09:36:57.13 [7772:2800:0512/093657.129:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 12, 2020 11:16:43.71 [7340:376:0512/111643.714:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 12, 2020 11:19:23.68 [7632:6732:0512/111923.680:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 12, 2020 11:40:49.15 [3528:7800:0512/114049.156:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 12, 2020 11:41:00.06 [6964:6668:0512/114100.066:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 12, 2020 11:46:23.54 [4044:6820:0512/114623.541:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 12, 2020 11:46:34.11 [4652:3176:0512/114634.115:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 12, 2020 11:50:14.21 [5780:8640:0512/115014.219:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 12, 2020 11:59:34.78 [8588:9088:0512/115934.783:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 12, 2020 11:59:45.83 [1724:3308:0512/115945.830:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 13, 2020 09:07:40.43 NEW SESSION
+5월 13, 2020 09:07:40.43 [10116:9436:0513/090740.431:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 09:16:20.63 [7056:3308:0513/091620.632:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 09:16:57.12 [10788:9028:0513/091657.125:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 09:17:04.54 [10344:1656:0513/091704.543:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 09:19:55.40 [4296:5220:0513/091955.407:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 09:48:31.53 [4236:6532:0513/094831.532:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 09:52:01.36 [948:10496:0513/095201.367:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 10:04:35.27 [9544:1908:0513/100435.275:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 10:06:02.74 [8320:8904:0513/100602.749:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 10:06:39.54 [3356:2536:0513/100639.548:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 10:08:19.38 [2480:5328:0513/100819.387:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 10:09:12.53 [3160:7112:0513/100912.539:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 10:10:27.88 [1740:11120:0513/101027.884:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 10:34:19.79 [10520:356:0513/103419.797:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 13, 2020 10:48:40.85 NEW SESSION
+5월 13, 2020 10:48:40.85 [6652:6956:0513/104840.852:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 10:55:50.62 [544:4760:0513/105550.623:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 10:58:00.37 [6324:1728:0513/105800.377:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 11:44:32.77 [8572:160:0513/114432.771:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 13:31:18.44 [8572:9880:0513/133118.439:ERROR:socket_stream.cc(218)] Closing stream with result -2
+5월 13, 2020 13:44:33.27 [8760:5876:0513/134433.278:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 13:46:17.82 [10344:9612:0513/134617.824:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 14:35:48.72 [9132:3292:0513/143548.722:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 14:38:02.90 [9184:6808:0513/143802.909:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 14:42:15.22 [9792:3748:0513/144215.222:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 15:14:52.68 [3120:8156:0513/151452.684:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 15:21:40.28 [8316:6588:0513/152140.280:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 15:21:49.10 [8316:3056:0513/152149.105:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 13, 2020 15:22:15.85 [8316:3056:0513/152215.855:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 13, 2020 15:23:38.63 [6928:10456:0513/152338.632:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 15:23:42.92 [6928:10548:0513/152342.927:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 13, 2020 15:24:09.43 [6928:10548:0513/152409.431:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 13, 2020 15:25:16.52 [508:10732:0513/152516.522:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 15:25:21.71 [508:7828:0513/152521.715:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 13, 2020 15:25:43.88 [508:7828:0513/152543.885:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 13, 2020 15:26:31.24 [508:7828:0513/152631.240:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 13, 2020 16:36:13.47 [2056:8956:0513/163613.472:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 16:38:33.04 [9356:4152:0513/163833.044:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 16:54:25.59 [10732:2148:0513/165425.593:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 17:17:46.69 [5844:8832:0513/171746.695:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 17:45:15.01 [10588:10284:0513/174515.011:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 17:46:03.59 [10996:1788:0513/174603.596:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 13, 2020 17:47:05.11 [10552:10264:0513/174705.117:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 14, 2020 09:42:29.80 NEW SESSION
+5월 14, 2020 09:42:29.80 [9944:7592:0514/094229.803:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 09:43:08.83 [11040:11236:0514/094308.838:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 09:49:48.08 [7512:7640:0514/094948.083:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 14, 2020 09:51:47.00 NEW SESSION
+5월 14, 2020 09:51:47.00 [10808:10800:0514/095147.004:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 09:52:46.31 [8484:7828:0514/095246.317:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 09:53:21.01 [8672:2652:0514/095321.009:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 09:54:17.32 [1804:8188:0514/095417.326:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 09:54:51.35 [3076:4816:0514/095451.359:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 09:58:44.15 [8716:3464:0514/095844.155:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 09:59:30.67 [9572:9704:0514/095930.672:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 10:16:14.72 [4652:5060:0514/101614.725:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 10:29:53.56 [5848:7348:0514/102953.560:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 10:35:11.77 [10704:7344:0514/103511.769:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 10:41:51.59 [9508:8984:0514/104151.595:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 10:47:11.23 [10456:5576:0514/104711.237:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 10:47:51.58 [2808:4312:0514/104751.586:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 14, 2020 12:28:12.19 NEW SESSION
+5월 14, 2020 12:28:12.19 [4716:8904:0514/122812.193:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 14, 2020 13:54:43.34 NEW SESSION
+5월 14, 2020 13:54:43.34 [4244:1276:0514/135443.348:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 14:02:06.91 [5928:11124:0514/140206.916:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 14:04:13.99 [1708:9072:0514/140413.990:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 14:47:01.57 [7816:9212:0514/144701.579:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 15:10:27.17 [10236:4716:0514/151027.174:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 15:11:09.81 [368:6980:0514/151109.814:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 15:13:37.37 [3416:8372:0514/151337.379:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 15:16:54.85 [9128:5848:0514/151654.855:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 15:54:38.64 [3824:4624:0514/155438.644:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 15:56:34.85 [6980:4444:0514/155634.853:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 16:19:50.08 [10048:3292:0514/161950.080:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 14, 2020 17:09:35.82 [9516:1304:0514/170935.825:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 15, 2020 10:01:16.90 NEW SESSION
+5월 15, 2020 10:01:16.91 [9420:7884:0515/100116.908:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 10:57:57.36 [11928:11376:0515/105757.362:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 14:12:19.09 [9468:11384:0515/141219.097:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 14:12:50.69 [9028:3220:0515/141250.694:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 14:53:19.45 [10868:12792:0515/145319.452:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 14:56:59.06 [1836:12784:0515/145659.063:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 15:26:51.79 [12524:12112:0515/152651.790:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 15, 2020 15:58:32.79 NEW SESSION
+5월 15, 2020 15:58:32.79 [12468:5536:0515/155832.795:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 16:01:36.37 [12500:12280:0515/160136.375:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 15, 2020 16:11:19.54 NEW SESSION
+5월 15, 2020 16:11:19.54 [12704:1476:0515/161119.546:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 16:17:10.34 [8448:11420:0515/161710.343:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 16:22:18.05 [12332:4220:0515/162218.054:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 16:23:45.08 [6008:11288:0515/162345.084:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+5월 15, 2020 16:46:48.00 NEW SESSION
+5월 15, 2020 16:46:48.00 [9652:12172:0515/164648.003:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 16:47:53.77 [11708:12636:0515/164753.770:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 17:01:33.47 [4244:12736:0515/170133.473:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 17:04:33.05 [12740:8728:0515/170433.054:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 17:07:10.17 [1216:13176:0515/170710.176:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 15, 2020 17:13:11.20 [5844:8128:0515/171311.201:ERROR:browser_switcher_service.cc(238)] XXX Init()

@@ -1,0 +1,3 @@
+#keyname=value
+/info.go=info.command.InfoHandler
+#/article/modify.do=article.command.ModifyArticleHandler

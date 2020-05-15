@@ -1,0 +1,12 @@
+package review.service;
+
+
+public class ReviewService {
+	private ReviewDao ReviewDao=new ReviewDao();
+	
+	public ReviewDto getStis() {
+		
+		return null;
+	}
+
+}

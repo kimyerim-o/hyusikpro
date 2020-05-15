@@ -1,0 +1,117 @@
+1589172644792	Delete element
+1589175767241	Delete element
+1589175769814	Delete element
+1589177602881	Delete element
+1589177926436	Delete element
+1589177931922	Delete element
+1589186941083	Delete element
+1589186942672	Delete element
+1589186980727	Delete element
+1589186984795	Delete element
+1589187821092	Delete element
+1589249593186	Rename resource 'header_login.jsp'
+1589249866084	Rename resource 'info_body.jsp'
+1589249883608	Rename resource 'main_body.jsp'
+1589249894686	Rename resource 'body_script.js'
+1589259000530	Rename resource 'tag'
+1589259188367	Rename package 'util'
+1589259243892	Rename package 'controller'
+1589259265216	Rename package 'command'
+1589259741576	Delete element
+1589259758760	Copy package
+1589259883947	Delete element
+1589260003274	Copy package
+1589260915171	Rename type 'Brand'
+1589265540863	Rename compilation unit 'ArticleContentNotFoundException.java'
+1589266294645	Move 'tags' to 'WEB-INF'
+1589269195862	Copy compilation unit
+1589269206199	Copy compilation unit
+1589269223550	Copy compilation unit
+1589269249277	Copy compilation unit
+1589329159234	Copy file
+1589329169672	Rename resource 'info.js'
+1589329174969	Copy file
+1589329179094	Copy file
+1589331065368	Copy file
+1589331859868	Copy file
+1589331866962	Rename resource 'info.js'
+1589331947365	Move 'info1.js' to 'info'
+1589331952896	Delete element
+1589332933923	Rename resource 'map'
+1589333207849	Delete element
+1589333586359	Delete element
+1589333646952	Move 'info1.js' to 'infomap'
+1589335437418	Delete element
+1589349504629	Copy files
+1589349529282	Rename resource 'info_style.css'
+1589349537720	Rename resource 'info.jsp'
+1589350316196	Delete element
+1589350838067	Rename package 'oilcost.command'
+1589350859634	Rename type 'OilcostHandler'
+1589350881048	Move 'main.jsp' to 'WebContent'
+1589350890095	Rename resource 'main.jsp'
+1589351040014	Move 'index.jsp' to 'main'
+1589351250656	Delete element
+1589352742669	Rename resource 'oilcost'
+1589352755670	Rename resource 'oilcost.jsp'
+1589352767092	Rename resource 'oilcost_style.css'
+1589355540202	Move 'index.jsp' to 'WebContent'
+1589356173224	Move file
+1589356253173	Move 'main_script.js' to 'main'
+1589356259533	Move compilation unit
+1589417788205	Delete element
+1589419968039	Copy files
+1589419980999	Rename resource 'info_style.css'
+1589419990905	Delete element
+1589425476500	Rename package 'member.dao'
+1589425496250	Rename compilation unit 'MemberDao.java'
+1589425993007	Copy package
+1589426007966	Rename type 'InfoHandler'
+1589426361607	Copy compilation unit
+1589426364688	Delete element
+1589426384900	Rename type 'OilHandler'
+1589426925279	Copy package
+1589426949720	Rename package 'member.command.copy'
+1589427081137	Rename type 'AdminHandler'
+1589427088373	Move compilation unit
+1589427091732	Delete element
+1589427271865	Rename resource 'admin_member.jsp'
+1589427359719	Rename type 'AdminMemberHandler'
+1589437139129	Copy compilation unit
+1589437142191	Delete element
+1589437161260	Rename type 'AdminHandler'
+1589437595703	Rename package 'info.model'
+1589437719887	Rename package 'review.model'
+1589437801261	Rename package 'review.dao'
+1589437829216	Rename type 'ReviewDao'
+1589437840706	Delete element
+1589443448353	Encapsulate field 'restinfos'
+1589504377607	Encapsulate field 'restno'
+1589514643020	Delete element
+1589520255657	Copy files
+1589520267568	Rename resource 'info_style.css'
+1589520275135	Rename resource 'info.jsp'
+1589520475303	Copy file
+1589522471650	Copy file
+1589522472864	Copy file
+1589522473635	Copy file
+1589522474369	Copy file
+1589522475056	Copy file
+1589522475791	Copy file
+1589522476478	Copy file
+1589522477150	Copy file
+1589522477824	Copy file
+1589522478557	Copy file
+1589522479229	Copy file
+1589522480010	Copy file
+1589523825206	Copy compilation unit
+1589523851287	Rename type 'InfoHandler'
+1589524485872	Delete element
+1589524664066	Rename type 'InfoUpdateHandler'
+1589524856285	Delete element
+1589527478618	Rename resource '11111.jsp'
+1589530636647	Delete element
+1589530644039	Rename resource 'info_style2.css'
+1589530677386	Rename resource 'info_style.css'
+1589530727276	Delete element
+1589530767810	Delete element

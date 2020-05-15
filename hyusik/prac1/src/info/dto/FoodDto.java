@@ -1,0 +1,64 @@
+package info.dto;
+
+public class FoodDto {
+	private Integer foodno;
+	private int restno;
+	private String foodname;
+	private String foodcost;
+	private String season;
+	private String foodma;
+	private String foodde;
+	
+	
+	public FoodDto(String foodname, String foodcost, String season, String foodma, String foodde) {
+		this.foodname=foodname;
+		this.foodcost=foodcost;
+		this.season=season;
+		this.foodma=foodma;
+		this.foodde=foodde;
+	}
+	public Integer getFoodno() {
+		return foodno;
+	}
+	public void setFoodno(Integer foodno) {
+		this.foodno = foodno;
+	}
+	public int getRestno() {
+		return restno;
+	}
+	public void setRestno(int restno) {
+		this.restno = restno;
+	}
+	public String getFoodname() {
+		return foodname;
+	}
+	public void setFoodname(String foodname) {
+		this.foodname = foodname;
+	}
+	public String getFoodcost() {
+		return foodcost;
+	}
+	public void setFoodcost(String foodcost) {
+		this.foodcost = foodcost;
+	}
+	public String getSeason() {
+		return season;
+	}
+	public void setSeason(String season) {
+		this.season = season;
+	}
+	public String getFoodma() {
+		return foodma;
+	}
+	public void setFoodma(String foodma) {
+		this.foodma = foodma;
+	}
+	public String getFoodde() {
+		return foodde;
+	}
+	public void setFoodde(String foodde) {
+		this.foodde = foodde;
+	}
+	
+	
+}

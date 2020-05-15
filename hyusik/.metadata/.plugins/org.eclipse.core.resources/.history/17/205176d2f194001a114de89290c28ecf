@@ -1,0 +1,18 @@
+package oil.Service;
+
+import java.util.List;
+
+import info.model.OilDto;
+
+public class OilData {
+	private List<OilDto> oilgasol;
+	private List<OilDto> oildisel;
+	private List<OilDto> oillpg;
+
+	public OilData(List<OilDto> oilgasol, List<OilDto> oildisel, List<OilDto> oillpg) {
+		this.oilgasol=oilgasol;
+		this.oildisel=oildisel;
+		this.oillpg=oillpg;
+	}
+
+}

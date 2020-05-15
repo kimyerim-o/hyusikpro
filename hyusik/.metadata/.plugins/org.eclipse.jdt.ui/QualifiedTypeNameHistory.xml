@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="jdbc.JdbcUtil"/>
+<fullyQualifiedTypeName name="info.dao.BrandDao"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="info.model.BrandDto"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="info.model.FoodDto"/>
+<fullyQualifiedTypeName name="info.model.OilconDto"/>
+<fullyQualifiedTypeName name="info.dao.FoodDao"/>
+<fullyQualifiedTypeName name="info.dao.OilconDao"/>
+<fullyQualifiedTypeName name="info.dao.RestconDao"/>
+<fullyQualifiedTypeName name="jdbc.connection.ConnectionProvider"/>
+<fullyQualifiedTypeName name="info.model.OilDto"/>
+<fullyQualifiedTypeName name="info.dao.OilDao"/>
+<fullyQualifiedTypeName name="info.service.NotFoundException"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="oil.Service.OilData"/>
+<fullyQualifiedTypeName name="info.service.InfoService"/>
+<fullyQualifiedTypeName name="info.service.InfoData"/>
+<fullyQualifiedTypeName name="com.mysql.cj.Session"/>
+<fullyQualifiedTypeName name="review.dto.ReviewDto"/>
+<fullyQualifiedTypeName name="admin.service.AdminInfoService"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,307 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>다중셀렉트박스메뉴</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+var selectedIndex, selValue, selText, swapValue,swapText,tempValue
+//변수 선언의 꼼수 - eval 함수의 formSelect 변수만 선언하지 않았다. 함수 안에 있지만 전역 변수 처럼 사용하기 위해서...
+
+function selectedForm(idx){
+	if(idx=="1"){
+		formSelect    = document.menuform.first
+	}else if (idx=="2"){
+		formSelect    = document.menuform.second
+	}else if (idx=="3"){
+		formSelect    = document.menuform.third
+	}else{
+		alert("셀렉트메뉴 오류 입니다.");
+		return;
+	}
+}
+
+function menu_onclick(idx){
+
+	selectedForm(idx);
+//eval("formSelect = document.menuform."+selectName)
+selectedIndex = formSelect.selectedIndex
+
+	selValue = formSelect.options[selectedIndex].value;
+	selText  = formSelect.options[selectedIndex].text;
+	document.menuform.text1.value = selValue
+	document.menuform.text2.value = selText
+}
+
+/*
+var temp
+	temp=a
+	a=b;
+	b=temp;	
+alert("a="+a+" b="+b+" temp="+temp);
+*/
+
+function upper(idx){////////////////////////////// 위로 올리기 함수
+	selectedForm(idx);
+	selectedIndex = formSelect.selectedIndex
+
+	if(selectedIndex==-1){
+		alert("선택한 메뉴가 없습니다."); 
+		return;
+	}else if(selectedIndex==0){
+		alert("최상위 메뉴를 선택하셨습니다."); 
+		return;
+	}else{
+		selValue  = formSelect.options[selectedIndex].value;
+		selText   = formSelect.options[selectedIndex].text;
+
+		swapValue = formSelect.options[selectedIndex-1].value;
+		swapText  = formSelect.options[selectedIndex-1].text;
+		
+		tempValue = selValue;
+		tempText  = selText;
+		
+		formSelect.options[selectedIndex].value = swapValue;//selValue=swapValue
+		formSelect.options[selectedIndex].text  = swapText;  
+		formSelect.options[selectedIndex-1].value = tempValue;//swapValue=tempValue
+		formSelect.options[selectedIndex-1].text  = tempText;
+		formSelect.selectedIndex                = selectedIndex-1;
+	}
+}
+
+function lower(idx){ ////////////////////////////////// 아래로 내리기 함수
+
+	selectedForm(idx);
+	selectedIndex = formSelect.selectedIndex
+
+	if(selectedIndex==-1){
+		alert("선택한 메뉴가 없습니다."); 
+		return;
+	}else if(selectedIndex+1==formSelect.length){
+		alert("최하위 메뉴를 선택하셨습니다."); 
+		return;
+	}else{
+		selValue  = formSelect.options[selectedIndex].value;
+		selText   = formSelect.options[selectedIndex].text;
+
+		swapValue = formSelect.options[selectedIndex+1].value;
+		swapText  = formSelect.options[selectedIndex+1].text;
+		
+		tempValue = selValue;
+		tempText  = selText;
+		
+		formSelect.options[selectedIndex].value = swapValue;//selValue=swapValue
+		formSelect.options[selectedIndex].text  = swapText;  
+		formSelect.options[selectedIndex+1].value = tempValue;//swapValue=tempValue
+		formSelect.options[selectedIndex+1].text  = tempText;
+		formSelect.selectedIndex                = selectedIndex+1;
+	}
+}
+
+
+function trim(item){//공백을 제거 하는 트림 함수
+var trimItem
+	trimItem = item.replace(/\s/g, "");
+	return trimItem;
+}
+
+function add_OK(idx){
+	var item, reItem 
+	item=document.getElementById("text"+idx)
+	reItem=trim(item.value) // 아이템을 트림함수 돌려서 리플레이스하여 공백 제거
+	item.value=reItem; // 사용자가 보는 인풋 텍스트 박스에 공백 제거 값 보여주기
+
+		if(idx==1){
+			formSelect    = document.menuform.first
+		}else if (idx==2){
+			formSelect    = document.menuform.second
+		}else if (idx==3){
+			formSelect    = document.menuform.third
+		}else{
+			alert("셀렉트메뉴박스 오류 입니다.");
+			return;
+		}
+
+		if (reItem.length==0){
+			alert("메뉴를 입력하세요");
+			item=document.getElementById("text"+idx)
+			item.style.backgroundColor = "yellow";
+			item.focus();
+			return;
+
+		}
+
+		for (i=0;i<formSelect.length;i++ ){
+			if(formSelect.options[i].value==reItem){
+				alert("이미 등록된 값이 있습니다.");
+				return;
+			}
+		}
+
+
+	alert("메뉴에["+reItem+"] 추가 합니다.");
+	formSelect.options[formSelect.length] = new Option(reItem,reItem);//실제 추가가 일어 난다	
+
+}
+
+
+function edit_OK(idx){
+	var item, reItem 
+	item=document.getElementById("text"+idx)
+	reItem=trim(item.value) // 아이템을 트림함수 돌려서 리플레이스하여 공백 제거
+	item.value=reItem; // 사용자가 보는 인풋 텍스트 박스에 공백 제거 값 보여주기
+
+		if(idx==1){
+			formSelect    = document.menuform.first
+		}else if (idx==2){
+			formSelect    = document.menuform.second
+		}else if (idx==3){
+			formSelect    = document.menuform.third
+		}else{
+			alert("셀렉트메뉴박스 오류 입니다.");
+			return;
+		}
+
+	selectedIndex = formSelect.selectedIndex
+//	alert(selectedIndex)
+	if (selectedIndex==-1){
+		alert("셀렉트 박스에서 수정할 메뉴를 선택하여 주세요");
+		formSelect.style.backgroundColor = "yellow";
+		formSelect.focus();
+		return;
+	}else{
+		selValue = formSelect.options[selectedIndex].value;
+		selText  = formSelect.options[selectedIndex].text;
+		var item, reItem 
+		item=document.getElementById("text"+idx)
+		reItem=trim(item.value) // 아이템을 트림함수 돌려서 리플레이스하여 공백 제거
+		item.value=reItem; // 사용자가 보는 인풋 텍스트 박스에 공백 제거 값 보여주기
+
+			if(idx==1){
+				formSelect    = document.menuform.first
+			}else if (idx==2){
+				formSelect    = document.menuform.second
+			}else if (idx==3){
+				formSelect    = document.menuform.third
+			}else{
+				alert("셀렉트메뉴박스 오류 입니다.");
+				return;
+			}
+
+			if (reItem.length==0){
+				alert("메뉴를 입력하세요");
+				return;
+			}
+
+			for (i=0;i<formSelect.length;i++ ){
+				if(formSelect.options[i].value==reItem){
+					alert("이미 등록된 값이 있습니다.");
+					return;
+				}
+			}
+	}
+		alert("메뉴에["+reItem+"] 수정 합니다.");
+		formSelect.options[selectedIndex] = new Option(reItem,reItem)
+
+}
+
+
+function del_OK(idx){
+
+	if(idx==1){
+		formSelect    = document.menuform.first
+	}else if (idx==2){
+		formSelect    = document.menuform.second
+	}else if (idx==3){
+		formSelect    = document.menuform.third
+	}else{
+		alert("셀렉트메뉴박스 오류 입니다.");
+		return;
+	}
+
+	selectedIndex = formSelect.selectedIndex
+
+	if (selectedIndex==-1){
+		alert("셀렉트 박스에서 수정할 메뉴를 선택하여 주세요");
+		formSelect.style.backgroundColor = "yellow";
+		formSelect.focus();
+		return;
+	}else{
+		formSelect.options[selectedIndex] = null
+	}
+}
+
+
+//-->
+</SCRIPT>
+
+</head>
+
+<body>
+<form id="menuform" name="menuform" method="post" action="">
+
+  <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <table width="781" border="1">
+   <tr>
+     <td width="224" colspan="2"><input type="text" name="text1" id="text1" />
+      <input type="button" name="add1" id="add1" value="추가" onclick="add_OK(1)"/>
+      <input type="button" name="edit1" id="edit1" value="수정" onclick="edit_OK(1)" /></td>
+     <td width="254" colspan="2"><input type="text" name="text2" id="text2" />
+      <input type="button" name="add2" id="add2" value="추가" onclick="add_OK(2)"/>
+      <input type="button" name="edit2" id="edit2" value="수정" onclick="edit_OK(2)" /></td>
+     <td width="281" colspan="2"><input type="text" name="text3" id="text3" />
+      <input type="button" name="add3" id="add3" value="추가" onclick="add_OK(3)"/>
+      <input type="button" name="edit3" id="edit3" value="수정" onclick="edit_OK(3)" /></td>
+   </tr>
+   <tr>
+     <td><select name="first" size="10" id="first" style="width:200px;" onchange="menu_onclick(1);">
+       <option value="0">1메뉴</option>
+       <option value="1">2메뉴</option>
+       <option value="2">3메뉴</option>
+       <option value="3">4메뉴</option>
+       <option value="4">5메뉴메뉴의명이 무지 길어져서 영어마을 입소 1박2일 프로그램 공무원 연수 과정 </option>
+       <option value="5">6메뉴</option>
+     </select></td>
+     <td><input type="button" name="up" id="up1" value="위로" onclick="upper(1)" />
+      <input type="button" name="down" id="down2" value="아래로" onclick="lower(1)" /></td>
+     <td>
+       <select name="second" size="10" id="second" style="width:200px;" onChange="menu_onclick(2);">
+         <option value="21">21메뉴</option>
+         <option value="22">22메뉴</option>
+         <option value="23">23메뉴</option>
+         <option value="24">24메뉴</option>
+         <option value="25">25메뉴</option>
+         <option value="26">26메뉴</option>
+       </select></td>
+     <td><input type="button" name="up2" id="up2" value="위로" onclick="upper(2)" />
+      <input type="button" name="down2" id="down2" value="아래로" onclick="lower(2)" /></td>
+     <td>
+         <select name="third" size="10" id="third" style="width:200px;" onChange="menu_onclick(3);">
+           <option value="31">31메뉴</option>
+           <option value="32">32메뉴</option>
+           <option value="33">33메뉴</option>
+           <option value="34">34메뉴</option>
+           <option value="35">35메뉴</option>
+           <option value="36">36메뉴</option>
+         </select>     </td>
+     <td><input type="button" name="up3" id="up3" value="위로" onclick="upper(3)" />
+      <input type="button" name="down3" id="down3" value="아래로" onclick="lower(3)" /></td>
+   </tr>
+   <tr>
+     <td colspan="2"><input type="button" name="del1" id="del" value="삭제" onClick="del_OK(1)" /></td>
+     <td colspan="2"><input type="button" name="del2" id="del2" value="삭제" onclick="del_OK(2)" /></td>
+     <td colspan="2"><input type="button" name="del3" id="del3" value="삭제" onclick="del_OK(3)" /></td>
+   </tr>
+ </table>
+</form>
+</body>
+</html>
+
+

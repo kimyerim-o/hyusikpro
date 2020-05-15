@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d033ab2c0002c3aedd619825d12b4956"></script>
+</head>
+<body>
+<%-- <c:set var="i" value='<%=request.getParameter("site")%>'/>
+ --%><c:set var="map" value='info${request.getParameter("site")}.js'/>
+<div id="map" style="width:500px;height:400px;"></div>
+<script src="${map}"></script>
+ </body>
+</html>

@@ -1,0 +1,8 @@
+<%@ tag language="java" pageEncoding="UTF-8"%>
+<%@ tag trimDirctiveWhitespaves="true"%>
+<%
+	HttpSession httpSession = request.getSession(false);
+	if(HttpSession!=null && HttpSession.getSession("authUser")!=null){ 
+%>
+<jsp:doBody />
+<% } %>

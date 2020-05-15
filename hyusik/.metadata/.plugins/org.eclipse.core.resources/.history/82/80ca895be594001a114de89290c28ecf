@@ -1,0 +1,12 @@
+package oil.command;
+
+import info.model.OilDto;
+
+public class OilService {
+
+	public OilDto getOil() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

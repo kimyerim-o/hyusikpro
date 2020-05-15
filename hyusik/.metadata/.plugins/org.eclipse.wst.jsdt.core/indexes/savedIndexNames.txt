@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\project1\hyusik\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2758899902.index
+471272403.index
+1514403437.index
+2375120168.index
+1360324727.index
+844730501.index
+2097162075.index

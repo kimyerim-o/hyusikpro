@@ -1,0 +1,32 @@
+package review.dto;
+
+public class ReviewDto {
+	private String restname;
+	private String redate;
+	private double restis;
+	
+	public ReviewDto(String restname, double restis) {
+		this.restname=restname;
+		this.restis=restis;
+	}
+	public String getRestname() {
+		return restname;
+	}
+	public void setRestname(String restname) {
+		this.restname = restname;
+	}
+	public String getRedate() {
+		return redate;
+	}
+	public void setRedate(String redate) {
+		this.redate = redate;
+	}
+	public int getRestis() {
+		return restis;
+	}
+	public void setRestis(int restis) {
+		this.restis = restis;
+	}
+	
+	
+}

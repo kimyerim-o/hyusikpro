@@ -1,0 +1,26 @@
+package info.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import info.model.Brand;
+
+//brand 테이블과 연동
+public class BrandDao {
+	public void select(Connection conn,int restno) throws SQLException {
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from brand where restno=?";
+		pstmt=conn.prepareStatement(sql);
+		pstmt.setInt(1, restno);
+		rs=pstmt.executeQuery();
+		//Brand brand =null;
+		if(rs.next()) {
+			brand=new Brand()
+		}
+		
+	}
+}

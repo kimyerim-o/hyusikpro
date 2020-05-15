@@ -1,0 +1,27 @@
+package info.model;
+
+public class BrandDto {
+	private int brandno;
+	private int restno;
+	private String brandname;
+	private String brandde;
+
+	public int getBrandno() {
+		return brandno;
+	}
+	public void setBrandno(int brandno) {
+		this.brandno = brandno;
+	}
+	public String getBrandname() {
+		return brandname;
+	}
+	public void setBrandname(String brandname) {
+		this.brandname = brandname;
+	}
+	public String getBrandde() {
+		return brandde;
+	}
+	public void setBrandde(String brandde) {
+		this.brandde = brandde;
+	}
+}

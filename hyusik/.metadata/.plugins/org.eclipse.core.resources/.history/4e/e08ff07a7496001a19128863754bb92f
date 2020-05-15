@@ -1,0 +1,37 @@
+package info.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import info.service.InfoData;
+import info.service.InfoService;
+import info.service.NotFoundException;
+import mvc.command.CommandHandler;
+
+public class InfoHandler implements CommandHandler {
+	private InfoService infoService=new InfoService();
+
+	@Override
+	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("infoHandler");
+		if(request.getParameter("site")!= null) {
+			String reststr=request.getParameter("site");
+			int restno = 0;
+			if(reststr!=null) {
+				restno=Integer.parseInt(reststr);
+			}
+			try {
+				InfoData infoData=infoService.getInfo(restno);
+				request.setAttribute("infoData", infoData);
+				return "/info/info.jsp";}
+		else if(){
+				
+			}
+		}catch(NotFoundException e) {
+			response.sendError(HttpServletResponse.SC_NOT_FOUND);
+		}
+				
+		return null;
+	}
+
+}

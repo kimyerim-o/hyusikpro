@@ -1,0 +1,15 @@
+package review.dao;
+
+import java.sql.Connection;
+import java.util.List;
+
+import review.dto.ReviewDto;
+
+public class ReviewDao {
+
+	public List<ReviewDto> selectNameis(Connection conn) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

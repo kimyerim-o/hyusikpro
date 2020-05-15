@@ -1,0 +1,4 @@
+#keyname=value
+/info.go=info.command.InfoHandler
+/oilcost.go=oil.command.OilHandler
+#/article/modify.do=article.command.ModifyArticleHandler
