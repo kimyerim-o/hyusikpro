@@ -21,7 +21,7 @@
 <body>
     <div id="headtext" align="center" ondrop="10%" >로그인 폼 입니다.</div>
     <hr/>
-    <form action="login.go"  method="post">
+    <form action="/login.go"  method="post">
     <c:if test="${errors.idOrPwNotMatch}">
      이메일과 비밀번호가 일치하지 않습니다.</c:if>
      <table  align="center" id="idtable" >
@@ -49,7 +49,5 @@
                  <input type="reset" value="취소"> 
 	</div>
 	</form>
-    
-
 </body>
 </html>

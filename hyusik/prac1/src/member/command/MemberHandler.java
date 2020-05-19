@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import jdbc.connection.ConnectionProvider;
 import member.member;
 import member.memberDAO;
-import member.service.MemberPage;
 import mvc.command.CommandHandler;
 
 
@@ -20,7 +19,7 @@ implements CommandHandler {
 	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
 	//1.파라미터 받기.
 		memberDAO memberDao = new memberDAO();
-		String memberchkmail = request.getParameter("memeailchk");
+		String memberchkmail = request.getParameter("memailchk");
 		String memberchkname = request.getParameter("mbnamechk");
 		member member = new member(memberchkmail,memberchkname);
 		
@@ -34,10 +33,8 @@ implements CommandHandler {
 //			}
 //		}
 		MemberPage MemberPage = listService.getMemberPage("");
-
-		
 		 System.out.println("널떨어진 녀석!");
-		return "./ManagementMember.jsp";
+		return "/login/ManagementMember.jsp";
 	}
 
 }

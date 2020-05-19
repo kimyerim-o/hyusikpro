@@ -20,16 +20,14 @@ import mvc.command.CommandHandler;
 	-로그인         성공한 경우에         (index.jsp)을 보여주기
 */
 public class LoginHandler implements CommandHandler {
-	
 	//View지정 p606-16
-	private static final String FORM_VIEW = "view/login.jsp";
+	private static final String FORM_VIEW = "/login/login.jsp";
 	private	LoginService loginService = new LoginService();
 	
 	@Override
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		System.out.println("LoginHandler의 process()진입");
-
 		if(request.getMethod().equalsIgnoreCase("GET")) {
 			System.out.println("login.jsp의 method방식="+request.getMethod());
 			return processForm(request,response);
@@ -41,7 +39,6 @@ public class LoginHandler implements CommandHandler {
 			response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED); 
 			return   null;
 		}
-		
 	}
 
 
@@ -109,7 +106,7 @@ public class LoginHandler implements CommandHandler {
 			
 			//4.View
 			//로그인성공시   index.jsp문서로 sendRedirect를 이용하여 강제이동
-			response.sendRedirect(request.getContextPath()+"./view/main.jsp");
+			response.sendRedirect(request.getContextPath()+"/index.jsp");
 			return null;
 		} catch (LoginFailException e) {//로그인 실패시
 			errors.put("idOrPwNotMatch", Boolean.TRUE);

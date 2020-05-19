@@ -12,14 +12,14 @@ import member.member;
 public class memberDAO {
 	
 	public member selectById(Connection conn, String email)throws SQLException{
-		System.out.println("DAO의member받음"+email);
+		System.out.println("DAO메소드 진입"+email);
 		
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			pstmt = conn.prepareStatement("Select * from member where email = ?"); //쿼리문 준비
-			pstmt.setString(1, email); //1번째 물음표는 id 
-			rs = pstmt.executeQuery(); // 쿼리 실행 변수.
+			pstmt = conn.prepareStatement("Select * from member where email = ?"); 
+			pstmt.setString(1, email); // 
+			rs = pstmt.executeQuery(); // 
 			member member = null;
 			if(rs.next()) {
 				member=new member(
@@ -27,11 +27,12 @@ public class memberDAO {
 						rs.getString("name"),
 						rs.getString("password"),
 						rs.getString("birth"),
-						rs.getString("hobby")
+						rs.getString("gender"),
+						rs.getInt("admin")
 						);
 			}
 			return member;
-		}finally {//값 반환.
+		}finally {//
 			JdbcUtil.close(rs);
 			JdbcUtil.close(pstmt);
 		}
@@ -54,8 +55,6 @@ public class memberDAO {
 	}
 	public void select(Connection conn, String membermatch)
 			throws SQLException {
-		
-		System.out.println("MemberDAO-select()들어옴");
 		String sql = "select * from member";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.execute(sql);
@@ -64,6 +63,10 @@ public class memberDAO {
 	public ArrayList<Member> getMemberList() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void update(Connection conn, member member)throws SQLException {
+		
 	}
 
 
