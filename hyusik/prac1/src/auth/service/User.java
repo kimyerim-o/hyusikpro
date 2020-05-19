@@ -1,0 +1,21 @@
+package auth.service;
+
+public class User {
+	private String email;
+	private String name;
+	
+	public User(String email, String name) {
+		this.email=email;
+		this.name=name;
+		
+	}
+
+	public String getemail() {
+		return email;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+}
