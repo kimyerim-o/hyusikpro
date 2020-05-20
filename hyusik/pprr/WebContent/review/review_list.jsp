@@ -102,7 +102,7 @@ footer {
 		휴게소 번호: ${message.restno}<br/>
 		휴게소 이름: ${message.restname}<br/>
 		닉네임: ${message.name} <br/>
-		작성일: ${message.redate} <br/>
+		작성일: ${message.stdate} <br/>
 		만족도: <c:forEach var="i" begin="1" end="${message.restis}">
 		<c:forEach var="j" items="★">
 	            	★

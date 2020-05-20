@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%-- <%@ page errorPage="errorView.jsp" %> --%>
+<%@ page errorPage="errorView.jsp" %>
 <%@ page import="review.dto.ReviewDto" %>
 <%@ page import="review.service.WriteMessageService" %>
 <%

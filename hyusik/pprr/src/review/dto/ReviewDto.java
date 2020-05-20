@@ -9,6 +9,13 @@ public class ReviewDto {
 	private String restname;
 	private Date redate;
 	private String stdate;
+	private String repw;
+	private String recontent;
+	private Double restis;
+	
+	
+	public ReviewDto() {}
+
 	public String getStdate() {
 		return stdate;
 	}
@@ -17,9 +24,6 @@ public class ReviewDto {
 		this.stdate = stdate;
 	}
 
-	private String repw;
-	private String recontent;
-	private Double restis;
 
 	public ReviewDto(int restno, String restname, double restis) {
 		this.setRestno(restno);
@@ -27,8 +31,6 @@ public class ReviewDto {
 		this.restis=restis;
 	}
 	
-	public ReviewDto() {}
-
 	public int getReno() {
 		return reno;
 	}

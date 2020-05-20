@@ -56,7 +56,7 @@ font-family: 'Nanum Gothic', sans-serif;}
 		휴게소 이름: ${message.restname}<br/>
 		닉네임: ${message.name} <br/>
 		암호:${message.repw}<br/>
-		작성일: ${message.redate} <br/>
+		작성일: ${message.stdate} <br/>
 		만족도: <c:forEach var="i" begin="1" end="${message.restis}">
 		<c:forEach var="j" items="★">
 	            	★
@@ -69,7 +69,7 @@ font-family: 'Nanum Gothic', sans-serif;}
         </c:forEach>
 		(${message.restis}점 / 5.0점) <br/>
 		후기: ${message.recontent} <br/>
-		<a href="<%=request.getContextPath()%>/review/review_confirmDeletion.jsp?messageId=${message.reno}">[삭제하기]</a>
+		<a href="<%=request.getContextPath()%>/admin/review/review_confirmDeletion.jsp?messageId=${message.reno}">[삭제하기]</a>
 		</td>
 	</tr>
 	</c:forEach>

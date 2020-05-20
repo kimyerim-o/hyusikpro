@@ -67,7 +67,6 @@ public class ReviewDao {
 	 private String toString(Date redate){ 
 		 Date date = new Date();
 		 String datestr = new SimpleDateFormat("yyyyMMdd").format(date);
-		 System.out.println(datestr);
 		 return datestr;
 	 }		 
 	 

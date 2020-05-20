@@ -24,12 +24,17 @@ public class WriteMessageService {
 			conn = ConnectionProvider.getConnection();
 			ReviewDao reviewDao = ReviewDao.getInstance();
 			
+			String restname=null;
+			String restno = null;
 			String[] rests=rest.split(",");
 			for(int i=0;i<rests.length;i++) {
-				String restname=rests[0];
-				String restno=rests[1];
-				reviewDao.insert(conn,review, restname,restno);
+				restname=rests[0];
+				restno=rests[1];
 			}
+			reviewDao.insert(conn,review,restname,restno);
+			
+			
+			
 		} catch (SQLException e) {
 			throw new ServiceException(
 					"메시지 등록 실패: " + e.getMessage(), e);

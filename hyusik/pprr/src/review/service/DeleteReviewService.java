@@ -18,7 +18,7 @@ public class DeleteReviewService {
 
 	private DeleteReviewService() {}
 
-	public void delete(int reno, String repw) {
+	public void delete(int reno, String password) {
 		Connection conn = null;
 		try {
 			conn = ConnectionProvider.getConnection();
@@ -29,7 +29,7 @@ public class DeleteReviewService {
 			if (message == null) {
 				throw new MessageNotFoundException("no message");
 			}
-			if (!message.matchPassword(repw)) {
+			if (!message.matchPassword(password)) {
 				throw new InvalidPasswordException("bad password");
 			}
 			messageDao.delete(conn, reno);
