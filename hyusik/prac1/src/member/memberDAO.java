@@ -83,5 +83,17 @@ public class memberDAO {
 	public ArrayList<Member> getMemberList() {
 		return null;
 	}
+	public void update(Connection conn, Member member)
+			throws SQLException {
+		System.out.println("MemberDAO-update()호출");
+		String sql = "UPDATE  member " + 
+				"	  SET	  name=?, password = ? " + 
+				"	  WHERE   memberid = ?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, member.getName());
+		pstmt.setString(2, member.getPassword());
+		pstmt.setString(3, member.getemail());
+		pstmt.executeUpdate();
+	}
 
 }
