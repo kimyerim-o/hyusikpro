@@ -1,20 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
     <meta charset="UTF-8">
     <title>기본정보</title>
-    <center>
-    <td align="center"><b><h2>회원가입</h2></b></td>
-
 <style>
-     tr {height:30px}
-    .t3 {background:white;margin-left:auto;margin-right:auto;text-align:center;}
-    .t2 {background:white;}
-
-
 </style>
-
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 $(function(){
@@ -72,12 +65,17 @@ $(function(){
 </script>
 </head>
 <body>
-<form id="frm1" name="frm1" action="join.go" method="post">
-    <table width="80%">
+	<div align="center"><b><h2>회원가입</h2></b></div>
+	<hr/>
+<div align="center">
+<form id="frm1" name="frm1" action="join.go" method="post" >
+    <table width="80%" >
+    
     <tr class="t1">
-    <br><br><br>
-        <td colspan="2"><h3>기본 정보</h3></td>
+    
+        <td colspan="2" align="center"><h3>기본 정보</h3></td>
     </tr>
+    
     <tr>
         <td>■ 회원 ID (Email)</td>
         <td><input type="text" name="userid" id="userid" size="20"> @
@@ -106,11 +104,17 @@ $(function(){
     <tr>
         <td>■ 닉네임</td>
         <td><input type="text" name="jname" id="jname" size="25"></td>
+	</tr>
+        <tr>
+        	<td colspan="3">
+        		<hr/>
+        	</td>
+        <tr>
+    
+    <tr>
+    
+    <td align="center" colspan="2"><h3>부가 정보</h3></td>
     </tr>
-        <br><br/>
-        <td/>
-    </tr>
-        <td><h3>부가 정보</h3></td>
     <tr>
     <td>성별</td>
     <td><input type="radio" name="gender" id="m" checked/>
@@ -119,6 +123,7 @@ $(function(){
         <label for="w">여</label>
     </td>
     </tr>
+    <tr>
         <td id="title">생일</td>
          <td>
 
@@ -148,19 +153,18 @@ $(function(){
          </td>
          </tr>
 
-        <tr class="t3">
-        <td colspan="2">
-        <br><br><br>
+
+        <tr>
+        <td colspan="3" align="center">
         <input type="submit" value="회원가입">
         <input type="reset" value="취소">
         </td>
+		<tr>
 
-    </tr>
-
-        </td>
-    </tr>
+   
     </table>
 </form>
+</div>
 </body>
 </html>
 </center>
