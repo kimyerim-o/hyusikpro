@@ -1,15 +1,13 @@
 package member.command;
 
-import java.lang.reflect.Member;
+
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
+import member.Member;
 import member.memberDAO;
-import member.service.MemberPage;
 
 public class ListMemberService {
 	
@@ -25,7 +23,6 @@ public class ListMemberService {
 	}
 
 	public MemberPage getMemberPage(String string) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
