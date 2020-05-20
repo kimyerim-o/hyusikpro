@@ -1,8 +1,0 @@
-package info.model;
-
-public class Brand {
-	private int brandno;
-	private int restno;
-	private String brandname;
-	private String brandde;
-}

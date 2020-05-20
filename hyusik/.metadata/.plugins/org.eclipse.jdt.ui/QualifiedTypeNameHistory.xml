@@ -24,4 +24,6 @@
 <fullyQualifiedTypeName name="com.mysql.cj.Session"/>
 <fullyQualifiedTypeName name="review.dto.ReviewDto"/>
 <fullyQualifiedTypeName name="admin.service.AdminInfoService"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>
