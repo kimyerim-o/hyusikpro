@@ -10,12 +10,12 @@ import review.dao.ReviewDao;
 import review.dto.ReviewDto;
 
 public class ReviewService {
-	private ReviewDao ReviewDao=new ReviewDao();
+	private ReviewDao reviewDao = ReviewDao.getInstance();
 	
 	public ReviewData getStis() {
 		try(Connection conn=ConnectionProvider.getConnection()) {
 			System.out.println("ReviewService");
-			List<ReviewDto> review=ReviewDao.selectNameis(conn);
+			List<ReviewDto> review=reviewDao.selectNameis(conn);
 			if(review==null) 
 				throw new NotFoundException();
 			return new ReviewData(review);
