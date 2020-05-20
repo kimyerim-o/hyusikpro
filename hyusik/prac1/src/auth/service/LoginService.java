@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import jdbc.connection.ConnectionProvider;
 import member.memberDAO;
-import member.member;
+import member.Member;
 
 //p605
 //이 문서는  LoginHandler에서 호출되는 클래스로서 db연동
@@ -24,7 +24,7 @@ public class LoginService {
 			//회원으로 존재하면 회원정보가 Member객체로 리턴
 			//회원으로 존재x  회원정보가 Member객체가 null리턴
 			System.out.println("LoginService의 conn="+conn);
-			member member = memberDao.selectById(conn, email);
+			Member member = memberDao.selectById(conn, email);
 			System.out.println("member안에 email받음"+member);
 			/*"SELECT  memberemail, name, password, regdate " + 
 			 "	FROM 	member " + 
@@ -40,7 +40,7 @@ public class LoginService {
 			}
 			
 			//memberemail, name, password, regdate 
-			return new User(member.getEmail(), member.getName());
+			return new User(member.getemail(), member.getName());
 			
 		}catch(SQLException e) {
 			throw new RuntimeException();
