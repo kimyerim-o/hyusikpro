@@ -70,12 +70,13 @@ function ranking(){
 		<nav class="nav">
 			<ul class="list">
 				<!-- filter설정하기 -->
-				<li class="list-item"><a href="notice.go">공지사항</a></li>
-				<li class="list-item"><a href="qna.go">Q&A</a></li>
-				<li class="list-item"><a href="road.go">도로 교통 상황</a></li>
-				<li class="list-item"><a href="recommand.go">추천휴게소</a></li>
-                <li class="list-item"><a href="oilprice.go">추천주유소</a></li>
-                <li class="list-item"><a href="">리뷰</a></li>
+				<li class="list-item"><a href="<%=request.getContextPath()%>/notice.go">공지사항</a></li>
+				<li class="list-item"><a href="<%=request.getContextPath()%>/qna.go">Q&A</a></li>
+				<li class="list-item"><a href="<%=request.getContextPath()%>/road/roadsa.jsp">사고</a></li>
+				<li class="list-item"><a href="<%=request.getContextPath()%>/road.go">공사</a></li>
+				<li class="list-item"><a href="<%=request.getContextPath()%>/recommand.go">추천휴게소</a></li>
+                <li class="list-item"><a href="<%=request.getContextPath()%>/oilprice.go">추천주유소</a></li>
+                <li class="list-item"><a href="<%=request.getContextPath()%>">리뷰</a></li>
                 
                 		<li class="list-item"><a href="admin.go">관리자</a></li>
                 <u:isLogin> <!-- 로그인시 -->
