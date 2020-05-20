@@ -61,8 +61,7 @@
 </head>
 <body>
 
-request.setAttribute("memberList",memberList);<br/>
-memberList=${memberList} <br/>
+
 <div align="center">
 <p class="cls1">회원정보관리</p>
     회원 조회 페이지입니다.<br/>
