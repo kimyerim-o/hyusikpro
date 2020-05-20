@@ -17,6 +17,11 @@
 <head>
 	<title>후기 삭제함</title>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+ $("header").remove(".body");
+ $("#page-wrapper").attr("id","");
+</script>
 </head>
 <body>
 <%  if (!invalidPassowrd) { %>

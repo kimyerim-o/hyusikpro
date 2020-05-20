@@ -8,6 +8,15 @@ public class ReviewDto {
 	private int restno;
 	private String restname;
 	private Date redate;
+	private String stdate;
+	public String getStdate() {
+		return stdate;
+	}
+
+	public void setStdate(String stdate) {
+		this.stdate = stdate;
+	}
+
 	private String repw;
 	private String recontent;
 	private Double restis;

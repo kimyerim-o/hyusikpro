@@ -11,17 +11,19 @@ public class Notice {
 	private String 	title;		//title컬럼용	 
 	private	Date	regDate;	//regdate컬럼용
 	private	Date	modifiedDate;//moddate컬럼용
+	private String  content;
 	private int		readCount;	 //read_cnt컬럼용
 	
   //public Article(null,req.getWriter(),req.getTitle(), now,now,0) {
 	public Notice(Integer number,
 			String 	title,
-			Date	regDate,Date	modifiedDate,
+			Date	regDate,Date	modifiedDate, String content,
 			int		readCount) {	
 		this.number = number;
 		this.title  = title;
 		this.regDate= regDate;
 		this.modifiedDate=modifiedDate;
+		this.content=content;
 		this.readCount=readCount;
 	}
 
@@ -57,6 +59,15 @@ public class Notice {
 		this.modifiedDate = modifiedDate;
 	}
 
+	
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
 	public int getReadCount() {
 		return readCount;
 	}
@@ -68,8 +79,9 @@ public class Notice {
 	@Override
 	public String toString() {
 		return "Notice [number=" + number + ", title=" + title + ", regDate=" + regDate + ", modifiedDate="
-				+ modifiedDate + ", readCount=" + readCount + "]";
+				+ modifiedDate + ", content=" + content + ", readCount=" + readCount + "]";
 	}
+
 
 	
 }

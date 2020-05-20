@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 import jdbc.JdbcUtil;
 import jdbc.connection.ConnectionProvider;
-import notice.DAO.NoticeContentDAO;
 import notice.DAO.NoticeDAO;
 import notice.dto.Notice;
 
@@ -14,7 +13,6 @@ import notice.dto.Notice;
 public class ModifyArticleService {
 
 	private NoticeDAO noticeDao = new NoticeDAO();
-	private NoticeContentDAO contentDao = new NoticeContentDAO();
 	
 	//p667 17
 	public void modify(ModifyRequest modiReq) {
@@ -32,9 +30,8 @@ public class ModifyArticleService {
 			}
 			//668 31
 			//article테이블에 해당 게시글의 제목수정
-			noticeDao.update(conn, modiReq.getTitle(), modiReq.getArticleNumber());
+			noticeDao.update(conn, modiReq.getTitle(), modiReq.getContent(), modiReq.getArticleNumber());
 			//article_content테이블에 해당게시글의 내용수정
-			contentDao.update(conn, modiReq.getContent(), modiReq.getArticleNumber());
 			
 			conn.commit();
 		}catch(SQLException e) {

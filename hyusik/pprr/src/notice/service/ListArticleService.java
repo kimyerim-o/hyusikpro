@@ -30,8 +30,7 @@ public class ListArticleService {
 			//시작행번호는 0부터 시작되므로 첫게시글은 -1해야한다
 			//보고싶은 페이지(pageNo)가 1이면 첫게시글의 인덱스번호는 0이되어야 한다
 			
-			List<Notice> content = 
-					noticeDao.select(conn, (pageNum-1)*size, size);
+			List<Notice> content = noticeDao.select(conn, (pageNum-1)*size, size);
 			
 			//페이지정보가 포함된 내용을 리턴을 해줘야 한다
 			return new ArticlePage(total, pageNum, size, content);

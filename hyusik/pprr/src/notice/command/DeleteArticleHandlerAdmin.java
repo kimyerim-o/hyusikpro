@@ -25,10 +25,9 @@ public class DeleteArticleHandlerAdmin implements CommandHandler {
 		}else {
 			throw new ArticleNotFoundException();
 		}
-		int success1 = deleteService.deletenotice(no);
-		int success2 = deleteService.deletecontent(no);
+		int success = deleteService.deletenotice(no);
 		
-		if(success1==1 && success2==1) {
+		if(success==1) {
 			System.out.println("삭제성공");
 		}else {
 			System.out.println("삭제실패");

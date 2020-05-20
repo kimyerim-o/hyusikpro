@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@ taglib prefix="u"  tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 body {font-family: 'Do Hyeon', sans-serif;
 font-family: 'Nanum Gothic', sans-serif;}
 .title {font-size:25px}
-.header {background-color:#77d8d8;height:10px}	
+.header1 {background-color:#77d8d8;height:10px}	
 .button {
   color: white;
   text-align: center;
@@ -21,19 +22,14 @@ table {text-align:center;}
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 </head>
 <body style="width:1200px; margin:100px; auto;">
-		<%--
-		   ArticlePage타입의  articlePage참조변수;
-		   request.setAttribute("articlePAPE", articlePage);
-		    모델이 넘어왔다 --%>
 	<table name="notice" width="1000" align="center" >
-	<%-- 게시글목록 출력부분 p653 14--%>
 		<tr>
 		<th colspan="5" width="800" class="title">
 	        공지사항 게시판
 	    </th>
 	    </tr>
 	    <tr><td></td></tr>
-		<tr class="header">
+		<tr class="header1">
 			<th width="50">번호</th>
 			<th width="300">제목</th>
 			<th width="150">작성일</th>
@@ -45,7 +41,7 @@ table {text-align:center;}
 			</tr>
 		</c:if>    
 		    
-		<c:forEach  var="notice" items="${articlePAPE.content}">
+		<c:forEach var="notice" items="${articlePAPE.content}">
 			<tr>
 			  <%-- ${aritcle.number}은 Article클래스의 getNumber()메소드를 호출 --%>
 				<td width="50">${notice.number} </td>
@@ -54,7 +50,7 @@ table {text-align:center;}
 				<c:out value="${notice.title}"/></a></td>
 				<td width="150">${notice.regDate}</td>
 				<td width="50">${notice.readCount}</td>
-		</tr>
+			</tr>
 		</c:forEach> 
 	<%-- 페이징 부분  p653 37--%>
 	<c:if test="${articlePAPE.hasArticles()}">

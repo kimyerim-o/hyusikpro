@@ -33,7 +33,7 @@ public class DeleteReviewService {
 				throw new InvalidPasswordException("bad password");
 			}
 			messageDao.delete(conn, reno);
-
+			
 			conn.commit();
 		} catch (SQLException ex) {
 			JdbcUtil.rollback(conn);

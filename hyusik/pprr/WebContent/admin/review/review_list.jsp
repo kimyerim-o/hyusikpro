@@ -69,14 +69,14 @@ font-family: 'Nanum Gothic', sans-serif;}
         </c:forEach>
 		(${message.restis}점 / 5.0점) <br/>
 		후기: ${message.recontent} <br/>
-		<a href="<%=request.getContextPath()%>/review/delete.go?messageId=${message.reno}">[삭제하기]</a>
+		<a href="<%=request.getContextPath()%>/review/review_confirmDeletion.jsp?messageId=${message.reno}">[삭제하기]</a>
 		</td>
 	</tr>
 	</c:forEach>
 </table>
 
 <c:forEach var="pageNum" begin="1" end="${viewData.pageTotalCount}">
-<a href="<%=request.getContextPath()%>/admin/review/list.go?page=${pageNum}">[${pageNum}]</a> 
+<a href="<%=request.getContextPath()%>/admin/review/review_list.jsp?page=${pageNum}">[${pageNum}]</a> 
 </c:forEach>
 
 </c:if>

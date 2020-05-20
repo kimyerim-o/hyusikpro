@@ -32,8 +32,7 @@ public class ReadArticleHandlerAdmin implements CommandHandler {
 			//p660 22
 			//2-1.조회수증가 : 조회수증가시 true전달
 			//2-2.상세내용조회
-			ArticleData articleData  = 
-				readService.getArticle(articleNum, true);
+			ArticleData articleData  = readService.getArticle(articleNum, true);
 			
 			//3.Model
 			request.setAttribute("articleDATA",articleData);

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@ taglib prefix="u"  tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 body {font-family: 'Do Hyeon', sans-serif;
 font-family: 'Nanum Gothic', sans-serif;}
 .title {font-size:25px}
-.header {background-color:#77d8d8}	
+.header1 {background-color:#77d8d8}	
 .button {
   color: white;
   text-align: center;
@@ -43,7 +44,7 @@ table {text-align:center;width:1000px;height:10px}
 			<th colspan="5" align="right">
 			<a href="<%=request.getContextPath()%>/admin/notice/write.go">[글쓰기]</a></th>
 		</tr>
-		<tr class="header">
+		<tr class="header1">
 			<th width="50" height="10px">번호</th>
 			<th width="300">제목</th>
 			<th width="150">작성일</th>
