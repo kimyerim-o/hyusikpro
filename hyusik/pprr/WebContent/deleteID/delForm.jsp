@@ -20,33 +20,37 @@
 </script>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<% request.setCharacterEncoding("utf-8"); %>
+<jsp:useBean id="membermanager" class="member.MemberManager"/>
+<script type="text/javascript" src="../js/script.js"></script>
+
 <title>회원탈퇴</title>
 </head>
 <body>
-<section>
-	<form action="<%=request.getContextPath()%>/deleteID/deleteID.go" method="post" onSubmit="return checkIt()">
-	<table cellSpacing="1" cellPadding="1" width="260" border="1" align="center">
-		<tr height="30">
-			<td colspan="2" align="middle">
-				<font size="+1">
-					<b>회원 탈퇴</b>
-				</font>
-			</td>	
-		</tr>
-		<tr height="30">
-			<td width="110" align="center">비밀번호</td>
-			<td width="150" align="center">
-				<input type="password" name="password" size="15" maxlength="12">
-			</td>	
-		</tr>
-		<tr height="30">
-			<td width="150" align="center">
-				<input type="button" value="취소하기" onclick="<%=request.getContextPath()%>/main.go">
-			</td>
-		</tr>		
-	</table>
-	</form>
-</section>
+<%
+	String id = (String)request.getParameter("id");
+	String password = (String)request.getParameter("password");
+	boolean deleteConfirm = membermanager.deleteConfirm(id, password);
+	if(deleteConfirm) {
+%>
+		<script type="text/javascript">
+			var confirmResult = confirm("정말 삭제하시겠습니까?");
+			if(confirmResult == true){
+				var deleteID = "<%=id%>";
+				post_to_url("<%=request.getContextPath()%>/deleteID/deleteID.go", {'id':deleteID});
+			} else {
+				history.back();
+			}	
+		</script>
+<%
+	} else {
+%>
+		<script>
+			alert("비밀번호가 틀립니다!");
+			history.back();
+		</script>	
+<%
+	}
+%>
 </body>
 </html>
