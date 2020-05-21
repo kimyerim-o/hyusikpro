@@ -8,15 +8,14 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-body {font-family: 'Do Hyeon', sans-serif;
-font-family: 'Nanum Gothic', sans-serif;}
-.header {background-color:yellowgreen}	
+table {text-align:center;margin-top:100px;width:800px}
 .button {
   color: white;
   text-align: center;
-  background: blue;
-  border-radius: 10px;}
-table {text-align:center;}
+  background: #1b60a6;
+  border-radius: 10px;
+  border:0px}
+.list1 {padding-top:100px;padding-left:10px;}
 </style>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 </head>
@@ -41,7 +40,8 @@ table {text-align:center;}
 				</td>
 			</tr>
 			<tr>
-				<th colspan="4"><%-- p662 29 --%>
+				<th colspan="4" class="list1">
+				<%-- p662 29 --%>
 				  <%-- 목록보기를 클릭하면 조회하던 페이지로 이동
 				  		만약 조회하던 페이지가 없으면 1페이지로 이동
 				  <c:set var="변수명" value="값"/>
@@ -51,9 +51,9 @@ table {text-align:center;}
 				  --%>
 				  <c:set var="pageNo" value="${empty pageNo?'1':pageNo}"/>
 					<a href="<%=request.getContextPath()%>/admin/notice/list.go?pageNo=${pageNo}">
-					<input type="button" class="button" value="목록보기"/></a>
+					<input type="button" class="button" value="목록보기"/></a>&nbsp;
 					<a href="<%=request.getContextPath()%>/admin/notice/modify.go?no=${articleDATA.notice.number}">
-					<input type="button" class="button" value="글 수정"/></a>  
+					<input type="button" class="button" value="글 수정"/></a>&nbsp;
 					<a href="<%=request.getContextPath()%>/admin/notice/delete.go?no=${articleDATA.notice.number}">
 					<input type="button" class="button" value="글 삭제"/></a>
 				</th>

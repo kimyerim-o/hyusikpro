@@ -6,6 +6,14 @@
 <style>
 .cont input {width:200px}
 .cont {font-size: 20px;}
+.submit {margin-left:900px;margin-top:80px;
+	color: white;
+  text-align: center;
+  font-size:1.2rem;
+  background: #2f3c4a;
+  border-radius: 10px;
+  border:0px;
+  margin-top:15px}
 </style>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d033ab2c0002c3aedd619825d12b4956"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -229,7 +237,7 @@
 		</table>
 	</div>
 </div>
-<input type="submit" value="입력">
+<input type="submit" value="입력" class="submit">
 </form>
 </body>
 </html>

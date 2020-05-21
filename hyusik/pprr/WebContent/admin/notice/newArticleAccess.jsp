@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-#access {text-align: center;margin-top:100px}
+#access {text-align: center;margin-top:200px}
 #ctxPath {color:white}
 </style>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">

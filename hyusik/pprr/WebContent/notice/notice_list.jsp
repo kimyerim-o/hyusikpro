@@ -1,27 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
-<%@ taglib prefix="u"  tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="u" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>공지사항</title>
 <style>
-body {font-family: 'Do Hyeon', sans-serif;
-font-family: 'Nanum Gothic', sans-serif;}
-.title {font-size:25px}
-.header1 {background-color:#77d8d8;height:10px}	
+body {width:1200px;margin-left:250px;margin-top: 0px;
+}
+.title {font-size:25px;padding:100px;}
+.header1 {background-color:#77d8d8;height:15px}	
 .button {
   color: white;
   text-align: center;
   background: #0779e4;
   border-radius: 10px;}
-table {text-align:center;}
+table {text-align:center;width:1150px;height:10px;padding-top:50px;}
 </style>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 </head>
-<body style="width:1200px; margin:100px; auto;">
+<body>
 	<table name="notice" width="1000" align="center" >
 		<tr>
 		<th colspan="5" width="800" class="title">

@@ -17,8 +17,7 @@
 <head>
 	<title>댓글 남김</title>
 <style>
-body {font-family: 'Do Hyeon', sans-serif;
-font-family: 'Nanum Gothic', sans-serif;}
+body {margin-left:800px;margin-top:300px;font-size:1.5rem}
 #review{height:200px;padding-left:200px;font-size:22px}
 #comment{width:60%;height:30px}
 #submit{/*float:right;*/}
@@ -37,6 +36,7 @@ font-family: 'Nanum Gothic', sans-serif;}
 <body>
 댓글을 남겼습니다.
 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="<%=request.getContextPath()%>/review/review_list.jsp">[목록 보기]</a>
 </body>
 </html>

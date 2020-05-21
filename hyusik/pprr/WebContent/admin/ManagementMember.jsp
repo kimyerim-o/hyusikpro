@@ -16,6 +16,7 @@
 <style>
 .cls1 {font-size: 40px; text-align: center;}
 .cls2 {font-size: 20px; text-align: center;}
+.gogo {margin-top:500px}
 </style>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d033ab2c0002c3aedd619825d12b4956"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -75,7 +76,7 @@
 	        </tr>
 	        <tr>
 	        </tr>
-	        <tr>
+	        <tr class="gogo">
 	            <td><input type="submit" value="조회하기"></td>
 	            <td><input type="reset" value="다시작성"></td>
 	        </tr>

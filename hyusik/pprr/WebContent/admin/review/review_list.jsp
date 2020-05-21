@@ -24,11 +24,9 @@
 <head>
 	<title>댓글 목록</title>
 <style>
-body {font-family: 'Do Hyeon', sans-serif;
-font-family: 'Nanum Gothic', sans-serif;}
+footer {margin-left:800px;margin-top:50px}
 #review{height:200px;padding-left:200px;font-size:22px}
 #comment{width:60%;height:30px}
-#submit{/*float:right;*/}
 .fas fa-bed {font: FontAwesome !important;}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>

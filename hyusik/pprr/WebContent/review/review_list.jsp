@@ -28,7 +28,7 @@
 body {font-family: 'Do Hyeon', sans-serif;
 font-family: 'Nanum Gothic', sans-serif;}
 footer {
-    margin-left: 200px;
+    margin-left: 300px;
     margin-top: 100px;
 }
 #review{height:200px;padding-left:200px;font-size:22px}

@@ -8,15 +8,14 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-body {font-family: 'Do Hyeon', sans-serif;
-font-family: 'Nanum Gothic', sans-serif;}
-.header {background-color:yellowgreen}	
+table {text-align:center;margin-top:100px;width:800px}
 .button {
   color: white;
   text-align: center;
-  background: blue;
-  border-radius: 10px;}
-table {text-align:center;}
+  background: #1b60a6;
+  border-radius: 10px;
+  border:0px}
+.list1 {padding-top:100px;padding-left:10px;}
 </style>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 </head>
