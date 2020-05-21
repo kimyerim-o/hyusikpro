@@ -8,9 +8,25 @@
 <meta charset="UTF-8">
 <title>공지사항</title>
 <style>
-table {text-align:center;width:1150px;height:10px;padding-top:50px;}
-.title {font-size:25px;padding:50px;}
-.header1 {background-color:rgb(159,197,232);height:15px}	
+.table {
+	border-collapse: collapse;
+	margin-top: 50px;
+	text-align:center;
+}
+
+.table td, .table th {
+	border: 1px solid white;
+	padding: 20px;
+}
+
+.table td:first-child, .table th:first-child {
+	width:100px;
+}
+thead {
+	background-color:rgb(159,197,232);
+	height:15px;
+	font-weight:bold;
+}
 .button {
   color: white;
   text-align: center;
@@ -20,19 +36,20 @@ table {text-align:center;width:1150px;height:10px;padding-top:50px;}
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 </head>
 <body>
-	<table name="notice" width="1000" align="center" >
+	<table class="table" width="1230px" align="center" >
+	<thead>
 		<tr>
-		<th colspan="5" width="800" class="title">
-	        공지사항 게시판
-	    </th>
+			<th colspan="5" class="title">
+		  	    공지사항
+	    	</th>
 	    </tr>
-	    <tr><td></td></tr>
-		<tr class="header1">
-			<th width="50">번호</th>
-			<th width="300">제목</th>
-			<th width="150">작성일</th>
-			<th width="50">조회수</th>
+		<tr class="tt">
+			<td>번호</td>
+			<td>제목</td>
+			<td>작성일</td>
+			<td>조회수</td>
 		</tr>
+	</thead>
 		<c:if test="${articlePAPE.hasNoArticles()}">
 			<tr>
 				<th colspan="5">공지사항이 존재하지 않습니다.</th>
@@ -42,12 +59,12 @@ table {text-align:center;width:1150px;height:10px;padding-top:50px;}
 		<c:forEach var="notice" items="${articlePAPE.content}">
 			<tr>
 			  <%-- ${aritcle.number}은 Article클래스의 getNumber()메소드를 호출 --%>
-				<td width="50">${notice.number} </td>
-				<td width="300"><a href="<%=request.getContextPath()%>
+				<td>${notice.number} </td>
+				<td><a href="<%=request.getContextPath()%>
 				/notice/read.go?no=${notice.number}&pageNo=${articlePAPE.currentPage}">
 				<c:out value="${notice.title}"/></a></td>
-				<td width="150">${notice.regDate}</td>
-				<td width="50">${notice.readCount}</td>
+				<td>${notice.regDate}</td>
+				<td >${notice.readCount}</td>
 			</tr>
 		</c:forEach> 
 	<%-- 페이징 부분  p653 37--%>

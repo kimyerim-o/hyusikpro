@@ -8,7 +8,7 @@
 <style>
 .table {
 	border-collapse: collapse;
-	margin:auto;
+	margin-top: 50px;
 	text-align:center;
 }
 
@@ -27,6 +27,13 @@ thead {
 	height:15px;
 	font-weight:bold;
 }
+.error{
+	position:fixed;
+	top: 500px;
+    left: 650px;
+    color:rgb(159,197,232);
+    font-size: 30px;
+}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
 <script src="<%=request.getContextPath()%>/road/sagoinfo.js"></script>
@@ -34,12 +41,11 @@ thead {
 <body>
 <div class="error">
 </div>
-
 <table class="table" align="center" width="1230px">
 	<thead>
 		<tr>
-			<th colspan="6" class="title">
-		  	    도로상황
+			<th colspan="4" class="title">
+		  	    도로 사고 상황
 	    	</th>
 	    </tr>
 		<tr class="tt">
@@ -47,8 +53,6 @@ thead {
 			<td>도로</td>
 			<td>내용</td>
 			<td>차량차단</td>
-			<td>방향</td>
-			<td>시작일</td>
 		</tr>
 	</thead>
 	<tbody>

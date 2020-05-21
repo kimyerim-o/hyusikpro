@@ -25,8 +25,6 @@
 <meta charset="UTF-8">
 	<title>댓글 목록</title>
 <style>
-body {font-family: 'Do Hyeon', sans-serif;
-font-family: 'Nanum Gothic', sans-serif;}
 footer {
     margin-left: 300px;
     margin-top: 100px;

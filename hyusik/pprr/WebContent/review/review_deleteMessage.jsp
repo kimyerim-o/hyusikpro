@@ -19,11 +19,6 @@
 <style>
 body {margin-left:800px;margin-top:300px;font-size:1.5rem}
 </style> 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script>
- $("header").remove(".body");
- $("#page-wrapper").attr("id","");
-</script>
 </head>
 <body>
 <%  if (!invalidPassowrd) { %>

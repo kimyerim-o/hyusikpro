@@ -40,7 +40,7 @@ function drawTable(data) {
 		$tbodyTr += "<tr><td>사고</td>";
 		
 		var type=$xml.find('data').children('type').text();
-		if(type=="ex"){
+		if(type=="exex"){
 			type="고속도로";
 		}else if(type=="its"){
 			type="국도";

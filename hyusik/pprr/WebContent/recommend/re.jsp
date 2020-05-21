@@ -55,23 +55,24 @@ $(function(){
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.5em;
   font-size:1.4em;
+  margin-left: 470px;
   }
 .a {
         margin: 0px 0px;
-        text-align: left;
+        text-align: center;
         font-size: 80px;
         color: #4969F2;
         }  
 </style>
 
-<div class="rounded">
-<strong>휴게소 맛집 랭킹</strong>
-</div>
 </head>
 <body>
-	<div float="left">
+<div class="rounded" align="center">
+<strong>휴게소 맛집 랭킹</strong>
+</div>
+	<div align="center">
 		<a href="#none" onclick="fn()">
-				<h1>1. 1등 휴게소</h1></a>
+				<h1>1. 화성휴게소</h1></a>
 		    <h3>  이영자 추천 맛집</h3>
 			<div id="a">
 				<p class="a" >
@@ -87,10 +88,76 @@ $(function(){
 					$("#a").animate({opacity : 1,top:"0",left:"0"},1000);
 					}
 				</script>
-	<h1>2. 2등 휴게소</h1>
-	<h1>3. 3등 휴게소</h1>
-	<h2>4. 4등 휴게소</h2>
-	<h2>5. 5등 휴게소</h2>
+	<h1>2. 금강휴게소</h1>
+	<h1>3. 동해휴게소</h1>
+	<h2>4. 단양휴게소</h2>
+	<h2>5. 정읍 녹두장군휴게소</h2>
 </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery("#btn").click(function() {
+            if(jQuery("#displayDiv").css("display") == "none") {
+                jQuery("#displayDiv").fadeIn();}
+            else {jQuery("#displayDiv").fadeOut();}
+        });
+    });
+</script>
+</head>
+<div align="center">
+    <h1>휴게소 테마 소개</h1>
+    <hr/>
+    <button type="button" id="btn">1위 휴게소 사진보기</button>
+    <div id="displayDiv">
+        <img src="https://post-phinf.pstatic.net/MjAxNzAzMjhfNzUg/MDAxNDkwNjY3NzQyMDUz.SwuuF3AkKeCURuoNetbdMtVwbkKvlF71ggwdea7BAt4g.wJox2lwR1rzTBdYsKBGJwTj9rEUYQfu-fCPq51Lgw0Eg.JPEG/1.jpg?type=w1200" width="400" height="300">
+    </div>
+    <div>
+    	휴게소명: 마장 프리미엄 휴게소<br/>
+    	휴게소 테마: 프리미엄 테마<br/>
+    	테마설명:먼저 국내 최대 규모 프리미엄 휴게소, 마장휴게소에 들러보자! 2만 7490㎡의 총면적에 지하 1층, 지상 3층으로 구성된 마장 프리미엄 휴게소는 스타벅스, 맥도날드, 롯데마트, 파리바게뜨 등의 프랜차이즈와 각종 브랜드 의류 매장, 공연장이 입점해 있어 깜빡 잊고 안 가져온 물품을 사거나, 친환경 쉼터에서 장거리 운전의 피로를 달래고, 답답해하는 아이들과 공연을 즐길 수 있는 최고의 복합문화휴식공간으로 자리 잡고 있다. 주말에는 하루 2회씩 퓨전 국악, 마술, 아동극, 관악 4중주 등의 문화공연이 펼쳐지기도 하니 잠시 들르는 휴게소가 아니라 여행의 목적지가 되기도 한다.
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery("#bttn").click(function() {
+            if(jQuery("#displayDivb").css("display") == "none") {
+                jQuery("#displayDivb").fadeIn();}
+            else {jQuery("#displayDivb").fadeOut();}
+        });
+    });
+</script>
+<div align="center">
+    <hr/>
+    <button type="button" id="bttn">2위 휴게소 사진 보기</button>
+    <div id="displayDivb">
+        <img src="https://www.ikld.kr/news/photo/201502/43817_21838_3340.jpg" width="400" height="300">
+    </div>
+    <div>
+    	휴게소명:덕평자연휴게소<br/>
+    	휴게소 테마:자연 테마<br/>
+    	테마설명:덕평휴게소는 소고기국밥 판매량 1위라는 타이틀을 가지고 있다. 매년 17만 그릇이 넘는 소고기국밥이 팔리고 있지만, 덕평휴게소의 매력은 먹거리에만 한정되어 있지는 않다. 2007년 한국건축문화대상을 받을 만큼 수려한 외관을 자랑하며, 자연을 그대로 담은 러브가든과 허브 정원, 각종 예술 작품과 함께 생태공원이 조성되어 있어 진정한 의미의 힐링을 할 수 있는 곳이다. 또 국내 최초의 애견 테마파크 '달려라 코코'가 있어 아이들과 애견 가족에게도 높은 인기를 누리고 있다.
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery("#btttn").click(function() {
+            if(jQuery("#displayDivbb").css("display") == "none") {
+                jQuery("#displayDivbb").fadeIn();}
+            else {jQuery("#displayDivbb").fadeOut();}
+        });
+    });
+</script>
+<div align="center">
+    <hr/>
+    <button type="button" id="btttn">3위 휴게소 사진 보기</button>
+    <div id="displayDivbb">
+        <img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile4.uf.tistory.com%2Fimage%2F9907853D5C206EBC2472E1" width="400" height="300">
+    </div>
+    <div>
+    	휴게소명:안성휴게소<br/>
+    	휴게소 테마:맛집 테마<br/>
+    	테마설명:호두과자, 우동, 통감자 등 고속도로 휴게소 음식 하면 가장 먼저 떠오르는 것들이 있다. 이상하게 배가 고프지 않아도 휴게소에 들르면 꼭 무언가를 허겁지겁 먹으며 다시 차에 오르는 재미를 누리고 싶어진다. 휴게소 음식이 대부분 거기서 거기라지만, 분명 맛으로 경쟁하는 맛집 휴게소들이 존재한다. 대표적인 곳이 바로 경부고속도로 부산 방향의 안성휴게소. ‘안성국밥’이라고 하는 새빨간 국물의 소고기국밥은 안 먹어보면 서러울 만큼 최고의 맛을 자랑한다. 서울 방향 안성휴게소에서도 소고기국밥을 팔지만, 국물이 하얀 안성옥국밥임을 참고할 것.
+		</div>
+</div>		
 </body>
 </html>

@@ -8,15 +8,13 @@
 <style>
 .table {
 	border-collapse: collapse;
-	margin:auto;
+	margin-top: 50px;
 	text-align:center;
 }
 
 .table td, .table th {
 	border: 1px solid white;
 	padding: 20px;
-	white-space: nowrap;
-	width:20px;
 }
 
 .table td:first-child, .table th:first-child {
@@ -34,14 +32,14 @@ thead {
 	<thead>
 		<tr>
 			<th colspan="6" class="title">
-		  	    도로상황
+		  	    도로 공사 상황
 	    	</th>
 	    </tr>
 		<tr class="tt">
 			<td>구분</td>
 			<td>도로</td>
 			<td>내용</td>
-			<td>차량차단</td>
+			<td width="20px">차량차단</td>
 			<td>방향</td>
 			<td>시작일</td>
 		</tr>

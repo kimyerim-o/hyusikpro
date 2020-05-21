@@ -45,9 +45,6 @@ function ranking(){
   <!-- http://localhost:8090/kim/header/header_login.jsp?site=? -->
     <select name="site" id="site" style="width:50%;height:30px;">
     	<option selected>선택하세요</option>
-    		<!--<c:forEach var="review" items="${nameis.review}"> 가능 그러나 review가 아닌 info로 가져와야됨
-    			<option value="${review.restno}">${review.restname}</option>
-			</c:forEach>-->
         	<option value="1">서울 만남의 광장 부산방향</option>
             <option value="2">죽전휴게소 서울방향</option>
             <option value="3">기흥휴게소 부산방향</option>
@@ -72,7 +69,7 @@ function ranking(){
 				<li class="list-item"><a href="<%=request.getContextPath()%>/notice/list.go">공지사항</a></li>
 				<li class="list-item"><a href="<%=request.getContextPath()%>/road/roadsa.jsp">사고</a></li>
 				<li class="list-item"><a href="<%=request.getContextPath()%>/road.go">공사</a></li>
-				<li class="list-item"><a href="<%=request.getContextPath()%>/#">추천휴게소</a></li>
+				<li class="list-item"><a href="<%=request.getContextPath()%>/recommend/re.jsp">추천휴게소</a></li>
                 <li class="list-item"><a href="<%=request.getContextPath()%>/oilprice.go">추천주유소</a></li>
                 <li class="list-item"><a href="<%=request.getContextPath()%>/review/review_list.jsp">리뷰</a></li>
                 
