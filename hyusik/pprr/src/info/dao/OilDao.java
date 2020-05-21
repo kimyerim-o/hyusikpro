@@ -91,4 +91,63 @@ public class OilDao {
 			JdbcUtil.close(stmt);
 	}
 	}
+
+	public int update(Connection conn, int restno, String oilname, String oiltel, int gasoline, int disel, int lpg,
+			String company, int air, int cleaner, int mat) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="update oil set oilname=?, oiltel=?, gasoline=?, disel=?," + 
+					" lpg=?, company=?, air=?, cleaner=?, mat=? where restno=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, oilname);
+			pstmt.setString(2, oiltel);
+			pstmt.setInt(3, gasoline);
+			pstmt.setInt(4, disel);
+			pstmt.setInt(5, lpg);
+			pstmt.setString(6, company);
+			pstmt.setInt(7, air);
+			pstmt.setInt(8, cleaner);
+			pstmt.setInt(9, mat);
+			pstmt.setInt(10, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+		
+	}
+
+	public int insert(Connection conn, int restno, String oilname, String oiltel, int gasoline, int disel, int lpg, String company,
+			int air, int cleaner, int mat) throws Exception {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="insert into oil(oilname, oiltel, gasoline, disel,lpg, company, air, cleaner, mat,restno) values (?,?,?,?,?,?,?,?,?,?)";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, oilname);
+			pstmt.setString(2, oiltel);
+			pstmt.setInt(3, gasoline);
+			pstmt.setInt(4, disel);
+			pstmt.setInt(5, lpg);
+			pstmt.setString(6, company);
+			pstmt.setInt(7, air);
+			pstmt.setInt(8, cleaner);
+			pstmt.setInt(9, mat);
+			pstmt.setInt(10, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+		
+	}
+
+	public int delete(Connection conn, int restno) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="delete from oil where restno=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+	}
 }

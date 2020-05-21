@@ -51,6 +51,14 @@ public class RestinfoDto {
 		this.restname=restname;
 	}
 
+	public RestinfoDto(int parseInt, String parameter, String parameter2, String parameter3, String parameter4,
+			String parameter5, String parameter6, String parameter7, String parameter8, String parameter9,
+			int parseInt2, int parseInt3, int parseInt4, int parseInt5, int parseInt6, String parameter10,
+			String parameter11, String parameter12) {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public int getRestno() {
 		return restno;
 	}
