@@ -51,10 +51,10 @@ public class JoinHandler implements CommandHandler {
 		
 		try {
 			joinService.join(joinReq);
-			return "/yejoin/joinSuccess.jsp";
+			return "/login/login.jsp";
 		} catch (DuplicateIdException e) {
 			errors.put("duplicateId", Boolean.TRUE);
-			return "/login/login.jsp";
+			return "/yejoin/join.jsp";
 		}
 	}
 
