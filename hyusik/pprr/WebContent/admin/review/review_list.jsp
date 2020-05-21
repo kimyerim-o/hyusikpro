@@ -95,6 +95,9 @@ footer {margin-left:620px;margin-top:50px}
 	</c:forEach>
 </table>
 </c:if>
+<c:forEach var="pageNum" begin="1" end="${viewData.pageTotalCount}">
+<a href="<%=request.getContextPath()%>/admin/review/review_list.jsp?page=${pageNum}">[${pageNum}]</a> 
+</c:forEach>
 </footer>
 </body>
 </html>
