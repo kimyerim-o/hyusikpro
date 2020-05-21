@@ -51,7 +51,7 @@
         </tr>
     </table>
     <div align="center">
-                 <input type="submit" value="이메일 로그인" onclick="location.href='./myPage/myPage.go'"> 
+                 <input type="submit" value="이메일 로그인" onclick="location.href='<%=request.getContextPath()%>/myPage/myPage.go'"> 
                  <input type="button" id="joinmember"value="회원가입"/>
                  <input type="reset" value="취소"> 
 	</div>
