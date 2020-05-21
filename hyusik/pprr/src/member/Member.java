@@ -26,8 +26,16 @@ public class Member {
 		this.password = password;
 		this.birth = birth;
 		this.admin =admin;
-		this.setGender(gender);
+		this.gender=gender;
 		
+	}
+
+	public Member(String email, String name, String password, String birth, String gender) {
+		this.email = email;
+		this.name = name;
+		this.password = password;
+		this.birth = birth;
+		this.gender=gender;
 	}
 
 	//getter & setter

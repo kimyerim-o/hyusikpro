@@ -1,4 +1,4 @@
-package member.service;
+package join;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -6,12 +6,12 @@ import java.util.Date;
 
 import jdbc.JdbcUtil;
 import jdbc.connection.ConnectionProvider;
-import member.dao.MemberDao;
-import member.model.Member;
+import member.Member;
+import member.memberDAO;
 
 public class JoinService {
 
-	private MemberDAO memberDao = new MemberDAO();
+	private memberDAO memberDao = new memberDAO();
 	
 	public void join(JoinRequest joinReq) {
 		Connection conn = null;
@@ -19,22 +19,19 @@ public class JoinService {
 			conn = ConnectionProvider.getConnection();
 			conn.setAutoCommit(false);
 			
-			Member member = MemberDAO.selectById(conn, joinReq.getId());
+			Member member = memberDao.selectById(conn, joinReq.getEmail());
 			if (member != null) {
 				JdbcUtil.rollback(conn);
 				throw new DuplicateIdException();
 			}
-			
-			MemberDAO.insert(conn, 
+			System.out.println("dao로감");
+			memberDao.insert(conn, 
 					new Member(
-							joinReq.getId(), 
-							joinReq.getName(), 
-							joinReq.getPassword(), 
-							joinReq.getConfirmPassword(),
+							joinReq.getEmail(), 
+							joinReq.getName(),
+							joinReq.getPass(), 
 							joinReq.getBirth(),
-							joinReq.getGender(),
-							joinReq.getAdmin()
-					);
+							joinReq.getGender()));
 			conn.commit();
 		} catch (SQLException e) {
 			JdbcUtil.rollback(conn);

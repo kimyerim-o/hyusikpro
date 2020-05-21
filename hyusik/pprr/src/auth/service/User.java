@@ -8,7 +8,7 @@ public class User {
 	public User(String email, String name, int admin) {
 		this.email=email;
 		this.name=name;
-		this.admin=admin;
+		this.setAdmin(admin);
 	}
 
 	public String getemail() {
@@ -17,6 +17,20 @@ public class User {
 
 	public String getName() {
 		return name;
+	}
+
+	/**
+	 * @return the admin
+	 */
+	public int getAdmin() {
+		return admin;
+	}
+
+	/**
+	 * @param admin the admin to set
+	 */
+	public void setAdmin(int admin) {
+		this.admin = admin;
 	}
 	
 }

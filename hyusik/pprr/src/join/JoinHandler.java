@@ -1,4 +1,4 @@
-package member.command;
+package join;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,14 +6,13 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import member.service.DuplicateIdException;
-import member.service.JoinRequest;
-import member.service.JoinService;
+import join.DuplicateIdException;
+import join.JoinRequest;
+import join.JoinService;
 import mvc.command.CommandHandler;
 
 public class JoinHandler implements CommandHandler {
 
-	private static final String FORM_VIEW = "/WebContent/join/join.jsp";
 	private JoinService joinService = new JoinService();
 	
 	@Override
@@ -29,15 +28,17 @@ public class JoinHandler implements CommandHandler {
 	}
 
 	private String processForm(HttpServletRequest req, HttpServletResponse res) {
-		return FORM_VIEW;
+		return "/yejoin/register.jsp";
 	}
 
 	private String processSubmit(HttpServletRequest req, HttpServletResponse res) {
 		JoinRequest joinReq = new JoinRequest();
-		joinReq.setId(req.getParameter("id"));
-		joinReq.setName(req.getParameter("jname"));
-		joinReq.setPassword(req.getParameter("password"));
-		joinReq.setConfirmPassword(req.getParameter("confirmPassword"));
+		joinReq.setEmail(req.getParameter("userid1")+"@"+req.getParameter("userid2"));
+		joinReq.setPass(req.getParameter("pass"));
+		joinReq.setPasscon(req.getParameter("passcon"));
+		joinReq.setName(req.getParameter("name"));
+		joinReq.setGender(req.getParameter("gender"));
+		joinReq.setBirth(req.getParameter("birth_yy")+req.getParameter("birth_mm")+req.getParameter("birth_dd"));
 		
 		Map<String, Boolean> errors = new HashMap<>();
 		req.setAttribute("errors", errors);
@@ -45,15 +46,15 @@ public class JoinHandler implements CommandHandler {
 		joinReq.validate(errors);
 		
 		if (!errors.isEmpty()) {
-			return FORM_VIEW;
+			return "/yejoin/join.jsp";
 		}
 		
 		try {
 			joinService.join(joinReq);
-			return "/WebContent/join/joinSuccess.jsp";
+			return "/yejoin/joinSuccess.jsp";
 		} catch (DuplicateIdException e) {
 			errors.put("duplicateId", Boolean.TRUE);
-			return FORM_VIEW;
+			return "/login/login.jsp";
 		}
 	}
 

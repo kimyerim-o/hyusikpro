@@ -40,7 +40,7 @@ public class memberDAO {
 
 	public void insert(Connection conn,Member mem) throws SQLException{
 		try {
-			PreparedStatement pstmt =conn.prepareStatement("insert into member value(?,?,?,?,?)");
+			PreparedStatement pstmt =conn.prepareStatement("insert into member (email,name,password,gender,birth) value(?,?,?,?,?)");
 					{
 				pstmt.setString(1, mem.getemail());
 				pstmt.setString(2, mem.getName());
@@ -71,7 +71,7 @@ public class memberDAO {
 			rs= pstmt.executeQuery();
 			Member member =null;
 			if(rs.next()) {
-//				member=convertmember(rs);
+				member=new Member(rs.getString("email"),rs.getString("name"),rs.getString("birth"),rs.getString("gender"),rs.getString("password"),Integer.parseInt(rs.getString("admin")));
 			}	
 			return member;
 		}finally {
