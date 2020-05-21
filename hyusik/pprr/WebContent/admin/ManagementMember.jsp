@@ -67,7 +67,7 @@
 <p class="cls1">회원정보관리</p>
     회원 조회 페이지입니다.<br/>
    회원을 조회해주세요..<br/>
-   <form action="/membersarch.go" method="post">
+   <form action="<%=request.getContextPath()%>/membersarch.go" method="post">
     	<table>
 	        <tr>
 	            <td>회원 이메일: <input type="text" id="memailchk"name="memailchk" ></td>

@@ -12,7 +12,6 @@ INDEX VERSION 1.131+D:\hyusikpro\hyusik\.metadata\.plugins\org.eclipse.jdt.core
 2802652799.index
 665742458.index
 1651531681.index
-3916543383.index
 911398812.index
 1118069043.index
 681069325.index
