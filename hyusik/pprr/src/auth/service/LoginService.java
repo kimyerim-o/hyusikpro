@@ -40,7 +40,7 @@ public class LoginService {
 			}
 			
 			//memberemail, name, password, regdate 
-			return new User(member.getemail(), member.getName());
+			return new User(member.getemail(), member.getName(),member.getAdmin());
 			
 		}catch(SQLException e) {
 			throw new RuntimeException();

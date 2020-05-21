@@ -38,7 +38,7 @@ public class MemberPage {
 			//비밀번호 불일치
 			
 			//memberemail, name, password, regdate 
-			return new User(member.getemail(), member.getName());
+			return new User(member.getemail(), member.getName(),member.getAdmin());
 			
 		}catch(SQLException e) {
 			throw new RuntimeException();
