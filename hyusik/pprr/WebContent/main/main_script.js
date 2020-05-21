@@ -151,43 +151,43 @@ for (var i = 0; i < positions.length; i ++) {
     	// 마커에 클릭이벤트를 등록합니다
     	kakao.maps.event.addListener(marker, 'click', function() {
     		//location.href="";
-    		location.href="http://localhost:8090/info.go?site=1";});
+    		location.href="http://localhost:8090/prac1/info.go?site=1";});
     }else if(i==1){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=2";});
+        	location.href="http://localhost:8090/prac1/info.go?site=2";});
     }else if(i==2){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=3";});
+        	location.href="";});
     }else if(i==3){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=4";});
+        	location.href="";});
     }else if(i==4){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=5";});
+        	location.href="";});
     }else if(i==5){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=6";});
+        	location.href="";});
     }else if(i==6){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=7";});
+        	location.href="";});
     }else if(i==7){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=8";});
+        	location.href="";});
     }else if(i==8){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=9";});
+        	location.href="";});
     }else if(i==9){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=10";});
+        	location.href="";});
     }else if(i==10){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=11";});
+        	location.href="";});
     }else if(i==11){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=12";});
+        	location.href="";});
     }else if(i==12){
         kakao.maps.event.addListener(marker, 'click', function() {
-        	location.href="http://localhost:8090/info.go?site=13";});
+        	location.href="";});
     }
     
     // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다

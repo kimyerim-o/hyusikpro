@@ -19,7 +19,7 @@ public class LogoutHandler implements CommandHandler {
 			session.invalidate();
 		}
 		//main.jsp화면으로 이동
-		response.sendRedirect(request.getContextPath()+"/main.jsp");
+		response.sendRedirect(request.getContextPath()+"/main.go");
 		return null;
 	}
 
