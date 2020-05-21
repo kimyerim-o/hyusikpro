@@ -17,21 +17,20 @@
 	<title>후기 삭제함</title>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 <style>
-body {margin-left:800px;margin-top:300px;font-size:1.5rem}
+#valid {margin-left:800px;font-size:1.5rem;text-align:center;}
 </style> 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script>
- $("header").remove(".body");
- $("#page-wrapper").attr("id","");
-</script>
 </head>
 <body>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<span id="valid">
 <%  if (!invalidPassowrd) { %>
 Review Delete Complete.
 <%  } else { %>
 Check your password.
 <%  }%>
-<br/>
-<a href="<%=request.getContextPath()%>/review/review_list.jsp">[listview]</a>
+<br/><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="<%=request.getContextPath()%>/admin/review/review_list.jsp" id="valid">[listview]</a>
+</span>
 </body>
 </html>
