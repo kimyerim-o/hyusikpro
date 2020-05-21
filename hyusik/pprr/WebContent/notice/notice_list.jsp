@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <%@ taglib prefix="u" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +47,7 @@ table {text-align:center;width:1150px;height:10px;padding-top:50px;}
 				<td width="300"><a href="<%=request.getContextPath()%>
 				/notice/read.go?no=${notice.number}&pageNo=${articlePAPE.currentPage}">
 				<c:out value="${notice.title}"/></a></td>
-				<td width="150">${notice.regDate}</td>
+				<td width="150"><fmt:formatDate value="${notice.regDate}" pattern="yyyy년 MM월 dd일"/></td>
 				<td width="50">${notice.readCount}</td>
 			</tr>
 		</c:forEach> 
