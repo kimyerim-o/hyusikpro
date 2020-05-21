@@ -13,7 +13,7 @@
 }
 
 .table td, .table th {
-	border: 1px solid black;
+	border: 1px solid white;
 	padding: 20px;
 	white-space: nowrap;
 	width:20px;
@@ -22,6 +22,11 @@
 .table td:first-child, .table th:first-child {
 	width:100px;
 }
+thead {
+	background-color:rgb(159,197,232);
+	height:15px;
+	font-weight:bold;
+	}
 </style>
 </head>
 <body>
@@ -32,7 +37,6 @@
 		  	    도로상황
 	    	</th>
 	    </tr>
-	    <tr><td></td></tr>
 		<tr class="tt">
 			<td>구분</td>
 			<td>도로</td>

@@ -7,6 +7,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
+<style>
+.button {
+  color: white;
+  text-align: center;
+  background: #2f3c4a;
+  border-radius: 10px;
+  border:0px;
+  margin-top:15px}
+</style>
 </head>
 <body>
 	<%--request.setAttribute("modiREQ", modiReq); --%>
@@ -41,7 +50,7 @@
 	</tbody>
 	<tfoot>
 		<tr>
-		<td colspan="2"><input type="submit" value="글 수정"/>&nbsp;&nbsp;<input type="reset"  value="취소"/></td>
+		<td colspan="2"><input type="submit" value="글 수정" class="button"/>&nbsp;&nbsp;<input type="reset" class="button" value="취소"/></td>
 		</tr>
 	</tfoot>
 </table>

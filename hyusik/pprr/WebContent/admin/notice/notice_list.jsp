@@ -9,7 +9,7 @@
 <title>공지사항</title>
 <style>
 .title {font-size:25px}
-.header1 {background-color:#77d8d8;height:15px}	
+.header1 {background-color:rgb(159,197,232);height:15px}	
 .button {
   color: white;
   text-align: center;
