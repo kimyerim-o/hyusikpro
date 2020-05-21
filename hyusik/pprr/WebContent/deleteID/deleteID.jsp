@@ -29,7 +29,7 @@
 <%
 	String email = (String)session.getAttribute("mememail");
 	String password = request.getParameter("password");
-	memberDAO memberDao = memberDAO.getInstance();
+	memberDAO memberDao = memberDAO.getInstance();  
 	boolean check = memberDao.delete(email, password);
 	
 	if (check == true) {

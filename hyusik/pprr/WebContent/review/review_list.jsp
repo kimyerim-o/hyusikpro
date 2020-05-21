@@ -31,8 +31,16 @@ footer {
 }
 #review{height:200px;padding-left:200px;font-size:22px}
 #comment{width:60%;height:30px}
-#submit{/*float:right;*/}
+#submit{    margin-left: 740px;}
 .fas fa-bed {font: FontAwesome !important;}
+.table{font-size: 23px;
+    width: 1020px;
+    border-bottom: solid rgb(159,197,232);
+    margin: 50px 0;
+    padding-bottom: 40px;}
+.table td{padding:10px}
+.table2{border-collapse: collapse; width:600px;}
+.table2 td{padding:3px}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
@@ -40,15 +48,21 @@ footer {
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-<footer>
+<footer style="width: 1230px">
 <c:set var="viewData" value="<%=viewData%>"/>
 <form action="review_write.jsp" method="POST">
- <label for="name">닉네임</label>  
- <input type="text" name="name"><br/><br/>
- <label for="repw">암호</label>
- <input type="password" name="repw"><br/><br/>
-    <label for="restname">휴게소 이름</label>
-     <select name="restname" id="restname" style="width:50%;height:30px;">
+<table class="table">
+ <tr>
+ 	<td><label for="name">닉네임</label></td>  
+ 	<td>${AUTHUSER.name}<input type="hidden" name="name" value="${AUTHUSER.name}"></td>
+ </tr>
+ <tr>
+ <td><label for="repw">암호</label></td>
+ <td><input type="password" name="repw" style="width: 400px;"></td>
+ </tr>
+ <tr>
+    <td><label for="restname">휴게소 이름</label></td>
+     <td><select name="restname" id="restname" style="width:570px;height:30px;">
 		<option selected>선택하세요</option>
        	<option value="서울만남(부산)휴게소,1">1.서울 만남의 광장 부산방향
        	</option>
@@ -76,32 +90,50 @@ footer {
           </option>
           <option value="신탄진(서울)휴게소,13">13.신탄진휴게소 서울방향
           </option>
-    </select><br/><br/>
- <label for="restis">휴게소 만족도</label>
-    <input type="radio" name="restis" value="1" id="1"> <i class="far fa-angry"> 1</i>
-    <input type="radio" name="restis" value="2" id="2"> <i class="far fa-frown"> 2</i>
-    <input type="radio" name="restis" value="3" id="3"> <i class="far fa-meh"> 3</i>
-    <input type="radio" name="restis" value="4" id="4"> <i class="far fa-smile"> 4</i>
-    <input type="radio" name="restis" value="5" id="5"> <i class="far fa-laugh"> 5</i><br/><br/>
-<label for="recontent">댓글</label>
-<textarea id="recontent" name="recontent" cols="30" rows="3"></textarea><br/><br/>
-<input type="submit" value="등록" id="submit"/>
-</form><br/><br/><br/>
-<hr>
+    </select></td>
+ <tr>  
+ 	<td><label for="restis">휴게소 만족도</label></td>
+    <td><input type="radio" name="restis" value="1" id="1"/> <i class="far fa-angry"> 1</i>
+    <input type="radio" name="restis" value="2" id="2"/> <i class="far fa-frown"> 2</i>
+    <input type="radio" name="restis" value="3" id="3"/> <i class="far fa-meh"> 3</i>
+    <input type="radio" name="restis" value="4" id="4"/> <i class="far fa-smile"> 4</i>
+    <input type="radio" name="restis" value="5" id="5"/> <i class="far fa-laugh"> 5</i></td>
+ </tr>
+ <tr>
+	<td><label for="recontent">댓글</label></td>
+	<td><textarea id="recontent" name="recontent" cols="30" rows="3" style="width: 570px; height: 155px;"></textarea></td>
+  </tr>
+  <tr>
+     <td colspan="2"><input type="submit" value="등록" id="submit"/></td>
+   </tr>  
+</table>
+</form>
+
 <c:if test="${viewData.isEmpty()}">
 등록된 메시지가 없습니다.
 </c:if>
 <c:if test="${!viewData.isEmpty()}">
-<table border="1" width="450">
+<table class="table2">
 	<c:forEach var="message" items="${viewData.messageList}">
-	<tr>
-		<td>
-		메시지 번호: ${message.reno} <br/>
-		휴게소 번호: ${message.restno}<br/>
-		휴게소 이름: ${message.restname}<br/>
-		닉네임: ${message.name} <br/>
-		작성일: ${message.stdate} <br/>
-		만족도: <c:forEach var="i" begin="1" end="${message.restis}">
+		<tr>
+			<td>메시지 번호:</td>
+			<td>${message.reno}</td>
+		</tr>
+		<tr>	
+			<td>휴게소 이름:</td>
+			<td>${message.restname}</td>
+		</tr>
+		<tr>	
+			<td>닉네임: </td>
+			<td>${message.name}</td>
+		</tr>
+		<tr>	
+			<td>작성일:</td>
+			<td>${message.stdate}</td>
+		</tr>
+		<tr>	
+			<td>만족도:</td>
+			<td><c:forEach var="i" begin="1" end="${message.restis}">
 		<c:forEach var="j" items="★">
 	            	★
 	        </c:forEach>
@@ -111,11 +143,16 @@ footer {
 	            	☆
 	        </c:forEach>
         </c:forEach>
-		(${message.restis}점 / 5.0점)<br/>
-		후기: ${message.recontent} <br/>
-		<a href="<%=request.getContextPath()%>/review/review_confirmDeletion.jsp?messageId=${message.reno}">[삭제하기]</a>
-		</td>
-	</tr>
+		(${message.restis}점 / 5.0점)</td>
+		</tr>
+		<tr>	
+			<td>후기: </td>
+			<td>${message.recontent} </td>
+		</tr>
+		<tr>	
+			<td colspan="2" style=" height: 40px"><a href="<%=request.getContextPath()%>/review/review_confirmDeletion.jsp?messageId=${message.reno}" style="    padding-left: 400px;">[삭제하기]</a><br/></td>
+		</tr>
+
 	</c:forEach>
 </table>
 <c:forEach var="pageNum" begin="1" end="${viewData.pageTotalCount}">
