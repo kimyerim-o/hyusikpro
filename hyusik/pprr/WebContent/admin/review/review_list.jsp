@@ -24,7 +24,7 @@
 <head>
 	<title>댓글 목록</title>
 <style>
-footer {margin-left:800px;margin-top:50px}
+footer {margin-left:620px;margin-top:50px}
 #review{height:200px;padding-left:200px;font-size:22px}
 #comment{width:60%;height:30px}
 .fas fa-bed {font: FontAwesome !important;}

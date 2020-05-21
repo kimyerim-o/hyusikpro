@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>공지사항</title>
 <style>
-table {text-align:center;width:1150px;height:10px;padding-top:10px;margin-left:400px;}
+table {text-align:center;width:1150px;height:10px;padding-top:50px;}
 .title {font-size:25px;padding:50px;}
 .header1 {background-color:rgb(159,197,232);height:15px}	
 .button {

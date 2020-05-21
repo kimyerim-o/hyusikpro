@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>공지사항</title>
 <style>
+table {text-align:center;width:1150px;height:10px;padding-top:50px;}
 .title {font-size:25px}
 .header1 {background-color:rgb(159,197,232);height:15px}	
 .button {
@@ -15,7 +16,6 @@
   text-align: center;
   background: #0779e4;
   border-radius: 10px;}
-table {text-align:center;width:1150px;height:10px;padding-top:50px;}
 </style>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
