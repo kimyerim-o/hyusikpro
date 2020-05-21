@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
     <meta charset="UTF-8">
     <title>login.jsp</title>
     <script>
