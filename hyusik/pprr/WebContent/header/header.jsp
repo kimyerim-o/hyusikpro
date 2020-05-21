@@ -100,10 +100,6 @@ function ranking(){
 				<c:forEach var="review" items="${nameis.review}" varStatus="i">
 				<li><a href="info.go?site=${review.restno}">${i.count}  ${review.restname} ${review.restis}점</a></li>
 				</c:forEach>
-                <li><a href="#">2 천안삼거리(서울)휴게소 5.0점</a></li>
-                <li><a href="#">3 입장거봉포도(서울)휴게소 5.0점</a></li>
-                <li><a href="#">4 입장거봉포도(서울)휴게소 5.0점</a></li>
-                <li><a href="#">5 입장거봉포도(서울)휴게소 5.0점</a></li>
                 </ol>
             </dd>
         </dl>
