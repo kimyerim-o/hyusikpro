@@ -30,4 +30,45 @@ public class BrandDao {
 			JdbcUtil.close(pstmt);
 	}
 	}
+
+	public int update(Connection conn, int restno, String brandname, String brandde) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="update brand set brandname=?, brandde=? where restno=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, brandname);
+			pstmt.setString(2, brandde);
+			pstmt.setInt(3, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+		
+	}
+
+	public int insert(Connection conn, int restno, String brandname, String brandde) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="insert into brand (brandname, brandde,restno) values (?,?,?)";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, brandname);
+			pstmt.setString(2, brandde);
+			pstmt.setInt(3, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+	}
+
+	public int delete(Connection conn, int restno) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="delete from brand where restno=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+	}
 }

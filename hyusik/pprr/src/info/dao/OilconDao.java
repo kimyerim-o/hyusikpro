@@ -29,4 +29,45 @@ public class OilconDao {
 			JdbcUtil.close(pstmt);
 	}
 	}
+
+	public int update(Connection conn, int restno, String oilconname, String oilconde) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="update oilcon set oilconname=?, oilconde=? where restno=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, oilconname);
+			pstmt.setString(2, oilconde);
+			pstmt.setInt(3, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+		
+	}
+
+	public int insert(Connection conn, int restno, String oilconname, String oilconde) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="insert into oilcon (oilconname, oilconde,restno) values (?,?,?)";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, oilconname);
+			pstmt.setString(2, oilconde);
+			pstmt.setInt(3, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+	}
+
+	public int delete(Connection conn, int restno) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="delete from oilcon where restno=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+	}
 }
