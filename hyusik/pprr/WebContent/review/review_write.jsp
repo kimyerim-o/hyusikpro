@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%-- <%@ page errorPage="errorView.jsp" %> --%>
+<%@ page errorPage="errorView.jsp" %>
 <%@ page import="review.dto.ReviewDto" %>
 <%@ page import="review.service.WriteMessageService" %>
 <%
@@ -10,7 +10,8 @@
 </jsp:useBean>
 <%
 	WriteMessageService writeService = WriteMessageService.getInstance();
-	writeService.write(message);
+	String rest=request.getParameter("restname");
+	writeService.write(message,rest);
 %>
 <html>
 <head>
@@ -36,6 +37,6 @@ font-family: 'Nanum Gothic', sans-serif;}
 <body>
 댓글을 남겼습니다.
 <br/>
-<a href="<%=request.getContextPath()%>/review/list.go">[목록 보기]</a>
+<a href="<%=request.getContextPath()%>/review/review_list.jsp">[목록 보기]</a>
 </body>
 </html>

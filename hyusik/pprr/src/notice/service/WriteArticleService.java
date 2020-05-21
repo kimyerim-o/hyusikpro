@@ -6,10 +6,8 @@ import java.util.Date;
 
 import jdbc.JdbcUtil;
 import jdbc.connection.ConnectionProvider;
-import notice.DAO.NoticeContentDAO;
 import notice.DAO.NoticeDAO;
 import notice.dto.Notice;
-import notice.dto.NoticeContent;
 
 //p638
 //글등록과 관련한 DAO와 연동
@@ -17,8 +15,6 @@ public class WriteArticleService {
 
 	//article테이블과 연동하는  DAO
 	private NoticeDAO noticeDao = new NoticeDAO();
-	//article_content테이블과 연동하는 DAO
-	private NoticeContentDAO contentDao = new NoticeContentDAO();
 	
 	//P639 19
 	public Integer write(WriteRequest req) {
@@ -33,16 +29,6 @@ public class WriteArticleService {
 			
 			if(savedArticle==null) {//insert실패하면 null리턴
 			 throw new RuntimeException("fail to insert notice");
-			}
-			
-			//P639 30
-			NoticeContent content = 
-				new NoticeContent(savedArticle.getNumber(),req.getContent());
-			
-			//article_content에 insert
-			NoticeContent savedContent = contentDao.insert(conn,content);
-			if(savedContent==null) { //article_content테이블의 insert실패시
-				throw new RuntimeException("fail to insert notice_content");
 			}
 			
 			conn.commit(); //트랜잭션반영
@@ -65,7 +51,7 @@ public class WriteArticleService {
 	//채우는 함수
 	private Notice toArticle(WriteRequest req) {
 		Date now = new Date();
-		return	new Notice(null,req.getTitle(),now,now,0);
+		return	new Notice(null,req.getTitle(),now,now,req.getContent(),0);
 		
 	}//end of write
 	

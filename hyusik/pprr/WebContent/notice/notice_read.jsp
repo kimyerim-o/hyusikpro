@@ -37,7 +37,7 @@ table {text-align:center;}
 			<tr>
 				<th width="100">내용</th>
 				<td width="300">
-				<u:pre value="${articleDATA.content.content}" />
+				<u:pre value="${articleDATA.notice.content}" />
 				</td>
 			</tr>
 			<tr>

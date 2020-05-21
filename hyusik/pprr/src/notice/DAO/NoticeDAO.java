@@ -32,15 +32,16 @@ public class NoticeDAO {
 	
 	//665 1
 	//글 수정
-	public int update(Connection conn, String title, int no) throws SQLException{
+	public int update(Connection conn, String title, String content, int no) throws SQLException{
 		PreparedStatement pstmt = null;
 		try {
 			String sql="update notice " + 
-					"set    notitle= ?, nomoddate=NOW()" + 
+					"set    notitle= ?, nomoddate=NOW(), nocontent=?" + 
 					"where  nono= ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, title);
-			pstmt.setInt(2, no);
+			pstmt.setString(2, content);
+			pstmt.setInt(3, no);
 			int cnt = pstmt.executeUpdate();
 			//update성공적으로 실행되면 update된 레코드수가 리턴된다
 			//여기에서는 특정 번호만 update되므로 성공시에는 1이 리턴
@@ -92,16 +93,13 @@ public class NoticeDAO {
 				//                         3,'id33','삼삼이','제목3이요',어제,어제,0  
 			}
 	*/
-	public List<Notice> select(Connection conn,
-			int startRow,int size)  
+	public List<Notice> select(Connection conn,int startRow,int size)  
 			throws SQLException {
 		PreparedStatement pstmt = null;
 		ResultSet rs   = null;
 		try {
 			String sql = 
-			"select	nono, " + 
-			" notitle,noregdate,nomoddate,noview " + 
-			" from  notice " +
+			" select * from  notice " +
 			" order by nono desc "+
 			" limit ?, ?";
 		//limit  0부터시작행번호, 읽어올레코드수
@@ -128,6 +126,7 @@ public class NoticeDAO {
 				rs.getString("notitle"),
 				toDate(rs.getTimestamp("noregdate")),
 				toDate(rs.getTimestamp("nomoddate")),
+				rs.getString("nocontent"),
 				rs.getInt("noview"));
 	}
 
@@ -146,12 +145,13 @@ public class NoticeDAO {
 		ResultSet rs   = null;	
 		try {
 			String sql = 
-			"insert into notice(notitle,noregdate,nomoddate,noview) " + 
-			" values(?,?,?,0)";
+			"insert into notice(notitle,noregdate,nomoddate,nocontent,noview) " + 
+			" values(?,?,?,?,0)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1,notice.getTitle());
 			pstmt.setTimestamp(2, toTimestamp(notice.getRegDate()));
 			pstmt.setTimestamp(3, toTimestamp(notice.getModifiedDate()));
+			pstmt.setString(4, notice.getContent());
 			int insertedCount = pstmt.executeUpdate();
 			
 			//p635 31
@@ -165,7 +165,7 @@ public class NoticeDAO {
 				if(rs.next()) {
 					Integer newNum = rs.getInt(1);
 					return new Notice(newNum,notice.getTitle(),
-							notice.getRegDate(),notice.getModifiedDate(),
+							notice.getRegDate(),notice.getModifiedDate(),notice.getContent(),
 							0);
 				}
 			}
@@ -210,8 +210,7 @@ public class NoticeDAO {
 		ResultSet rs = null;
 		try {
 			String sql = 
-			"select	nono,notitle,noregdate,nomoddate, noview " + 
-			" from  notice " +
+			"select	* from  notice " +
 			" where nono=?";
 			pstmt =	conn.prepareStatement(sql);
 			pstmt.setInt(1, no);

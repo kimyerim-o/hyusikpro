@@ -43,7 +43,7 @@ public class ReviewDao {
 		}
 	}
 
-	public int insert(Connection conn, ReviewDto review) throws SQLException {
+	public int insert(Connection conn, ReviewDto review,String restname,String restno) throws SQLException {
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(
@@ -51,8 +51,8 @@ public class ReviewDao {
 					"(name,repw,restno,restname,redate,restis,recontent) values (?, ?, ?, ?, ?, ?, ?)");
 			pstmt.setString(1, review.getName());
 			pstmt.setString(2, review.getRepw());
-			pstmt.setInt(3, review.getReno());
-			pstmt.setString(4, review.getRestname());
+			pstmt.setString(3, restno);
+			pstmt.setString(4, restname);
 			pstmt.setString(5, toString(review.getRedate()));
 			pstmt.setDouble(6, review.getRestis());
 			pstmt.setString(7, review.getRecontent());
@@ -76,7 +76,7 @@ public class ReviewDao {
 		ResultSet rs = null;
 		try {
 			pstmt = conn.prepareStatement(
-					"select * from review where reno = ?");
+					"select * from review where reno = ? and redate like '2020____'");
 			pstmt.setInt(1, reno);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
@@ -97,7 +97,7 @@ public class ReviewDao {
 		review.setRestname(rs.getString("restname"));
 		review.setName(rs.getString("name"));
 		review.setRepw(rs.getString("repw"));
-		review.setRedate(rs.getDate("redate"));
+		review.setStdate(rs.getString("redate"));
 		review.setRecontent(rs.getString("recontent"));
 		review.setRestis(rs.getDouble("restis"));
 		return review;

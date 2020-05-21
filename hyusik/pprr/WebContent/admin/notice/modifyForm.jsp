@@ -11,8 +11,8 @@
 <body>
 	<%--request.setAttribute("modiREQ", modiReq); --%>
 	
-	<form name="modifyFrm" id="modifyFrm" 
-				method="POST" action="<%=request.getContextPath()%>/admin/notice/modify.go?no=${modiREQ.articleNumber}">
+	<form name="modifyFrm" id="modifyFrm" method="POST" 
+	action="<%=request.getContextPath()%>/admin/notice/modify.go?no=${modiREQ.articleNumber}">
 	<table class="table" style="text-align:center; border:1px solic #dddddd;margin:auto;">
 	<thead>
 		<tr>

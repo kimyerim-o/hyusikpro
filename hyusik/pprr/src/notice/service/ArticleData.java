@@ -1,7 +1,6 @@
 package notice.service;
 
 import notice.dto.Notice;
-import notice.dto.NoticeContent;
 
 //p657
 //article테이블과 article_content테이블의 결과를 
@@ -9,35 +8,24 @@ import notice.dto.NoticeContent;
 public class ArticleData {
 
 	private Notice notice;
-	private NoticeContent content;
 	
-	public ArticleData(Notice notice,
-			NoticeContent content) {
+	public ArticleData(Notice notice) {
 		this.notice = notice;
-		this.content = content;
 	}
 
 	public Notice getNotice() {
 		return notice;
 	}
 
-	public void setNotice(Notice article) {
+	public void setNotice(Notice notice) {
 		this.notice = notice;
-	}
-
-	public NoticeContent getContent() {
-		return content;
-	}
-
-	public void setContent(NoticeContent content) {
-		this.content = content;
 	}
 
 	@Override
 	public String toString() {
-		return "ArticleData [notice=" + notice + ", content=" + content + "]";
+		return "ArticleData [notice=" + notice + "]";
 	}
-	
+
 	
 }
 

@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 import jdbc.JdbcUtil;
 import jdbc.connection.ConnectionProvider;
-import notice.DAO.NoticeContentDAO;
 import notice.DAO.NoticeDAO;
 import notice.dto.Notice;
 
@@ -14,7 +13,6 @@ import notice.dto.Notice;
 public class DeleteArticleService {
 
 	private NoticeDAO noticeDao = new NoticeDAO();
-	private NoticeContentDAO contentDao = new NoticeContentDAO();
 	
 	//p667 17
 	public int deletenotice(int no) {
@@ -27,15 +25,6 @@ public class DeleteArticleService {
 		}
 	}
 	
-	public int deletecontent(int no) {
-		Connection conn = null;
-		try {
-			conn = ConnectionProvider.getConnection();
-			return contentDao.delete(conn, no);
-		}catch(SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
 }
 
 

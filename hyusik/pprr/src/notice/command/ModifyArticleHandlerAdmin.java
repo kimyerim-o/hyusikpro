@@ -118,7 +118,7 @@ public class ModifyArticleHandlerAdmin implements CommandHandler {
 		ModifyRequest modiReq = new ModifyRequest(
 				no,
 				articleData.getNotice().getTitle(),
-				articleData.getContent().getContent()
+				articleData.getNotice().getContent()
 			);
 		
 		//3.Model P670 53

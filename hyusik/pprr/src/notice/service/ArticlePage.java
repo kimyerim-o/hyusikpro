@@ -1,7 +1,6 @@
 package notice.service;
 
 import java.util.List;
-
 import notice.dto.Notice;
 
 //게시물 데이터   및       페이징처리에 필요한 데이터
