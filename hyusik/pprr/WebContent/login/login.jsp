@@ -22,7 +22,7 @@
     <div id="headtext" align="center" ondrop="10%" >휴~식 로그인</div>
     
     <hr/>
-    <form action="/login.go"  method="post">
+    <form method="post">
     
     <c:if test="${errors.idOrPwNotMatch}">
      <div align="center">이메일과 비밀번호가 일치하지 않습니다.</div></c:if>
@@ -50,8 +50,8 @@
         </tr>
     </table>
     <div align="center">
-                 <input type="submit" value="이메일 로그인"> 
-                 <input type="button" id="joinmember"value="회원가입"/>
+                 <input type="submit" value="이메일 로그인" formaction="<%=request.getContextPath()%>/login.go"> 
+                 <input type="submit" id="joinmember"value="회원가입" formaction=""/><!-- 회원가입으로 이동 -->
                  <input type="reset" value="취소"> 
 	</div>
 	</form>

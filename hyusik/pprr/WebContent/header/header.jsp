@@ -31,8 +31,8 @@ $(function() {
     step(1);
 });
 function ranking(){
-	if(location=='http://localhost:8090/prac1/' || location=='http://localhost:8090/prac1/index.jsp'){
-	location.replace("/prac1/main.go");}
+	if(location=='http://localhost:8090/' || location=='http://localhost:8090/index.jsp'){
+	location.replace("/main.go");}
 }
 </script>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
@@ -76,13 +76,13 @@ function ranking(){
 				<li class="list-item"><a href="<%=request.getContextPath()%>/road.go">공사</a></li>
 				<li class="list-item"><a href="<%=request.getContextPath()%>/recommand.go">추천휴게소</a></li>
                 <li class="list-item"><a href="<%=request.getContextPath()%>/oilprice.go">추천주유소</a></li>
-                <li class="list-item"><a href="<%=request.getContextPath()%>">리뷰</a></li>
+                <li class="list-item"><a href="<%=request.getContextPath()%>/review/review_list.jsp">리뷰</a></li>
                 
-                		<li class="list-item"><a href="admin.go">관리자</a></li>
                 <u:isLogin> <!-- 로그인시 -->
-                	<c:if test="${member.admin ==1}">
+                	<c:if test="${AUTHUSER.admin ==1}">
+                		<li class="list-item"><a href="admin.go">관리자</a></li>
                 	</c:if>
-                	<c:if test="${member.admin ==0}">
+                	<c:if test="${AUTHUSER.admin ==0}">
                 		<li class="list-item"><a href="mypage.go">마이페이지</a></li>
                 	</c:if>
 					<li class="list-item"><a href="logout.go">로그아웃</a></li>

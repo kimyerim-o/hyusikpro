@@ -23,17 +23,17 @@ $(function(){
             $('#userid').focus()
             return false;
         }
-        if (!$('#pass').val()) {
+        if (!$('#pw).val()) {
             alert('pass를 입력하세요')
             $('#pass').focus()
             return false;
         }
-        if ($('#pass').val().length<5 || $('#pass').val().length>12){
+        if ($('#pw').val().length<5 || $('#pass').val().length>12){
             alert('비밀번호는 5~12자리입니다.')
             $('#pass').focus()
             return false;
         }
-        if ($('#pass').val()!=$('#pass2').val()) {
+        if ($('#pw').val()!=$('#pwCheck').val()) {
             alert('비밀번호 확인을 정확히 입력하세요')
             $('#pass2').val('')
             $('#pass2').focus()
@@ -68,7 +68,7 @@ $(function(){
 	<div align="center"><b><h2>회원가입</h2></b></div>
 	<hr/>
 <div align="center">
-<form id="frm1" name="frm1" action="join.go" method="post" >
+<form id="frm1" name="frm1" action="<%=request.getContextPath()%>/join.go" method="post" >
     <table width="80%" >
     
     <tr class="t1">
@@ -89,7 +89,7 @@ $(function(){
             <option>gmail.com</option>
             <option>icloud.com</option>
             </select>
-            <input type="button" value="중복확인">
+            <input type="button" value="중복확인"><!-- 중복확인 기능???? -->
         <br>
         </td>
     </tr>
