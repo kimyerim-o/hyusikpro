@@ -17,30 +17,36 @@
 				$('#' + activeTab).addClass('current');
 			})
 		});
-		
 </script>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>myPage</title>
-
+<title>회원탈퇴</title>
 </head>
-<body>	
-	<nav>
-		<ul>
-			<li> <a href="#">회원정보수정</a> </li>
-			<li> <a href="#">리뷰게시판</a> </li>
-			<li> <a href="#">QnA게시판</a> </li>
-			<li> <a href="#">회원탈퇴</a> </li>
-		</ul>
-	</nav>
+<body>
 <section>
-	<h2>마이페이지</h2>
-		<article>
-			이메일 : ${member.email}
-			닉네임 : ${member.name}
-			생년월일 : ${member.birth}
-			성별 : ${member.gender}
-		</article>
-</section>	
+	<form action="<%=request.getContextPath()%>/deleteID/deleteID.go" method="post" onSubmit="return checkIt()">
+	<table cellSpacing="1" cellPadding="1" width="260" border="1" align="center">
+		<tr height="30">
+			<td colspan="2" align="middle">
+				<font size="+1">
+					<b>회원 탈퇴</b>
+				</font>
+			</td>	
+		</tr>
+		<tr height="30">
+			<td width="110" align="center">비밀번호</td>
+			<td width="150" align="center">
+				<input type="password" name="password" size="15" maxlength="12">
+			</td>	
+		</tr>
+		<tr height="30">
+			<td width="150" align="center">
+				<input type="button" value="취소하기" onclick="<%=request.getContextPath()%>/main.go">
+			</td>
+		</tr>		
+	</table>
+	</form>
+</section>
 </body>
 </html>
