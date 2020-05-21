@@ -22,7 +22,7 @@
     <div id="headtext" align="center" ondrop="10%" >휴~식 로그인</div>
     
     <hr/>
-    <form action="/login.go"  method="post">
+    <form action="<%=request.getContextPath()%>/login.go"  method="post">
     
     <c:if test="${errors.idOrPwNotMatch}">
      <div align="center">이메일과 비밀번호가 일치하지 않습니다.</div></c:if>
