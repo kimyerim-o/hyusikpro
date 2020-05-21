@@ -187,3 +187,7 @@
 5월 21, 2020 09:44:40.89 NEW SESSION
 5월 21, 2020 09:44:40.89 [8036:8312:0521/094440.897:ERROR:browser_switcher_service.cc(238)] XXX Init()
 5월 21, 2020 09:46:59.80 [7132:1376:0521/094659.806:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 21, 2020 10:00:48.80 [5184:8400:0521/100048.800:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 21, 2020 10:01:23.18 [7960:648:0521/100123.186:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 21, 2020 10:03:58.19 [8844:9020:0521/100358.192:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 21, 2020 10:05:50.71 [3096:8348:0521/100550.715:ERROR:browser_switcher_service.cc(238)] XXX Init()

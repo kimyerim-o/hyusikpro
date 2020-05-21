@@ -80,16 +80,16 @@ function ranking(){
                 
                 <u:isLogin> <!-- 로그인시 -->
                 	<c:if test="${AUTHUSER.admin ==1}">
-                		<li class="list-item"><a href="admin.go">관리자</a></li>
+                		<li class="list-item"><a href="<%=request.getContextPath()%>/admin.go">관리자</a></li>
                 	</c:if>
                 	<c:if test="${AUTHUSER.admin ==0}">
-                		<li class="list-item"><a href="mypage.go">마이페이지</a></li>
+                		<li class="list-item"><a href="<%=request.getContextPath()%>/mypage.go">마이페이지</a></li>
                 	</c:if>
-					<li class="list-item"><a href="logout.go">로그아웃</a></li>
+					<li class="list-item"><a href="<%=request.getContextPath()%>/logout.go">로그아웃</a></li>
                 </u:isLogin>
                 <u:notLogin> <!--미로그인시--> 
-					<li class="list-item"><a href="login.go">로그인</a></li>
-					<li class="list-item"><a href="join.go">회원가입</a></li>
+					<li class="list-item"><a href="<%=request.getContextPath()%>/login.go">로그인</a></li>
+					<li class="list-item"><a href="<%=request.getContextPath()%>/join.go">회원가입</a></li>
                 </u:notLogin>
                 
 			</ul>

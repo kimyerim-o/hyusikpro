@@ -56,4 +56,83 @@ public class RestinfoDao {
 			JdbcUtil.close(stmt);
 		}
 	}
+
+	public int update(Connection conn, int restno, String restname, String theme, String themede, String resttel,
+			String restadd, String firstfood, String truck, String maintenance, String wifi, int m_toilet, int w_toilet,
+			int topark, int spark, int bpark, String jpark, String block, String pregnant) throws SQLException {
+		PreparedStatement pstmt=null;
+	  try {	
+		String sql="update restinfo set restname=?, theme=?, themede=?, resttel=?," + 
+				" restadd=?, firstfood=?, truck=?, maintenance=?, wifi=?, m_toilet=?, w_toilet=?," + 
+				" topark=?, spark=?, bpark=?, jpark=?, block=?, pregnant=? where restno=?";
+		pstmt=conn.prepareStatement(sql);
+		pstmt.setString(1, restname);
+		pstmt.setString(2, theme);
+		pstmt.setString(3, themede);
+		pstmt.setString(4, resttel);
+		pstmt.setString(5, restadd);
+		pstmt.setString(6, firstfood);
+		pstmt.setString(7, truck);
+		pstmt.setString(8, maintenance);
+		pstmt.setString(9, wifi);
+		pstmt.setInt(10, m_toilet);
+		pstmt.setInt(11, w_toilet);
+		pstmt.setInt(12, topark);
+		pstmt.setInt(13, spark);
+		pstmt.setInt(14, bpark);
+		pstmt.setString(15, jpark);
+		pstmt.setString(16, block);
+		pstmt.setString(17, pregnant);
+		pstmt.setInt(18, restno);
+		return pstmt.executeUpdate();
+	  }finally {
+			JdbcUtil.close(pstmt);
+	}
+		
+	}
+
+	public int insert(Connection conn, int restno, String restname, String theme, String themede, String resttel, String restadd,
+			String firstfood, String truck, String maintenance, String wifi, int m_toilet, int w_toilet, int topark,
+			int spark, int bpark, String jpark, String block, String pregnant) throws Exception {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="insert into restinfo (restname, theme, themede, resttel, restadd, firstfood, truck, maintenance, wifi, m_toilet, w_toilet, topark, spark, bpark, jpark, block, pregnant,restno) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, restname);
+			pstmt.setString(2, theme);
+			pstmt.setString(3, themede);
+			pstmt.setString(4, resttel);
+			pstmt.setString(5, restadd);
+			pstmt.setString(6, firstfood);
+			pstmt.setString(7, truck);
+			pstmt.setString(8, maintenance);
+			pstmt.setString(9, wifi);
+			pstmt.setInt(10, m_toilet);
+			pstmt.setInt(11, w_toilet);
+			pstmt.setInt(12, topark);
+			pstmt.setInt(13, spark);
+			pstmt.setInt(14, bpark);
+			pstmt.setString(15,jpark);
+			pstmt.setString(16, block);
+			pstmt.setString(17, pregnant);
+			pstmt.setInt(18, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+		
+	}
+
+	public int delete(Connection conn, int restno) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="delete from restinfo where restno=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, restno);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+	}
+
 }
