@@ -5,13 +5,12 @@ import java.util.Date;
 public class ReviewDto {
 	private int reno;
 	private String name;
+	private int restno;
+	private String restname;
 	private Date redate;
 	private String stdate;
 	private String repw;
 	private String recontent;
-	
-	private int restno;
-	private String restname;
 	private Double restis;
 	
 	
@@ -27,7 +26,7 @@ public class ReviewDto {
 
 
 	public ReviewDto(int restno, String restname, double restis) {
-		this.restno=restno;
+		this.setRestno(restno);
 		this.restname=restname;
 		this.restis=restis;
 	}
