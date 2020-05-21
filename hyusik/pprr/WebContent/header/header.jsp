@@ -40,7 +40,7 @@ function ranking(){
 <header class="body">
 <form name="form1" action="<%=request.getContextPath()%>/info.go" method="get">
 <!-- target="_blank" 클릭하면 새창 -->
-<span class="logo"><a href="<%=request.getContextPath()%>">휴~ 식</a></span>	
+<span class="logo"><a href="<%=request.getContextPath()%>/main.go">휴~ 식</a></span>	
   <div id="choice">
   <!-- http://localhost:8090/kim/header/header_login.jsp?site=? -->
     <select name="site" id="site" style="width:50%;height:30px;">
@@ -83,7 +83,7 @@ function ranking(){
                 	<c:if test="${AUTHUSER.admin ==0}">
                 		<li class="list-item"><a href="<%=request.getContextPath()%>/myPage.go">마이페이지</a></li>
                 	</c:if>
-					<li class="list-item"><a href="logout.go">로그아웃</a></li>
+					<li class="list-item"><a href="<%=request.getContextPath()%>/logout.go">로그아웃</a></li>
 				</c:if>
                 <c:if test="${empty AUTHUSER }"> <!--미로그인시--> 
 					<li class="list-item"><a href="<%=request.getContextPath()%>/login.go">로그인</a></li>
