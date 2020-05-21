@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>header</title>
 <style type="text/css">
-#rank {width: 200px;position: relative;top: -35px;left: 960px;}
+#rank {width: 200px;position: relative;top: -35px;left: 940px;}
 #rank-list {overflow: hidden;width: 300px;height: 20px;margin: 0;}
 #rank-list dd {position: relative;margin: 0;}
 #rank-list ol {position: absolute;top: 0;left: 0;margin: 0;padding: 0;list-style-type: none;}
@@ -31,8 +31,8 @@ $(function() {
     step(1);
 });
 function ranking(){
-	if(location=='http://localhost:8090/' || location=='http://localhost:8090/index.jsp'){
-	location.replace("/main.go");}
+	if(location=='http://localhost:8090/prac1/' || location=='http://localhost:8090/prac1/index.jsp'){
+	location.replace("/prac1/main.go");}
 }
 </script>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
@@ -76,17 +76,16 @@ function ranking(){
 				<li class="list-item"><a href="<%=request.getContextPath()%>/road.go">공사</a></li>
 				<li class="list-item"><a href="<%=request.getContextPath()%>/recommand.go">추천휴게소</a></li>
                 <li class="list-item"><a href="<%=request.getContextPath()%>/oilprice.go">추천주유소</a></li>
-               <li class="list-item"><a href="<%=request.getContextPath()%>/review/review_list.jsp">리뷰</a></li>
+                <li class="list-item"><a href="<%=request.getContextPath()%>">리뷰</a></li>
                 
                 		<li class="list-item"><a href="admin.go">관리자</a></li>
                 <u:isLogin> <!-- 로그인시 -->
-                	<c:if test="${AUTHUSER.admin ==1}">
-                	<li class="list-item"><a href="<%=request.getContextPath()%>/admin.go">관리자</a></li>
+                	<c:if test="${member.admin ==1}">
                 	</c:if>
-                	<c:if test="${AUTHUSER.admin ==0}">
-                		<li class="list-item"><a href="<%=request.getContextPath()%>/mypage.go">마이페이지</a></li>
+                	<c:if test="${member.admin ==0}">
+                		<li class="list-item"><a href="mypage.go">마이페이지</a></li>
                 	</c:if>
-					<li class="list-item"><a href="<%=request.getContextPath()%>/logout.go">로그아웃</a></li>
+					<li class="list-item"><a href="logout.go">로그아웃</a></li>
                 </u:isLogin>
                 <u:notLogin> <!--미로그인시--> 
 					<li class="list-item"><a href="<%=request.getContextPath()%>/login.go">로그인</a></li>
@@ -97,7 +96,7 @@ function ranking(){
 		</nav>
 	</div>
 	
-	
+
 	<div id="rank">
 		<dl id="rank-list">
 			<dd>
