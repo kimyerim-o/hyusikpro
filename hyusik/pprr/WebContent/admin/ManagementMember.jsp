@@ -63,7 +63,6 @@
 </head>
 <body>
 
-
 <div align="center">
 <p class="cls1">회원정보관리</p>
     회원 조회 페이지입니다.<br/>
@@ -86,27 +85,35 @@
 
 <table align="center" border="1">
 	<tr align="center">
-		<td width="7%"><b>이메일</b></td>	
-		<td width="7%"><b>비밀번호</b></td>	
+		<td width="7%"><b>이메일</b></td>		
 		<td width="7%"><b>닉네임</b></td>
 		<td width="7%"><b>생년월일</b></td>
 		<td width="7%"><b>성별</b></td>
 		<td width="7%"><b>관리자여부</b></td>
 	</tr>
+	<c:if test="${memberpage==null}">
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>	
+	</tr>
+	</c:if>
+	<c:forEach items="${memberpage}" var="mem">
+		<tr>
+			<td>${mem.email}</td>
+			<td>${mem.name}</td>
+			<td>${mem.birth}</td>
+			<td>${mem.gender}</td>
+			<td>${mem.admin}</td>
+		</tr>
+	</c:forEach>
 	<c:choose>
-		<c:when test="${memberList == null}">
-			<tr>
-				<td colspan="5">
-					<b>등록된 회원이 없습니다</b>
-				</td>
-			</tr>
-		</c:when>
- 		
 		<c:when test="${memberList != null}">	
 			<tr align="center">
 				<c:forEach var="Member" items="${memberList}">
 					<td><c:out value="${Member.email}" /></td>
-					<td><c:out value="${Member.password}" /></td>
 					<td><c:out value="${Member.name}" /></td>
 					<td><c:out value="${Member.birth}" /></td>
 					<td><c:out value="${Member.gender}" /></td>
