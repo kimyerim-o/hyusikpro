@@ -13,7 +13,7 @@
  
     </script>
     <style>
-        #headtext{color: blue;}
+        #headtext{color: #296ead;;}
         #idtable {margin-top:5%}
         #headtext{margin-top:10%; font-size:50px}
         
