@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%> 
+<%@ page import="java.sql.*" %>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/info/infos_style.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/dcss/mypage.css">		
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d033ab2c0002c3aedd619825d12b4956"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
@@ -17,38 +19,27 @@
 		});
 </script>
 <head>
-<title></title>
-		
-</head>
-<body>
-<form action="/mypage.go"  method="post">
-<table border="1" id="listArticle" >
-	<tr>
-		<td colspan="4"><a href="write.go">[게시글 쓰기]</a></td>
-	</tr>
-	<tr>
-		<td>글 번호</td>
-		<td>글 제목</td>
-		<td>조회수</td>
-	</tr>
-	<c:if test="${articlePage.hasNoArticles()}">
-		<tr>
-			<td colspan="4">게시글이 없습니다.</td>
-		</tr>
-	</c:if>
-	<c:forEach var="article" items="${articlePage.content}">
-		<tr>
-			<td>${article.number}</td>
-			<td>
-				<a href="read.go?no=${article.number}&pageNo=${articlePage.currentPage}">
-					<c:out value="${article.title}" />
-				</a>
-			</td>
-			<td>
-		</tr>
-	</c:forEach>
-</table>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>myPage</title>
 
-</form>	
-	
+</head>
+<body>	
+	<nav>
+		<ul>
+			<li> <a href="#">회원정보수정</a> </li>
+			<li> <a href="#">리뷰게시판</a> </li>
+			<li> <a href="#">QnA게시판</a> </li>
+			<li> <a href="#">회원탈퇴</a> </li>
+		</ul>
+	</nav>
+<section>
+	<h2>마이페이지</h2>
+		<article>
+			이메일 : ${member.email}
+			닉네임 : ${member.name}
+			생년월일 : ${member.birth}
+			성별 : ${member.gender}
+		</article>
+</section>	
+</body>
 </html>
