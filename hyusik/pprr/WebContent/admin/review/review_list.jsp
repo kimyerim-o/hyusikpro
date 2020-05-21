@@ -28,6 +28,8 @@ footer {margin-left:620px;margin-top:50px}
 #review{height:200px;padding-left:200px;font-size:22px}
 #comment{width:60%;height:30px}
 .fas fa-bed {font: FontAwesome !important;}
+.table2{border-collapse: collapse; width:600px;}
+.table2 td{padding:3px}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
@@ -46,16 +48,31 @@ footer {margin-left:620px;margin-top:50px}
 등록된 메시지가 없습니다.
 </c:if>
 <c:if test="${!viewData.isEmpty()}">
-<table border="1" width="450">
+<table class="table2">
 	<c:forEach var="message" items="${viewData.messageList}">
-	<tr>
-		<td>
-		메시지 번호: ${message.reno} <br/>
-		휴게소 이름: ${message.restname}<br/>
-		닉네임: ${message.name} <br/>
-		암호:${message.repw}<br/>
-		작성일: ${message.stdate} <br/>
-		만족도: <c:forEach var="i" begin="1" end="${message.restis}">
+		<tr>
+			<td>메시지 번호:</td>
+			<td>${message.reno}</td>
+		</tr>
+		<tr>	
+			<td>휴게소 이름:</td>
+			<td>${message.restname}</td>
+		</tr>
+		<tr>	
+			<td>암호: </td>
+			<td>${message.repw}</td>
+		</tr>
+		<tr>	
+			<td>닉네임: </td>
+			<td>${message.name}</td>
+		</tr>
+		<tr>	
+			<td>작성일:</td>
+			<td>${message.stdate}</td>
+		</tr>
+		<tr>	
+			<td>만족도:</td>
+			<td><c:forEach var="i" begin="1" end="${message.restis}">
 		<c:forEach var="j" items="★">
 	            	★
 	        </c:forEach>
@@ -65,18 +82,18 @@ footer {margin-left:620px;margin-top:50px}
 	            	☆
 	        </c:forEach>
         </c:forEach>
-		(${message.restis}점 / 5.0점) <br/>
-		후기: ${message.recontent} <br/>
-		<a href="<%=request.getContextPath()%>/admin/review/review_confirmDeletion.jsp?messageId=${message.reno}">[삭제하기]</a>
-		</td>
-	</tr>
+		(${message.restis}점 / 5.0점)</td>
+		</tr>
+		<tr>	
+			<td>후기: </td>
+			<td>${message.recontent} </td>
+		</tr>
+		<tr>	
+			<td colspan="2" style=" height: 40px"><a href="<%=request.getContextPath()%>/review/review_confirmDeletion.jsp?messageId=${message.reno}" style="    padding-left: 400px;">[삭제하기]</a><br/></td>
+		</tr>
+
 	</c:forEach>
 </table>
-
-<c:forEach var="pageNum" begin="1" end="${viewData.pageTotalCount}">
-<a href="<%=request.getContextPath()%>/admin/review/review_list.jsp?page=${pageNum}">[${pageNum}]</a> 
-</c:forEach>
-
 </c:if>
 </footer>
 </body>
