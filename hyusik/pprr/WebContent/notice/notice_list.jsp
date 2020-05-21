@@ -8,16 +8,14 @@
 <meta charset="UTF-8">
 <title>공지사항</title>
 <style>
-body {width:1200px;margin-left:250px;margin-top: 0px;
-}
-.title {font-size:25px;padding:100px;}
-.header1 {background-color:#77d8d8;height:15px}	
+table {text-align:center;width:1150px;height:10px;padding-top:10px;margin-left:400px;}
+.title {font-size:25px;padding:50px;}
+.header1 {background-color:rgb(159,197,232);height:15px}	
 .button {
   color: white;
   text-align: center;
   background: #0779e4;
   border-radius: 10px;}
-table {text-align:center;width:1150px;height:10px;padding-top:50px;}
 </style>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 </head>
