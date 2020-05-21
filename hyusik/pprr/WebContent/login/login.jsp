@@ -26,7 +26,7 @@
     
     <c:if test="${errors.idOrPwNotMatch}">
      <div align="center">이메일과 비밀번호가 일치하지 않습니다.</div></c:if>
-     <table  align="center" id="idtable" >
+     <table align="center" id="idtable" >
         <tr height="50px">
             <td>이메일 : </td>
             <td>
@@ -50,7 +50,7 @@
         </tr>
     </table>
     <div align="center">
-                 <input type="submit" value="이메일 로그인"> 
+                 <input type="submit" value="이메일 로그인" onclick="location.href='./myPage/myPage.go'"> 
                  <input type="button" id="joinmember"value="회원가입"/>
                  <input type="reset" value="취소"> 
 	</div>
