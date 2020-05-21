@@ -22,7 +22,7 @@
 	공지사항을 등록했습니다.
 	<div id="ctxPath">${ctxPath = pageContext.request.contextPath}&nbsp;&nbsp;</div>
 	<a href="${ctxPath}/admin/notice/list.go">[글 목록보기]</a>&nbsp;&nbsp;
-	<a href="${ctxPath}/admin/notice/read.go?no=${NEWARTICLENO}">[입력된)글 상세내용 조회]</a></div>
+	<a href="${ctxPath}/admin/notice/read.go?no=${newArticleNo}">[입력된)글 상세내용 조회]</a></div>
 	
 </body>
 </html>
