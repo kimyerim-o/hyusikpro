@@ -1,0 +1,67 @@
+.cont {
+	width: 1230px;
+	margin:0 auto;
+}
+.tab {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+/* Float the list items side by side */
+.tab li {
+    float: left;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 10px;
+	border-bottom-style: ridge;
+	border-bottom-color: rgb(177,196,214);
+	border-bottom-width: thin;
+}
+/* Style the links inside the list items */
+.tab li a {
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	padding: 20px 80px;
+	font-size: 17px;
+	transition:0.3s;
+	background-color:rgb(159,197,232);
+	margin:10px 50px;
+}
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	/*background-color:rgb(0,154,200);*/
+	padding: 6px 12px;
+	/*color:#fff;*/
+}
+/*ul.tab li.current{
+	//background-color:rgb(64,140,209);
+	color: #222;
+}*/
+ul.tab li.current a{
+	background-color:rgb(177,196,214);
+}
+.tabcontent.current {
+	display: block;
+}
+	
+.location{
+	text-align:center;
+	width:1100px;
+}
+#map{
+	width:550px;height:200px;margin: 30px;
+}
+
+.infolist li{
+	font-size: 25px;margin:10px;
+}
+.infolist h3{
+	margin:20px 10px;
+}
+.infolist a{
+	margin:30px;
+}
