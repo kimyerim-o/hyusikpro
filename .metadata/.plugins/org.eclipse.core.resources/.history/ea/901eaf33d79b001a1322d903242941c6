@@ -40,7 +40,7 @@
     <form action="<%=request.getContextPath()%>/deleteID.go" method="post">
 	    <table align="center" id="deleteMember">
 			<tr align="center">
-			<c:forEach var="Member" items="${Member.email}">
+			<c:forEach var="Member" items="${memberList}">
 				<td>아이디: <br></td>
 				<td><input type="text" id="memailchk" name="memailchk"><c:out value="${Member.email}" /><br></td>
 			</c:forEach>	

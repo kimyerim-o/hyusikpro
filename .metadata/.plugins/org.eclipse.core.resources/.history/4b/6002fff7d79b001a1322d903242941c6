@@ -33,24 +33,20 @@
 	if(id == null){
 	 response.sendRedirect("./login/login.jsp");
 	}
-			
 	//passwd값 가져오기
-	String passwd = request.getParameter("password");
-	
+	String passwd = request.getParameter("passwd");
 	//디비객체생성 dbPro
-	memberDAO memberDao = new memberDAO();
-	
-	// int check = deleteMember(email, password)
-	int check = memberDAO.deleteMember(String email, String password);
-	
+	MemberDBBean dbPro = new MemberDBBean();
+	// int check = deleteMember(id,passwd)
+	int check = dbPro.deleteMember(id, passwd);
 	// check==1 세션값 삭제, 삭제성공메시지, loginForm.jsp 이동
 	// check==0 비밀번호틀림. 뒤로이동
-	if(check == 1) {
-		session.invalidate();
+	if(check==1){
+	 session.invalidate();
  %>
 	 <script type="text/javascript">
-		 alert("삭제 성공!");
-		 location.href="./main/main.go";
+	 alert("삭제 성공!");
+	 location.href="loginForm.jsp";
 	 </script>
  <%
 	} else if(check == 0) {

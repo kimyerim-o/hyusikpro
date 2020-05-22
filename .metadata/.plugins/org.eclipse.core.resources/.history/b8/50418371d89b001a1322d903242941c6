@@ -41,7 +41,7 @@
 	memberDAO memberDao = new memberDAO();
 	
 	// int check = deleteMember(email, password)
-	int check = memberDAO.deleteMember(String email, String password);
+	int check = memberDAO.deleteMember("email", "password");
 	
 	// check==1 세션값 삭제, 삭제성공메시지, loginForm.jsp 이동
 	// check==0 비밀번호틀림. 뒤로이동

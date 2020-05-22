@@ -51,7 +51,7 @@
 			</tr>	
 			<tr>
 				<td><input type="submit" value="회원삭제" onclick="alert('정상적으로 계정 삭제가 이루어졌습니다.')"><br></td>
-				<td><input type="reset" value="취소" onclick="<%=request.getContextPath()%>/main.go"></td>
+				<td><input type="reset" value="취소" onclick="<%=request.getContextPath()%>/main/main.go"></td>
 			</tr>
 		</table>
 	</form>
