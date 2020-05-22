@@ -37,22 +37,14 @@
 </div>
 <div id="headtext" align="center">마이페이지
 	<form>
-	<table border="1">
-		<section>
-			<h2>회원 정보</h2>
-				<c:choose>
-				<c:when test="${memberList != null}">	
-					<tr align="center">
-						<c:forEach var="Member" items="${memberList}">
-							<td width="7%"><c:out value="${Member.email}" /></td>
-							<td width="7%"><c:out value="${Member.name}" />회원 닉네임</td>
-							<td width="7%"><c:out value="${Member.birth}" />회원 생년월일</td>
-							<td width="7%"><c:out value="${Member.gender}" />회원 성별</td>
-						</c:forEach>
-					</tr>
-				</c:when>
-				</c:choose>		
-		</section>	
+			 sessionScope.authUser=(${sessionScope.AUTHUSER})
+			 (${AUTHUSER.email })
+	<table border="1" width="400" height="400" margin="auto">
+				<tr>
+					<td ><a href="/admin/modmember.jsp">회원정보 수정</a></td>
+					<td><a href="/deleteID/delForm.jsp">회원 삭제</a></td>
+					<td><a href="/review/review_list.jsp">리뷰 게시판</a></td>
+				</tr>	
 	</table>
 	</form>
 </div>	
