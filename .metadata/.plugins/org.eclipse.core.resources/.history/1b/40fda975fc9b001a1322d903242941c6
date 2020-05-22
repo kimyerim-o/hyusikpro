@@ -60,7 +60,7 @@ $(function(){
 .a {
         margin: 0px 0px;
         text-align: center;
-        font-size: 50px;
+        font-size: 80px;
         color: #4969F2;
         }  
 </style>
@@ -76,13 +76,13 @@ $(function(){
 			<td>
 			<tr>
 				<td>
-					<h2>휴게소 맛집 랭킹</h2>
+					<strong>휴게소 맛집 랭킹</strong>
 				</td>
 			</tr>	
 		</div>
 	
 	
-	<hr/>
+	
 	<div align="center">
 		<a href="#none" onclick="fn()">
 				<h1>1. 화성휴게소</h1></a>
@@ -116,15 +116,11 @@ $(function(){
         });
     });
 </script>
-<hr/>
 
+<table border="1" width="800" height="800" >
 <div align="center">
     <h1>휴게소 테마 소개</h1>
-    <br/> 
-    <br/> 
-    <br/> 
-
-     
+    <hr/>  
     <div id="displayDiv">
         <img src="https://post-phinf.pstatic.net/MjAxNzAzMjhfNzUg/MDAxNDkwNjY3NzQyMDUz.SwuuF3AkKeCURuoNetbdMtVwbkKvlF71ggwdea7BAt4g.wJox2lwR1rzTBdYsKBGJwTj9rEUYQfu-fCPq51Lgw0Eg.JPEG/1.jpg?type=w1200" width="400" height="300">
     </div>
@@ -148,7 +144,8 @@ $(function(){
         });
     });
 </script>
-
+</table>
+<table border="1" width="800" height="800" >
 	<div align="center">
 	    <hr/>
 	    <div id="displayDivb">
@@ -173,7 +170,8 @@ $(function(){
 	        });
 	    });
 	</script>
-
+</table>
+<table border="1" width="800" height="800" >
 <div align="center">
     <hr/>
     <div id="displayDivbb">
@@ -191,6 +189,6 @@ $(function(){
     	서울 방향 안성휴게소에서도 소고기국밥을 팔지만, 국물이 하얀 '안성 옥국밥'이기에 하행선 안성휴게소에서만 판매하는 '안성국밥'을 기억해주시기 바란다.
 	</div>
 </div>
-		
+</table>		
 </body>
 </html>
