@@ -51,11 +51,27 @@ public class RestinfoDto {
 		this.restname=restname;
 	}
 
-	public RestinfoDto(int parseInt, String parameter, String parameter2, String parameter3, String parameter4,
-			String parameter5, String parameter6, String parameter7, String parameter8, String parameter9,
-			int parseInt2, int parseInt3, int parseInt4, int parseInt5, int parseInt6, String parameter10,
-			String parameter11, String parameter12) {
-		// TODO Auto-generated constructor stub
+	public RestinfoDto(int restno, String restname,String theme, String themede, String resttel, String restadd, String firstfood, String truck, String maintenance,
+			String wifi, int m_toilet, int w_toilet, int topark, int spark, int bpark, String jpark, String block,
+			String pregnant) {
+		this.restno=restno;
+		this.restname=restname;
+		this.theme=theme;
+		this.themede=themede;
+		this.resttel=resttel;
+		this.restadd=restadd;
+		this.firstfood=firstfood;
+		this.truck=truck;
+		this.maintenance=maintenance;
+		this.wifi=wifi;
+		this.m_toilet=m_toilet;
+		this.w_toilet=w_toilet;
+		this.topark=topark;
+		this.spark=spark;
+		this.bpark=bpark;
+		this.jpark=jpark;
+		this.block=block;
+		this.pregnant=pregnant;
 	}
 
 

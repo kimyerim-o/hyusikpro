@@ -67,29 +67,35 @@
 	<div id="tab1" class="tabcontent current">
 		<table class="location">
             <tr>
+                <td colspan="2">
+					지도를 추가하세요
+                </td>
+            </tr>
+            <tr>    
             	<td>
 					휴게소번호
                 </td>
                 <td>
 					<input type="text" name="restno"/>
 				</td>
-                <td rowspan="2">
-					지도를 추가하세요
-                </td>
+            </tr>
+            <tr> 
                 <td>휴게소명</td>
                 <td>
 					<input type="text" name="restname"/>
 				</td>
-            </tr>
-                <td style="font-size: 20px;">주소</td>
+			</tr>
+            <tr> 
+                <td>주소</td>
                 <td><input id="td" type="text" name="restadd"/></td>
+             </tr>   
             <tr>
-                <td style="width: 150px;font-size: 20px;height:80px;">전화번호</td>
+                <td>전화번호</td>
                 <td><input id="td" type="text" name="resttel"/></td>
             </tr>
         </table>
 		
-		<table>
+		<table class="location">
 			<tr>
 				<td>테마명</td>
 				<td><input type="text" name="theme"/></td>
@@ -104,7 +110,7 @@
 			</tr>
 		</table>
 
-		<table id=ta1>
+		<table id=ta1 class="location">
 		브랜드
 		<input id=bu1 type="button" value="브랜드 추가">
 		<input id=bud1 type="button" value="브랜드 삭제">
@@ -136,7 +142,7 @@
 				<td><input type="text" name="conde"/></td>
 			</tr>
 		</table>
-		<table>
+		<table class="location">
 			<tr>
 				<td>임산부 휴게시설</td>
 				<td><input type="text" name="pregnant"/></td>
@@ -195,7 +201,7 @@
 	</div>
 
 	<div id="tab3" class="tabcontent">
-		<table id=ta3>
+		<table id=ta3 class="location">
 		<input id=bu3 type="button" value="음식 추가">
 		<input id=bud3 type="button" value="음식 삭제">
 			<tr>
@@ -216,7 +222,7 @@
 	</div>
 	
 	<div id="tab4" class="tabcontent">
-			<table>
+			<table class="location">
 			<tr>
 				<td>주유소명</td>
 				<td><input type="text" name="oilname"/></td>
@@ -254,7 +260,7 @@
 				<td><input type="text" name="mat"/> 개</td>
 			</tr>
 		</table>
-		<table id=ta4>
+		<table id=ta4 class="location">
 		<input id=bu4 type="button" value="주유소 편의시설 추가">
 		<input id=bud4 type="button" value="주유소 편의시설  삭제">
 			<tr>

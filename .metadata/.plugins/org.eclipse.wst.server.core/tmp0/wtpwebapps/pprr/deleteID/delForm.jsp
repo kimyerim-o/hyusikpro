@@ -38,10 +38,12 @@
     
     <hr/>
     <form action="<%=request.getContextPath()%>/deleteID.go" method="post">
-	    <table align="center" id="deleteTable">
+	    <table align="center" id="deleteMember">
 			<tr align="center">
+			<c:forEach var="Member" items="${Member.email}">
 				<td>아이디: <br></td>
-				<td><input type="text" id="email" name="email" value="${param.email}"><br></td>
+				<td><input type="text" id="memailchk" name="memailchk"><c:out value="${Member.email}" /><br></td>
+			</c:forEach>	
 			</tr>
 			<tr align="center">
 				<td>패스워드: <br></td>
