@@ -34,6 +34,9 @@ public class MemberService {
 			
 			System.out.println("MemberService의 getmember()호출성공");
 			int delete = memberDao.delete(conn,email,pw);
+			if(delete==1) {
+				conn.commit();
+			}
 			System.out.println(delete);
 			return delete;
 			
