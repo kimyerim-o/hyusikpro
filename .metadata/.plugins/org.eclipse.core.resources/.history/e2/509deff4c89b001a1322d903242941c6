@@ -11,6 +11,13 @@ import jdbc.JdbcUtil;
 public class memberDAO {
 
 	
+	public memberDAO(List<Member> select) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public memberDAO() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Member selectById(Connection conn, String email)throws SQLException{
 		System.out.println("DAO메소드 진입"+email);
@@ -147,5 +154,5 @@ public class memberDAO {
 	
 
 	
+	}
 }
-
