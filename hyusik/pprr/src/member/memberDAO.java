@@ -28,7 +28,8 @@ public class memberDAO {
 						rs.getString("gender"), 
 						rs.getString("password"), 
 						rs.getInt("admin"));
-			}System.out.println(member);
+			}
+			System.out.println(member);
 			return member;
 		
 		}finally {//
@@ -80,9 +81,11 @@ public class memberDAO {
 		}//p656
 		
 	}
+	
 	public ArrayList<Member> getMemberList() {
 		return null;
 	}
+	
 	public void update(Connection conn, Member member)
 			throws SQLException {
 		System.out.println("MemberDAO-update()호출");
@@ -95,9 +98,23 @@ public class memberDAO {
 		pstmt.setString(3, member.getemail());
 		pstmt.executeUpdate();
 	}
+	
+	public void delete(Connection conn, String email) throws SQLException {
+		System.out.println("DAO메소드 진입"+email);
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String memailchk = null;
+		
+		try {
+			System.out.println("Member의 try문 진입");
+			pstmt = conn.prepareStatement("Select * from member where email = ?"); 
+			pstmt.setString(1, email); 
+			rs = pstmt.executeQuery();  
+			System.out.println("완성된 쿼리문"+pstmt);
+			Member member=null;
+		}
+		
 
 	
-
-
-	
+	}
 }
