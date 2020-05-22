@@ -27,7 +27,7 @@ public class MemberPage {
 			
 			System.out.println("LoginService의 conn="+conn);
 			memberDAO memberDao = new memberDAO();
-			Member member = memberDao.select(conn, email);
+			Member member = memberDao.selectById(conn, email);
 			System.out.println("member안에 email받음"+member);
 			/* "SELECT  * from member" */
 			if(member==null) { //회원으로 존재x=>비회원 
