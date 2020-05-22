@@ -20,6 +20,7 @@
 </head>
 <body>
  <h1 class="cls1">회원 정보 수정창</h1>
+ sessionScope.AuthUser=(${sessionScope.AUTHUSER})
 <form  method="post" action="${contextPath}/members/modMember.do?id=${memInfo.id}">
  <table align="center" >
    <tr>

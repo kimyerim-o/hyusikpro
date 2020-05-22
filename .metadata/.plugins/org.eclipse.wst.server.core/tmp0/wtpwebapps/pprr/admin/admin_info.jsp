@@ -8,7 +8,7 @@
 <style>
 .infolist{margin-left:250px;margin-top:50px;}
 li{text-decoration: none;}
-
+ul.tab li.tab2 a{background-color:rgb(177,196,214);}
 </style>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
