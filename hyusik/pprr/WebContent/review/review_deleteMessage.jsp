@@ -30,7 +30,7 @@ Check your password.
 <%  }%>
 <br/><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="<%=request.getContextPath()%>/admin/review/review_list.jsp" id="valid">[listview]</a>
+<a href="<%=request.getContextPath()%>/review/review_list.jsp" id="valid">[listview]</a>
 </span>
 </body>
 </html>
