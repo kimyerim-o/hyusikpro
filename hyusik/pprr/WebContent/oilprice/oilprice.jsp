@@ -24,18 +24,18 @@
 		<li data-tab="tab2"><a href="#">경유</a></li>
 		<li data-tab="tab3"><a href="#">LPG</a></li>
 	</ul>
-
+	<ul class="infolist">
 	<div id="tab1" class="tabcontent current">
 		<c:forEach var="gasol" items="${oil.oilgasol}" >
 			<h3>${gasol.oilname}</h3>
-			<a>${gasol.gasoline}</a>
+			<a>￦  ${gasol.gasoline}</a>
 		</c:forEach>
 	</div>
 
 	<div id="tab2" class="tabcontent">
 		<c:forEach var="disel" items="${oil.oildisel}" >
 			<h3>${disel.oilname}</h3>
-			<a>${disel.disel}</a>
+			<a>￦  ${disel.disel}</a>
 		</c:forEach>
 	</div>
 
@@ -43,11 +43,11 @@
 		<c:forEach var="lpg" items="${oil.oillpg}">
 			<c:if test="${lpg.lpg != '0'}">
 				<h3>${lpg.oilname}</h3>
-				<a>${lpg.lpg}</a>
+				<a>￦  ${lpg.lpg}</a>
 			</c:if>
 		</c:forEach>
 	</div>
-	
+	</ul>
 </div>
 </main>	
 </body>

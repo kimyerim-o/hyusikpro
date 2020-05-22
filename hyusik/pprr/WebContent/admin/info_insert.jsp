@@ -25,8 +25,33 @@
 			$('.tabcontent').removeClass('current');
 			$(this).addClass('current');
 			$('#' + activeTab).addClass('current');
-		})
+		
 	})
+	$('#bu1').click(function(){
+		$('#ta1 tr:last').after('<tr><td><input type="text" name="brandname"/></td><td><input type="text" name="brandde"/></td></tr>')
+	})
+	$('#bud1').click(function(){
+		$('#ta1 tr:last').remove()})
+		
+	$('#bu2').click(function(){
+		$('#ta2 tr:last').after('<tr><td><input type="text" name="conname"/></td><td><input type="text" name="conde"/></td></tr>')
+	})
+	$('#bud2').click(function(){
+		$('#ta2 tr:last').remove()})
+		
+	$('#bu3').click(function(){
+		$('#ta3 tr:last').after('<td><input type="text" name="foodname"/></td><td><input type="text" name="foodcost"/></td><td><input type="text" name="season"/></td><td><input type="text" name="foodma"/></td><td><input type="text" name="foodde"/></td>')
+	})
+	$('#bud3').click(function(){
+		$('#ta3 tr:last').remove()})	
+		
+	$('#bu4').click(function(){
+		$('#ta4 tr:last').after('<tr><td><input type="text" name="oilconname"/></td><td><input type="text" name="oilconde"/></td></tr>')
+	})
+	$('#bud4').click(function(){
+		$('#ta4 tr:last').remove()})		
+	})
+	
 </script>
 </head>
 <body>
@@ -79,25 +104,29 @@
 			</tr>
 		</table>
 
-		<table>
+		<table id=ta1>
 		브랜드
-		<input type="button" value="브랜드 추가">
+		<input id=bu1 type="button" value="브랜드 추가">
+		<input id=bud1 type="button" value="브랜드 삭제">
 			<tr>
 				<td>브랜드명</td>
 				<td>브랜드 설명</td>
 			</tr>
+			<tbody>
 			<tr>
 				<td><input type="text" name="brandname"/></td>
 				<td><input type="text" name="brandde"/></td>
 			</tr>
+			</tbody>
 		</table>
 
 	</div>
 
 	<div id="tab2" class="tabcontent">
-		<table>
+		<table id=ta2>
 		편의시설
-		<input type="button" value="편의시설 추가">
+		<input id=bu2 type="button" value="편의시설 추가">
+		<input id=bud2 type="button" value="편의시설 삭제">
 			<tr>
 				<td>편의시설명 </td>
 				<td>편의시설 설명</td>
@@ -166,8 +195,9 @@
 	</div>
 
 	<div id="tab3" class="tabcontent">
-		<table>
-		<input type="button" value="음식 추가">
+		<table id=ta3>
+		<input id=bu3 type="button" value="음식 추가">
+		<input id=bud3 type="button" value="음식 삭제">
 			<tr>
 				<td>음식명 </td>
 				<td>음식 가격</td>
@@ -224,8 +254,9 @@
 				<td><input type="text" name="mat"/> 개</td>
 			</tr>
 		</table>
-		<table>
-		<input type="button" value="주유소 편의시설 추가">
+		<table id=ta4>
+		<input id=bu4 type="button" value="주유소 편의시설 추가">
+		<input id=bud4 type="button" value="주유소 편의시설  삭제">
 			<tr>
 				<td>주유소 편의시설명 </td>
 				<td>주유소 편의시설 설명</td>

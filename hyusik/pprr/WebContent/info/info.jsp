@@ -122,33 +122,39 @@
 	</div>
 	
 	<div id="tab4" class="tabcontent">
-		<h3>${infoData.oil.oilname}</h3>
+	<ul class="infolist">
+		<h1>${infoData.oil.oilname}</h1>
 		<div>
-			${infoData.oil.oiltel}
-			${infoData.oil.gasoline}
-			${infoData.oil.disel}
+			<h3>주유소 전화번호 : ${infoData.oil.oiltel}</h3>
+			<h3>주유소 회사 : ${infoData.oil.company}</h3>
+			<li>가격 목록</li>
+			<h3>현재 휘발유 가격 : ${infoData.oil.gasoline}</h3>
+			<h3>현재 경유 가격 : ${infoData.oil.disel}</h3>
 			<c:if test="${infoData.oil.lpg !=0}">
-				${infoData.oil.lpg}
-			</c:if>
-			${infoData.oil.company}
-			<c:if test="${infoData.oil.air ==1}">
-				<a>공기압점검기 사용가능</a>
-			</c:if>
-			<c:if test="${infoData.oil.cleaner ==1}">
-				<a>진공청소기 사용가능</a>
-			</c:if>
-			<c:if test="${infoData.oil.mat ==1}">
-				<a>매트청소기 사용가능</a>
-			</c:if>
+				<h3>현재 LPG 가격 : ${infoData.oil.lpg}</h3>
+			</c:if>		
 		</div>
 		<div>
+		<li>주유소 편의 시설</li>
+		
+			<c:if test="${infoData.oil.air ==1}">
+				<h3>공기압점검기 사용가능</h3>
+			</c:if>
+			<c:if test="${infoData.oil.cleaner ==1}">
+				<h3>진공청소기 사용가능</h3>
+			</c:if>
+			<c:if test="${infoData.oil.mat ==1}">
+				<h3>매트청소기 사용가능</h3>
+			</c:if>
+			
 			<c:forEach var="oilcon" items="${infoData.oilcon}" >
-				<a>${oilcon.oilconname}</a>
+				<h3>${oilcon.oilconname}</h3>
 				<c:if test="${! empty oilcon.oilconde}">
 					<a>${oilcon.oilconde}</a>
 				</c:if>
-			</c:forEach>
+			</c:forEach>		
 		</div>
+		</ul>
 	</div>
 </div>
 </body>
