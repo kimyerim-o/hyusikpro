@@ -25,25 +25,26 @@
 
 </head>
 <body>	
-<div>
+<div align="center">
 	<form>
-	<table border="1">
-			<ul>
-				<li> <a href="/review/review_list.jsp">리뷰게시판</a> </li><br/>
-				<li> <a href="/deleteID/delform.jsp">회원탈퇴</a> </li>
-			</ul>
+	<table>	
+	<tr>
+		<th>
+		<h1> 마이페이지 </h1>
+		</th>
+	</tr>
 	</table>
-	</form>
-</div>
-<div id="headtext" align="center">마이페이지
-	<form>
-			 sessionScope.authUser=(${sessionScope.AUTHUSER})
-			 (${AUTHUSER.email })
-	<table border="1" width="400" height="400" margin="auto">
+	<table border="1" width="300" height="300" margin="auto">
 				<tr>
-					<td ><a href="/admin/modmember.jsp">회원정보 수정</a></td>
-					<td><a href="/deleteID/delForm.jsp">회원 삭제</a></td>
-					<td><a href="/review/review_list.jsp">리뷰 게시판</a></td>
+					<td >
+						<a href="/admin/modmember.jsp">
+						<img width="200" height="200" align="top" src="https://i.dlpng.com/static/png/6734405_preview.png">
+						<h3 align="center">회원정보 수정</h3></a>
+					</td>
+					<td><a href="/deleteID/delForm.jsp">
+						<img width="200" height="200" align="top" src="https://cdn1.iconfinder.com/data/icons/hand-gestures-line-art/128/hand-wave-ol-512.png">
+						<h3 align="center">회원 삭제</h3></a>
+					</td>
 				</tr>	
 	</table>
 	</form>

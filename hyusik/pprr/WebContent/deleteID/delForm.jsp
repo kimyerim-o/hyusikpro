@@ -39,7 +39,10 @@
     <hr/>
     <form action="<%=request.getContextPath()%>/deleteID.go" method="post">
     <c:if test="${on !=1}">
-    <h3>비밀번호를 다시 입력하세요</h3>
+    <tr>
+	    <td align="center"><h3>비밀번호를 다시 입력하세요</h3>
+	    </td>
+    </tr>
     </c:if>
 	    <table align="center" id="deleteMember">
 			<tr align="center">

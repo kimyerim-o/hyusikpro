@@ -38,20 +38,25 @@
     
     <hr/>
     <form action="<%=request.getContextPath()%>/deleteID.go" method="post">
+    <c:if test="${on !=1}">
+    <tr>
+	    <td align="center"><h3>비밀번호를 다시 입력하세요</h3>
+	    </td>
+    </tr>
+    </c:if>
 	    <table align="center" id="deleteMember">
 			<tr align="center">
-			<c:forEach var="Member" items="${Member.email}">
-				<td>아이디: <br></td>
-				<td><input type="text" id="memailchk" name="memailchk"><c:out value="${Member.email}" /><br></td>
-			</c:forEach>	
+				<td>이메일: <br></td>
+				<td>${AUTHUSER.email}</td>	
+				<input type="hidden" name="email" value="${AUTHUSER.email}">
 			</tr>
 			<tr align="center">
 				<td>패스워드: <br></td>
-				<td><input type="password" id="pw" name="password"><br></td>
+				<td><input type="password" name="pw" name="password"><br></td>
 			</tr>	
 			<tr>
-				<td><input type="submit" value="회원삭제" onclick="alert('정상적으로 계정 삭제가 이루어졌습니다.')"><br></td>
-				<td><input type="reset" value="취소" onclick="<%=request.getContextPath()%>/main.go"></td>
+				<td><input type="submit" value="회원삭제"><br></td>
+				<td><input type="reset" value="취소"></td>
 			</tr>
 		</table>
 	</form>
