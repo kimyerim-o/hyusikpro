@@ -1,56 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%> 
-<%@ page import="java.sql.*" %>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>  
+
 <link rel="stylesheet" href="<%=request.getContextPath()%>/info/infos_style.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/dcss/mypage.css">		
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d033ab2c0002c3aedd619825d12b4956"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script>
-		$(function() {
-			$('ul.tab li').click(function() {
-				var activeTab = $(this).attr('data-tab');
-				$('ul.tab li').removeClass('current');
-				$('.tabcontent').removeClass('current');
-				$(this).addClass('current');
-				$('#' + activeTab).addClass('current');
-			})
-		});
-</script>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
+    <meta charset="UTF-8">
+    <title>login.jsp</title>
+    <script>
+
+ 
+    </script>
+    <style>
+        #headtext{color: #296ead;}
+        #headtext{margin-top:10%; font-size:25px}
+        
+    </style>
+</head>
 <html>
 <head>
 <% request.setCharacterEncoding("utf-8"); %>
-<jsp:useBean id="membermanager" class="member.MemberManager"/>
-<script type="text/javascript" src="../js/script.js"></script>
 
 <title>회원탈퇴</title>
 </head>
 <body>
 <%
-	String id = (String)request.getParameter("id");
-	String password = (String)request.getParameter("password");
-	boolean deleteConfirm = membermanager.deleteConfirm(id, password);
-	if(deleteConfirm) {
-%>
-		<script type="text/javascript">
-			var confirmResult = confirm("정말 삭제하시겠습니까?");
-			if(confirmResult == true){
-				var deleteID = "<%=id%>";
-				post_to_url("<%=request.getContextPath()%>/deleteID/deleteID.go", {'id':deleteID});
-			} else {
-				history.back();
-			}	
-		</script>
-<%
-	} else {
-%>
-		<script>
-			alert("비밀번호가 틀립니다!");
-			history.back();
-		</script>	
-<%
+	//세션값 가져오기
+	String id = (String)session.getAttribute("id");
+	//세션값 없으면 loginForm.jsp 이동
+	if(id != null) {
+	 	response.sendRedirect("./login/login.jsp");
 	}
 %>
+<div id="headtext" align="center" >회원 정보 삭제</div>
+    
+    <hr/>
+    <form action="<%=request.getContextPath()%>/deleteID.go" method="post">
+	    <table align="center" id="deleteTable">
+			<tr align="center">
+				<td>아이디: <br></td>
+				<td><input type="text" id="email" name="email" value="${param.email}"><br></td>
+			</tr>
+			<tr align="center">
+				<td>패스워드: <br></td>
+				<td><input type="password" id="pw" name="password"><br></td>
+			</tr>	
+			<tr>
+				<td><input type="submit" value="회원삭제" onclick="alert('정상적으로 계정 삭제가 이루어졌습니다.')"><br></td>
+				<td><input type="reset" value="취소" onclick="<%=request.getContextPath()%>/main.go"></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
