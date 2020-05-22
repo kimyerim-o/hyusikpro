@@ -6,18 +6,18 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 <% 	request.setCharacterEncoding("UTF-8");%> 
 <!DOCTYPE html>
+
+
 <html lang="en">
-<style>
-#td {
-	font-size:15px;
-	font-family:'NanumSquareRoundB';
-}
-</style>
-<style>
-.cls1 {font-size: 40px; text-align: center;}
-.cls2 {font-size: 20px; text-align: center;}
-.gogo {margin-top:500px}
-</style>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+ $("header").remove(".body");
+ $("#page-wrapper").attr("id","");
+</script>
+</head>
+<body>
+<jsp:include page="admin.jsp"/>
+
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d033ab2c0002c3aedd619825d12b4956"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
@@ -31,6 +31,7 @@
 		})
 	})
 </script>
+
 <c:choose>
 	<c:when test='${msg=="addmember"}'>
 		<script>
@@ -58,8 +59,16 @@
 <head>
     <meta charset="UTF-8">
     <title>ManagementBoard</title>
-    <script>
-    </script>
+    <style>
+#td
+{
+	font-size:15px;
+	font-family:'NanumSquareRoundB';
+}
+.cls1 {font-size: 40px; text-align: center;}
+.cls2 {font-size: 20px; text-align: center;}
+.gogo {margin-top:500px}
+</style>
 </head>
 <body>
 
