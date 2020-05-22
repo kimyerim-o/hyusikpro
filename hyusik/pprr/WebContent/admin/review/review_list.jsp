@@ -89,7 +89,7 @@ footer {margin-left:620px;margin-top:50px}
 			<td>${message.recontent} </td>
 		</tr>
 		<tr>	
-			<td colspan="2" style=" height: 40px"><a href="<%=request.getContextPath()%>/review/review_confirmDeletion.jsp?messageId=${message.reno}" style="    padding-left: 400px;">[삭제하기]</a><br/></td>
+			<td colspan="2" style=" height: 40px"><a href="<%=request.getContextPath()%>/admin/review/review_confirmDeletion.jsp?messageId=${message.reno}" style="    padding-left: 400px;">[삭제하기]</a><br/></td>
 		</tr>
 
 	</c:forEach>
