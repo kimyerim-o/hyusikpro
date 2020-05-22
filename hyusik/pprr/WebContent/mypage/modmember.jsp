@@ -20,10 +20,11 @@
 </head>
 <body>
  <h1 class="cls1">회원 정보 수정창</h1>
+ sessionScope.AuthUser=(${sessionScope.AUTHUSER})
 <form  method="post" action="<%=request.getContextPath()%>/modMember.go">
  <table align="center" >
    <tr>
-     <td width="200"><p align="right" >아이디</td>
+     <td width="200"><p align="right" >이메일</td>
      <td width="400"><input   type="text" name="email" value="${AUTHUSER.email}" disabled ></td>
      
    </tr>
@@ -34,11 +35,15 @@
    </tr>
    <tr>
      <td width="200"><p align="right" >이름</td>
-     <td width="400"><input   type="text" name="name" value="${AUTHUSER.name}" disabled ></td>
+     <td width="400"><input   type="text" name="name" value="${AUTHUSER.name}" ></td>
+   </tr>
+   <tr>
+     <td width="200"><p align="right" >이메일</td>
+     <td width="400"><input   type="text" name="email"  value="${AUTHUSER.email}" ></td>
    </tr>
    <tr>
      <td width="200"><p align="right" >생일</td>
-     <td width="400"><input   type="text"  name="joinDate" value="${memInfo.joinDate}"   ></td>
+     <td width="400"><input   type="text"  name="joinDate" value="${memInfo.joinDate }"   ></td>
    </tr>
    <tr align="center" >
     <td colspan="2" width="400"><input type="submit" value="수정하기" >

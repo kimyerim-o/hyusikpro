@@ -1,64 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/admin/admin_style.css">
-
-<link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 <% 	request.setCharacterEncoding("UTF-8");%> 
 <!DOCTYPE html>
-
-
 <html lang="en">
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script>
- $("header").remove(".body");
- $("#page-wrapper").attr("id","");
-</script>
-</head>
-<body>
-<jsp:include page="admin.jsp"/>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d033ab2c0002c3aedd619825d12b4956"></script>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script>
-	$(function() {		
-		$('ul.tab li').click(function() {
-			var activeTab = $(this).attr('data-tab');
-			$('ul.tab li').removeClass('current');
-			$('.tabcontent').removeClass('current');
-			$(this).addClass('current');
-			$('#' + activeTab).addClass('current');
-		})
-	})
-</script>
-
-<c:choose>
-	<c:when test='${msg=="addmember"}'>
-		<script>
-			window.onload = function() {
-				alert("회원 정보가 등록되었습니다.");
-			}
-		</script>
-	</c:when>
-	<c:when test='${msg=="modified"}'>
-		<script>
-			window.onload = function() {
-				alert("회원 정보가 수정되었습니다.");
-			}
-		</script>
-	</c:when>
-	<c:when test='${msg=="deleted"}'>
-		<script>
-			window.onload = function() {
-				alert("회원 정보가 삭제되었습니다.");
-			}
-		</script>
-	</c:when>
-</c:choose>	
-
 <head>
     <meta charset="UTF-8">
     <title>ManagementBoard</title>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
     <style>
 #td
 {
@@ -69,6 +18,15 @@
 .cls2 {font-size: 20px; text-align: center;}
 .gogo {margin-top:500px}
 </style>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+ $("header").remove(".body");
+ $("#page-wrapper").attr("id","");
+</script>
+</head>
+<body>
+<jsp:include page="admin.jsp"/>
+
 </head>
 <body>
 
@@ -91,7 +49,7 @@
     	</table>
 	</form> 
 </div>
-
+<form method="post" action="<%=request.getContextPath()%>/change.go">
 <table align="center" border="1">
 	<tr align="center">
 		<td width="7%"><b>이메일</b></td>		
@@ -111,11 +69,11 @@
 	</c:if>
 	<c:forEach items="${memberpage}" var="mem">
 		<tr>
-			<td>${mem.email}</td>
+			<td>${mem.email}<input type="hidden" name="email" value="${mem.email}"></td>
 			<td>${mem.name}</td>
 			<td>${mem.birth}</td>
 			<td>${mem.gender}</td>
-			<td>${mem.admin}</td>
+			<td><input type="text" name="admin" value="${mem.admin}"><input type="submit" value="수정"></td>
 		</tr>
 	</c:forEach>
 	<c:choose>
@@ -132,6 +90,7 @@
 		</c:when>
 	</c:choose>				
 </table>
+</form>
 <div align="center">
 <a href="login.go" >로그인 페이지로 돌아가기</a>
 </div>

@@ -78,7 +78,7 @@ function ranking(){
                 		<li class="list-item"><a href="<%=request.getContextPath()%>/admin.go">관리자</a></li>
                 	</c:if>
                 	<c:if test="${AUTHUSER.admin ==0}">
-                		<li class="list-item"><a href="<%=request.getContextPath()%>/myPage.go">마이페이지</a></li>
+                		<li class="list-item"><a href="<%=request.getContextPath()%>/mypage/mypage.jsp">마이페이지</a></li>
                 	</c:if>
 					<li class="list-item"><a href="<%=request.getContextPath()%>/logout.go">로그아웃</a></li>
 				</c:if>

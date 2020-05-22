@@ -16,9 +16,6 @@ public class Member {
 	private int admin;		//admin 컬럼용
 	
 	//생성
-	public Member() {
-		System.out.println("Member 생성자를 호출합니다!");
-	}
 	
 	public Member(String email, String name, String birth, String gender,String password ,int admin) {
 		this.email = email;
@@ -36,6 +33,17 @@ public class Member {
 		this.password = password;
 		this.birth = birth;
 		this.gender=gender;
+	}
+
+	public Member(String password, String birth, String email) {
+		this.password = password;
+		this.birth = birth;
+		this.email = email;// TODO Auto-generated constructor stub
+	}
+
+	public Member(int admin,String email) {
+		this.admin =admin;
+		this.email = email;
 	}
 
 	//getter & setter

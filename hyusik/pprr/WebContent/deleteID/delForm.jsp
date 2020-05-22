@@ -16,7 +16,7 @@
     <style>
         #headtext{color: #296ead;}
         #headtext{margin-top:10%; font-size:25px}
-        
+        h2 {text-align: center;}
     </style>
 </head>
 <html>
@@ -40,7 +40,7 @@
     <form action="<%=request.getContextPath()%>/deleteID.go" method="post">
     <c:if test="${on !=1}">
     <tr>
-	    <td align="center"><h3>비밀번호를 다시 입력하세요</h3>
+	    <td align="center"><h2>비밀번호를 다시 입력하세요</h2>
 	    </td>
     </tr>
     </c:if>
