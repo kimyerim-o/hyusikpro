@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import jdbc.JdbcUtil;
 public class memberDAO {
@@ -95,8 +96,6 @@ public class memberDAO {
 		pstmt.setString(3, member.getemail());
 		pstmt.executeUpdate();
 	}
-
-	
 
 
 	
