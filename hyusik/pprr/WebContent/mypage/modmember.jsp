@@ -21,10 +21,10 @@
 <body>
  <h1 class="cls1">회원 정보 수정창</h1>
  sessionScope.AuthUser=(${sessionScope.AUTHUSER})
-<form  method="post" action="${contextPath}/members/modMember.do?id=${memInfo.id}">
+<form  method="post" action="<%=request.getContextPath()%>/modMember.go">
  <table align="center" >
    <tr>
-     <td width="200"><p align="right" >아이디</td>
+     <td width="200"><p align="right" >이메일</td>
      <td width="400"><input   type="text" name="email" value="${AUTHUSER.email}" disabled ></td>
      
    </tr>

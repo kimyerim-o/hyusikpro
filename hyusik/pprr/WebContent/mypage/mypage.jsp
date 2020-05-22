@@ -41,7 +41,7 @@
 			 (${AUTHUSER.email })
 	<table border="1" width="400" height="400" margin="auto">
 				<tr>
-					<td ><a href="/admin/modmember.jsp">회원정보 수정</a></td>
+					<td ><a href="/mypage/modmember.jsp">회원정보 수정</a></td>
 					<td><a href="/deleteID/delForm.jsp">회원 삭제</a></td>
 					<td><a href="/review/review_list.jsp">리뷰 게시판</a></td>
 				</tr>	

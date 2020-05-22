@@ -150,6 +150,21 @@ public class memberDAO {
 				JdbcUtil.close(pstmt);
 		}
 	}
+
+
+	public int modify(Connection conn, String password, String getbirth) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {			  
+			String sql="update member set password=?,birth=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, password);
+			pstmt.setString(2, getbirth);
+			System.out.println("delete");
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+	}
 	   
        
        
