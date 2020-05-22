@@ -67,8 +67,8 @@ function ranking(){
 			<ul class="list">
 				<!-- filter설정하기 -->
 				<li class="list-item"><a href="<%=request.getContextPath()%>/notice/list.go">공지사항</a></li>
-				<li class="list-item"><a href="<%=request.getContextPath()%>/road/roadsa.jsp">사고</a></li>
-				<li class="list-item"><a href="<%=request.getContextPath()%>/road.go">공사</a></li>
+				<li class="list-item"><a href="<%=request.getContextPath()%>/road/roadsa.jsp">사고 상황</a></li>
+				<li class="list-item"><a href="<%=request.getContextPath()%>/road.go">공사 상황</a></li>
 				<li class="list-item"><a href="<%=request.getContextPath()%>/recommend/re.jsp">추천휴게소</a></li>
                 <li class="list-item"><a href="<%=request.getContextPath()%>/oilprice.go">추천주유소</a></li>
                 <li class="list-item"><a href="<%=request.getContextPath()%>/review/review_list.jsp">리뷰</a></li>

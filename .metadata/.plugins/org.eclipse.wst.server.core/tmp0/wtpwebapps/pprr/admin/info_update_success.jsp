@@ -11,6 +11,6 @@
 </head>
 <body>
 <div id="insert1">
-휴게소 정보가 입력되었습니다. </div>
+<a href="http://localhost:8090/admin_info.go">휴게소 정보가 수정되었습니다.</a> </div>
 </body>
 </html>

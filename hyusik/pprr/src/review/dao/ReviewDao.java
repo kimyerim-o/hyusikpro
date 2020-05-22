@@ -76,7 +76,7 @@ public class ReviewDao {
 		ResultSet rs = null;
 		try {
 			pstmt = conn.prepareStatement(
-					"select * from review where reno = ? and redate like '2020____'");
+					"select * from review where reno = ? and name is not null and redate like '2020____' ");
 			pstmt.setInt(1, reno);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
@@ -109,7 +109,7 @@ public class ReviewDao {
 		ResultSet rs = null;
 		try {
 			stmt = conn.createStatement();
-			rs = stmt.executeQuery("select count(*) from review");
+			rs = stmt.executeQuery("select count(*) from review where name is not null");
 			rs.next();
 			return rs.getInt(1);
 		} finally {
@@ -124,7 +124,7 @@ public class ReviewDao {
 		ResultSet rs = null;
 		try {
 			pstmt = conn.prepareStatement(
-					"select * from review " + 
+					"select * from review where name is not null " + 
 					"order by reno desc limit ?, ?");
 			pstmt.setInt(1, firstRow - 1);
 			pstmt.setInt(2, endRow - firstRow + 1);

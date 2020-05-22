@@ -128,23 +128,26 @@
 	</div>
 	
 	<div id="tab4" class="tabcontent">
-		<h3><input type="text" name="oilname" value="${infoData.oil.oilname}"/></h3>
+	<ul class="infolist">
+		<h3>주유소명 : <input type="text" name="oilname" value="${infoData.oil.oilname}"/></h3>
 		<div>
-			<input type="text" name="oiltel" value="${infoData.oil.oiltel}"/>
-			<input type="text" name="gasoline" value="${infoData.oil.gasoline}"/>
-			<input type="text" name="disel" value="${infoData.oil.disel}"/>
-			<input type="text" name="lpg" value="${infoData.oil.lpg}"/>
-			<input type="text" name="company" value="${infoData.oil.company}"/>
-			<input type="text" name="air" value="${infoData.oil.air}"/>
-			<input type="text" name="cleaner" value="${infoData.oil.cleaner}"/>
-			<input type="text" name="mat" value="${infoData.oil.mat}"/>
+			<h3>주유소 전화번호 : <input type="text" name="oiltel" value="${infoData.oil.oiltel}"/></h3>
+			<h3>주유소 회사 : <input type="text" name="company" value="${infoData.oil.company}"/></h3>
+			<li>가격 목록</li>
+			<h3>현재 휘발유 가격 : <input type="text" name="gasoline" value="${infoData.oil.gasoline}"/></h3>
+			<h3>현재 경유 가격 : <input type="text" name="disel" value="${infoData.oil.disel}"/></h3>
+			<h3>현재 LPG 가격 : <input type="text" name="lpg" value="${infoData.oil.lpg}"/></h3>
+			<h3>공기압점검기<input type="text" name="air" value="${infoData.oil.air}"/></h3>
+			<h3>진공청소기<input type="text" name="cleaner" value="${infoData.oil.cleaner}"/></h3>
+			<h3>매트청소기<input type="text" name="mat" value="${infoData.oil.mat}"/></h3>
 		</div>
 		<div>
 			<c:forEach var="oilcon" items="${infoData.oilcon}" >
-				<a><input type="text" name="oilconname" value="${oilcon.oilconname}"/></a>
+				<h3><input type="text" name="oilconname" value="${oilcon.oilconname}"/></h3>
 				<a><input type="text" name="oilconde" value="${oilcon.oilconde}"/></a>
 			</c:forEach>
 		</div>
+		</ul>
 	</div>
 </div>
 </form>

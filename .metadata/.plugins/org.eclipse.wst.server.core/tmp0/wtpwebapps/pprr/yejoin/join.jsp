@@ -52,7 +52,6 @@ $(function(){
     <table width="80%" >
     
     <tr class="t1">
-    
         <td colspan="2" align="center"><h3>기본 정보</h3></td>
     </tr>
     
@@ -95,9 +94,9 @@ $(function(){
     </tr>
     <tr>
     <td>성별</td>
-    <td><input type="radio" name="gender" id="M" checked/>
+    <td><input type="radio" name="gender" value="M" checked/>
         <label for="M">남</label>
-        <input type="radio" name="gender" id="F"/>
+        <input type="radio" name="gender" value="F"/>
         <label for="F">여</label>
     </td>
     </tr>

@@ -24,11 +24,11 @@
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
-	padding: 20px 34px;
+	padding: 20px 80px;
 	font-size: 17px;
 	transition:0.3s;
 	background-color:rgb(159,197,232);
-	margin:10px 47px;
+	margin:10px 50px;
 }
 /* Style the tab content */
 .tabcontent {
