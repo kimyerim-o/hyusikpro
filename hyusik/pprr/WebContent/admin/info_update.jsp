@@ -8,6 +8,17 @@
 	font-size:15px;
 	font-family:'NanumSquareRoundB';
 }
+.submit {
+	top: 900px;
+  left: 900px;
+  position: relative;
+	color: white;
+  text-align: center;
+  font-size:1.2rem;
+  background: #2f3c4a;
+  border-radius: 10px;
+  border:0px;
+  margin-top:15px}
 </style>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d033ab2c0002c3aedd619825d12b4956"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -26,8 +37,8 @@
 <body>
 <form method="post">
 <input type="hidden" name="site" value="<%=request.getParameter("site")%>">
-<input type="submit" value="수정" formaction="<%=request.getContextPath()%>/update.go">
-<input type="submit" value="삭제" formaction="<%=request.getContextPath()%>/delete.go">
+<input type="submit" class="submit" value="수정" formaction="<%=request.getContextPath()%>/update.go">
+<input type="submit" class="submit" value="삭제" formaction="<%=request.getContextPath()%>/delete.go">
 <div class="cont">
 	<ul class="tab">
 		<li class="current" data-tab="tab1"><a href="#">휴게소</a></li>
