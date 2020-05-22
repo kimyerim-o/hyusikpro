@@ -102,43 +102,53 @@ public class memberDAO {
 		pstmt.executeUpdate();
 	}
 
-	public void deleteMember(String email, String password)
-			throws SQLException {
-		System.out.println("MemberDAO-deleteMember()호출");
-		Connection conn = null;
+	
+	public Member selectByPw(Connection conn,String email, String pw)throws SQLException{
+		System.out.println("DAO메소드 진입"+pw);
+		
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "";
-		try {
-			sql = "select password from member where memberid = ?";
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, email); // email로 정보 조회
-			rs = pstmt.executeQuery();
-			
-			if (rs.next()) { //조회하는 정보가 존재하는 경우
-				if(rs.getString("password").equals("password")) {
-					//DB상 password = 사용자 입력 password => 계정 삭제 실행.
-					pstmt.close();
-					pstmt = null;
-					sql = "delete member where memberid = ?";
-					pstmt = conn.prepareStatement(sql);
-					pstmt.setString(1, email);
-					pstmt.executeUpdate();
-					System.out.println("계정 삭제에 성공했습니다. 그동안 이용해주셔서 감사합니다.");
-				} else {
-					System.out.println("계정 삭제에 실패했습니다. 다시 시도해주시기 바랍니다.");
-				}
+		
+		try {System.out.println("Member의 try문 진입");
+			pstmt = conn.prepareStatement("Select * from member where email = ? and pw=?"); 
+			pstmt.setString(1,email);
+			pstmt.setString(2,pw);// 
+			rs = pstmt.executeQuery(); // 
+			System.out.println("완성된 쿼리문"+pstmt);
+			Member member=null;
+			if(rs.next()) {
+				member = new Member(rs.getString("email"), 
+						rs.getString("name"), 
+						rs.getString("birth"), 
+						rs.getString("gender"), 
+						rs.getString("password"), 
+						rs.getInt("admin"));
 			}
-			return;
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
+			System.out.println(member);
+			return member;
+		
+		}finally {//
+			
 			JdbcUtil.close(rs);
-			JdbcUtil.close(conn);	
-			JdbcUtil.close(pstmt);	
+			JdbcUtil.close(pstmt);
 		}
+	}//end of member method
+	
+	
+	
 
-
+	public int delete(Connection conn, String email, String pw) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {			  
+			String sql="delete from member where email=? and password=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, email);
+			pstmt.setString(2, pw);
+			System.out.println("delete");
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
 	}
 	   
        

@@ -26,5 +26,22 @@ public class MemberService {
 		return null;
 		
 	}
+	
+
+	public int delete(String email, String pw) {
+		try (Connection conn=ConnectionProvider.getConnection()){
+			conn.setAutoCommit(false);
+			
+			System.out.println("MemberService의 getmember()호출성공");
+			int delete = memberDao.delete(conn,email,pw);
+			System.out.println(delete);
+			return delete;
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+		
+	}
 
 }

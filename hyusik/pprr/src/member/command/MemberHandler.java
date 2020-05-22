@@ -30,7 +30,6 @@ implements CommandHandler {
 		String memberchkmail = request.getParameter("memailchk");
 		String memberchkname = request.getParameter("mbnamechk");
 		System.out.println("파라미터 받았습니다!"+memberchkmail+memberchkname);
-			
 		
 		//2.비즈니스로직(server<->dao<->db)
 		Connection conn = ConnectionProvider.getConnection();
@@ -68,10 +67,6 @@ implements CommandHandler {
 		//request.setAttribute("키값",데이터);
 		request.setAttribute("memberList",mlist);
 		System.out.println("memberList"+mlist);
-		
-		
-		
-		
 		
 		
 		//4. 뷰

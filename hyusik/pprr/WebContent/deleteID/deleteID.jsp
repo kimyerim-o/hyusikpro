@@ -18,6 +18,9 @@
 			})
 		});
 </script>
+<style>
+h2 {text-align: center;}
+</style>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -25,44 +28,5 @@
 </head>
 <body>
 <h2>회원 탈퇴 완료</h2>
-<%
-	//세션값 가져오기
-	String id = (String)session.getAttribute("memberid");
-
-	//세션값 없으면 login.jsp 이동
-	if(id == null){
-	 response.sendRedirect("./login/login.jsp");
-	}
-			
-	//passwd값 가져오기
-	String passwd = request.getParameter("password");
-	
-	//디비객체생성 dbPro
-	memberDAO memberDao = new memberDAO();
-	
-	// int check = deleteMember(email, password)
-	int check = memberDAO.deleteMember(String email, String password);
-	
-	// check==1 세션값 삭제, 삭제성공메시지, loginForm.jsp 이동
-	// check==0 비밀번호틀림. 뒤로이동
-	if(check == 1) {
-		session.invalidate();
- %>
-	 <script type="text/javascript">
-		 alert("삭제 성공!");
-		 location.href="./main/main.go";
-	 </script>
- <%
-	} else if(check == 0) {
- %>
-	 <script type="text/javascript">
-	 	alert("비밀번호 틀림");
-		 history.back();
-	 </script>
- <%
-}
-%>
-
-
 </body>
 </html>
