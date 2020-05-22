@@ -25,22 +25,36 @@
 
 </head>
 <body>	
-	<nav>
-		<ul>
-			<li> <a href="#">회원정보수정</a> </li>
-			<li> <a href="#">리뷰게시판</a> </li>
-			<li> <a href="#">QnA게시판</a> </li>
-			<li> <a href="#">회원탈퇴</a> </li>
-		</ul>
-	</nav>
-<section>
-	<h2>마이페이지</h2>
-		<article>
-			이메일 : ${member.email}
-			닉네임 : ${member.name}
-			생년월일 : ${member.birth}
-			성별 : ${member.gender}
-		</article>
-</section>	
+<div>
+	<form>
+	<table border="1">
+			<ul>
+				<li> <a href="/review/review_list.jsp">리뷰게시판</a> </li><br/>
+				<li> <a href="/deleteID/delform.jsp">회원탈퇴</a> </li>
+			</ul>
+	</table>
+	</form>
+</div>
+<div id="headtext" align="center">마이페이지
+	<form>
+	<table border="1">
+		<section>
+			<h2>회원 정보</h2>
+				<c:choose>
+				<c:when test="${memberList != null}">	
+					<tr align="center">
+						<c:forEach var="Member" items="${memberList}">
+							<td width="7%"><c:out value="${Member.email}" /></td>
+							<td width="7%"><c:out value="${Member.name}" />회원 닉네임</td>
+							<td width="7%"><c:out value="${Member.birth}" />회원 생년월일</td>
+							<td width="7%"><c:out value="${Member.gender}" />회원 성별</td>
+						</c:forEach>
+					</tr>
+				</c:when>
+				</c:choose>		
+		</section>	
+	</table>
+	</form>
+</div>	
 </body>
 </html>
