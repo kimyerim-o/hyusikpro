@@ -38,8 +38,7 @@ public class MemberModHandler implements CommandHandler {
 
 
 	private String processSubmit(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		Member member=new Member(request.getParameter("pwd"),request.getParameter("joinDate"),request.getParameter("email"));
-		System.out.println(request.getParameter("email"));
+		Member member=new Member(request.getParameter("pwd"),request.getParameter("joinDate"),request.getParameter("mail"));
 		try{
 			modifyService.modify(member);
 			return "/mypage/mypage.jsp";

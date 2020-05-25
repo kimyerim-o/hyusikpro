@@ -25,20 +25,20 @@
    <tr>
      <td width="200"><p align="right" >아이디</td>
      <td width="400"><input   type="text" name="email" value="${AUTHUSER.email}" disabled ></td>
-     
+     <input type="hidden" name="mail" value="${AUTHUSER.email}">
    </tr>
  <tr>
      <td width="200"><p align="right" >비밀번호</td>
-     <td width="400"><input   type="password" name="pwd" value="${memInfo.pwd}" >
+     <td width="400"><input   type="password" name="pwd"  >
      </td>
    </tr>
    <tr>
      <td width="200"><p align="right" >이름</td>
-     <td width="400"><input   type="text" name="name" value="${AUTHUSER.name}" disabled ></td>
+     <td width="400"><input type="text" name="name" value="${AUTHUSER.name}" disabled ></td>
    </tr>
    <tr>
      <td width="200"><p align="right" >생일</td>
-     <td width="400"><input   type="text"  name="joinDate" value="${memInfo.joinDate}"   ></td>
+     <td width="400"><input   type="text"  name="joinDate"></td>
    </tr>
    <tr align="center" >
     <td colspan="2" width="400"><input type="submit" value="수정하기" >
