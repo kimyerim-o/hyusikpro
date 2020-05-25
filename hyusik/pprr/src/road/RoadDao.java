@@ -51,4 +51,17 @@ public class RoadDao {
 		
 	}
 
+	public int delete(Connection conn, String rono) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="delete from road where rono=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, rono);
+			System.out.println(pstmt);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+	}
+
 }

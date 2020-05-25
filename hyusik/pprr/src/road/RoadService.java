@@ -39,4 +39,21 @@ public class RoadService {
 		}
 	}
 
+	public void delete(String rono) {
+		Connection conn=null;
+		try {
+			conn=ConnectionProvider.getConnection();
+			conn.setAutoCommit(false);
+			int r=roadDao.delete(conn,rono);
+			if(r<1) 
+				throw new RuntimeException("fail delete Road");
+			conn.commit();
+		}catch(SQLException e) {
+			JdbcUtil.rollback(conn);
+			throw new RuntimeException(e);
+		}finally {
+			JdbcUtil.close(conn);
+		}
+	}
+
 }

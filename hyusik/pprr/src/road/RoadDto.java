@@ -19,6 +19,7 @@ public class RoadDto {
 		this.blocktype=blocktype;
 		this.startday=startday;
 	}
+
 	public Integer getRono() {
 		return rono;
 	}

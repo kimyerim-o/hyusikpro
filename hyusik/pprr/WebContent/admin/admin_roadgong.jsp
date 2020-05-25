@@ -28,7 +28,6 @@ thead {
 </style>
 </head>
 <body>
-<form method="post">
 <table class="table" align="center" width="1230px">
 	<thead>
 		<tr>
@@ -48,6 +47,7 @@ thead {
 	<tbody>
 	</tbody>
 	<c:forEach var="road" items="${roadDto}" >
+<form method="post">
 	<tr>
 		<input type="hidden" name="rono" value="${road.rono}">
 		<td><input type="text" name="sitname" value="${road.sitname}"></td>
@@ -77,10 +77,11 @@ thead {
 		</c:if>
 		<td><input type="text" name="direction" value="${road.direction}"></td>
 		<td><input type="text" name="startday" value="${road.startday}"></td>
-		<td><input type="submit" value="수정" formaction="<%=request.getContextPath()%>/modroad.go"></td>
+		<td><input type="submit" value="수정" formaction="<%=request.getContextPath()%>/modroad.go">
+		<input type="submit" value="삭제" formaction="<%=request.getContextPath()%>/delroad.go"></td>
 	</tr>
+</form>
 	</c:forEach>
 </table>
-</form>
 </body>
 </html>
