@@ -1,4 +1,4 @@
-package member.command;
+package member.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -19,6 +19,9 @@ public class MemberModifyService {
 			
 			
 			int c=memberDAO.modify(conn,member.getPassword(),member.getbirth(),member.getemail());
+			if(c<1) {
+				throw new RuntimeException("fail modify member");
+			}
 			conn.commit();
 		}catch(SQLException e) {
 			JdbcUtil.rollback(conn);

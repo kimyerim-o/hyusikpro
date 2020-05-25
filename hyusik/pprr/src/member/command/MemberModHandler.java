@@ -1,21 +1,13 @@
 package member.command;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import admin.service.InfoModifyService;
-import info.dto.BrandDto;
-import info.dto.FoodDto;
-import info.dto.OilDto;
-import info.dto.OilconDto;
-import info.dto.RestconDto;
-import info.dto.RestinfoDto;
 import info.service.NotFoundException;
 import member.Member;
+import member.service.MemberModifyService;
 import mvc.command.CommandHandler;
 
 public class MemberModHandler implements CommandHandler {
@@ -36,7 +28,7 @@ public class MemberModHandler implements CommandHandler {
 
 	private String processForm(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		try {			
-			return "/mypage/mypage.jsp";
+			return "/mypage/modmember.jsp";
 		}catch(NotFoundException e) {
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);
 			return null;

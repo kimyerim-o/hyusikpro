@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import info.service.NotFoundException;
 import member.Member;
-import member.command.MemberModifyService;
+import member.service.MemberModifyService;
 import mvc.command.CommandHandler;
 
 public class ChangeHandler implements CommandHandler {
