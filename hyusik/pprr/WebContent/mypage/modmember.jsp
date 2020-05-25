@@ -25,12 +25,11 @@
  <table align="center" >
    <tr>
      <td width="200"><p align="right" >이메일</td>
-     <td width="400"><input   type="text" name="email" value="${AUTHUSER.email}" disabled ></td>
-     
+     <td width="400"><input type="text" name="email" value="${AUTHUSER.email}" disabled ></td>
    </tr>
  <tr>
      <td width="200"><p align="right" >비밀번호</td>
-     <td width="400"><input   type="password" name="pwd" value="${memInfo.pwd}" >
+     <td width="400"><input type="password" name="pwd" value="${memInfo.pwd}" >
      </td>
    </tr>
    <tr>

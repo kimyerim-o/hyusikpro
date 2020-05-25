@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import info.service.NotFoundException;
 import member.Member;
@@ -37,8 +38,8 @@ public class MemberModHandler implements CommandHandler {
 
 
 	private String processSubmit(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
 		Member member=new Member(request.getParameter("pwd"),request.getParameter("joinDate"),request.getParameter("email"));
+		System.out.println(request.getParameter("email"));
 		try{
 			modifyService.modify(member);
 			return "/mypage/mypage.jsp";

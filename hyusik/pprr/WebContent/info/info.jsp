@@ -48,6 +48,12 @@
         </table>
 		
 		<ul class="infolist">
+		 <c:if test="${! empty infoData.restinfo.theme}">
+				<li> 테마명 : ${infoData.restinfo.theme}</li>
+		</c:if>
+		<c:if test="${! empty infoData.restinfo.themede}">
+				<a>테마 설명 : ${infoData.restinfo.themede}</a>
+		</c:if>
 		 <li>대표 음식 : ${infoData.restinfo.firstfood}</li>
 		 <li>브랜드</li>
 			<div>
@@ -126,7 +132,13 @@
 		<h1>${infoData.oil.oilname}</h1>
 		<div>
 			<h3>주유소 전화번호 : ${infoData.oil.oiltel}</h3>
-			<h3>주유소 회사 : ${infoData.oil.company}</h3>
+			<c:if test="${infoData.oil.company == AD}">
+				<h3>주유소 회사 : 알뜰</h3>
+			</c:if>	
+			<c:if test="${infoData.oil.company != AD}">
+				<h3>주유소 회사 : ${infoData.oil.company}</h3>
+			</c:if>	
+				
 			<li>가격 목록</li>
 			<h3>현재 휘발유 가격 : ${infoData.oil.gasoline}</h3>
 			<h3>현재 경유 가격 : ${infoData.oil.disel}</h3>

@@ -160,6 +160,7 @@ public class memberDAO {
 			pstmt.setString(1, password);
 			pstmt.setString(2, getbirth);
 			pstmt.setString(3, getemail);
+			System.out.println(pstmt);
 			System.out.println("update");
 			return pstmt.executeUpdate();
 		  }finally {
