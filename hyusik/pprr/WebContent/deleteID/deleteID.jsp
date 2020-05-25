@@ -5,19 +5,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/header/header_style.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/info/infos_style.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/dcss/mypage.css">		
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d033ab2c0002c3aedd619825d12b4956"></script>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script>
-		$(function() {
-			$('ul.tab li').click(function() {
-				var activeTab = $(this).attr('data-tab');
-				$('ul.tab li').removeClass('current');
-				$('.tabcontent').removeClass('current');
-				$(this).addClass('current');
-				$('#' + activeTab).addClass('current');
-			})
-		});
-</script>
 <style>
 h2 {text-align: center;}
 </style>

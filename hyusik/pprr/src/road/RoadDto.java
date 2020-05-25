@@ -10,7 +10,8 @@ public class RoadDto {
 	private String startday;
 	
 	
-	public RoadDto(String sitname, String direction, String msg, String type, String startday, int blocktype) {
+	public RoadDto(Integer rono,String sitname, String direction, String msg, String type, String startday,int blocktype) {
+		this.rono=rono;
 		this.sitname=sitname;
 		this.direction=direction;
 		this.msg=msg;

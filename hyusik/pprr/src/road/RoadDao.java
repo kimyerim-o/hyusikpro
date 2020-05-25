@@ -22,12 +22,33 @@ public class RoadDao {
 		List<RoadDto> road =new ArrayList<>();
 		while(rs.next()) {
 			System.out.println("road select");
-			road.add(new RoadDto(rs.getString("sitname"),rs.getString("direction"),rs.getString("msg"),rs.getString("type"),rs.getString("startday"),Integer.parseInt(rs.getString("blocktype"))));
+			road.add(new RoadDto(rs.getInt("rono"),rs.getString("sitname"),rs.getString("direction"),rs.getString("msg"),rs.getString("type"),rs.getString("startday"),rs.getInt("blocktype")));
 		}return road;
 	  }finally {
 			JdbcUtil.close(rs);
 			JdbcUtil.close(pstmt);
 	}
+	}
+
+	public int update(Connection conn, Integer rono, String sitname, String msg, String direction, String type, int blocktype,
+			String startday) throws SQLException {
+		PreparedStatement pstmt=null;
+		  try {	
+			String sql="update road set sitname=?, msg=?,direction=?,type=?,blocktype=?,startday=? where rono=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, sitname);
+			pstmt.setString(2, msg);
+			pstmt.setString(3, direction);
+			pstmt.setString(4, type);
+			pstmt.setInt(5, blocktype);
+			pstmt.setString(6, startday);
+			pstmt.setInt(7, rono);
+			System.out.println(pstmt);
+			return pstmt.executeUpdate();
+		  }finally {
+				JdbcUtil.close(pstmt);
+		}
+		
 	}
 
 }

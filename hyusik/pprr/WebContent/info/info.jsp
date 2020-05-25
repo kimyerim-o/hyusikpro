@@ -121,7 +121,7 @@
 					<a>음식 재료 : ${food.foodma}</a><br/>
 				</c:if>
 				<c:if test="${! empty food.foodde}">
-					<a>음식 음식설명 : ${food.foodde}</a><br/>
+					<a>음식설명 : ${food.foodde}</a><br/>
 				</c:if>
 			</c:forEach>
 		</ul>
