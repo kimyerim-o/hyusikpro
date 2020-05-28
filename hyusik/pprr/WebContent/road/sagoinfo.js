@@ -3,13 +3,13 @@ $(function() {
 });
 
 function updateTable() {
-	$.get('../roadre.go', {}, function(data) {
+	$.get('../roadsago', {}, function(data) {
 		drawTable(data);
 	}, 'xml');
 }
 
 $(document).ready(function(){
-	$.get('../roadre.go', {}, function(data) {
+	$.get('../roadsago', {}, function(data) {
 		drawTable(data);
 	}, 'xml');
 });

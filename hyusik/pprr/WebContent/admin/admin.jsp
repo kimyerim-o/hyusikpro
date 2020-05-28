@@ -12,6 +12,7 @@
 		<li class="tab2"><a href="<%=request.getContextPath()%>/admin_info.go">휴게소 정보 관리</a></li>
 		<li class="tab3"><a href="<%=request.getContextPath()%>/admin/notice/list.go">공지사항 관리</a></li>
 		<li class="tab5"><a href="<%=request.getContextPath()%>/admin/review/review_list.jsp">리뷰 관리</a></li>
+		<li class="tab5"><a href="<%=request.getContextPath()%>/modroad.go">공사 상황 관리</a></li>
 	</ul>
 </div>
 </body>

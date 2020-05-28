@@ -14,11 +14,14 @@ import info.dto.OilDto;
 import info.dto.OilconDto;
 import info.dto.RestconDto;
 import info.dto.RestinfoDto;
+import info.service.InfoData;
+import info.service.InfoService;
 import info.service.NotFoundException;
 import mvc.command.CommandHandler;
 
 public class InfoModifyHandler implements CommandHandler {
 	private InfoModifyService modifyService=new InfoModifyService();
+	private InfoService infoService=new InfoService();
 	
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -34,7 +37,15 @@ public class InfoModifyHandler implements CommandHandler {
 	}
 
 	private String processForm(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		try {			
+			String reststr=request.getParameter("site");
+			int restno = 0;
+			if(reststr!=null) {
+				restno=Integer.parseInt(reststr);
+			}
+			try {
+				InfoData infoData=infoService.getInfo(restno);
+				request.setAttribute("infoData", infoData);
+				request.setAttribute("site", restno);
 			return "/admin/info_update.jsp";
 		}catch(NotFoundException e) {
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);

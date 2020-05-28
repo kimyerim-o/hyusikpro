@@ -11,6 +11,6 @@
 </head>
 <body>
 <div id="insert1">
-<a href="http://localhost:8090/admin_info.go">휴게소 정보가 삭제되었습니다.</a> </div>
+<a href="http://localhost:8090/modroad.go">공사상황 정보가 삭제되었습니다.</a> </div>
 </body>
 </html>

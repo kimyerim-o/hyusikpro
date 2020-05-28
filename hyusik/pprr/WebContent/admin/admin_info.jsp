@@ -23,7 +23,7 @@ li{text-decoration: none;}
 	<!-- 수정하기 삽입하기 삭제하기 -->
 		<li><a href="<%=request.getContextPath()%>/admin/info_insert.jsp">추가하기</a></li>
 		<c:forEach var="restinfos" items="${restnames.restinfos}" >
-		<li><a href="info_up.go?site=${restinfos.restno}">${restinfos.restname}</a></li>
+		<li><a href="update.go?site=${restinfos.restno}">${restinfos.restname}</a></li>
 		</c:forEach>
 	</ul>
 </div>

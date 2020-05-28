@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/roadre.go")
+@WebServlet("/roadsago")
 public class sagoApi extends HttpServlet implements Servlet{
 	private static final long serialVersionUID = 1L;
 

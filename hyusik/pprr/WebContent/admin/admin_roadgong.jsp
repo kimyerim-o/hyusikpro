@@ -39,9 +39,10 @@ thead {
 			<td>구분</td>
 			<td>도로</td>
 			<td>내용</td>
-			<td width="20px" colspan="2">차량차단</td>
+			<td>차량차단</td>
 			<td>방향</td>
 			<td>시작일</td>
+			<td></td>
 		</tr>
 	</thead>
 	<tbody>
