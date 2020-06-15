@@ -169,5 +169,6 @@
 		</ul>
 	</div>
 </div>
+<jsp:include page="info_review_list.jsp"></jsp:include>
 </body>
 </html>
